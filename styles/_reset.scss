@@ -1,0 +1,78 @@
+@use "./variables";
+
+@font-face {
+    font-family:hell;
+    src: url("../Helvetica-Font/Helvetica.ttf");
+    font-weight:400;
+}
+@font-face {
+    font-family:hell;
+    src: url("../Helvetica-Font/Helvetica-Bold.ttf");
+    font-weight:700;
+}
+
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:hell, sans-serif;
+    font-weight:400;
+    scroll-behavior: smooth;
+}
+
+// Images & Icons
+
+img {
+    width:100%;
+
+    &.icon {
+        width:2rem;
+    }
+}
+// Images & Icons End
+
+// Links
+a {
+    text-decoration: none;
+    color:white;
+}
+
+// Links End
+
+// List
+ul {
+    list-style:none;
+}
+// List End
+
+// Section Layout
+
+section,
+main,
+header,
+footer {
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    .wrapper {
+        width:100%;
+        max-width:1440px;
+        padding:8rem 2rem;
+    }
+
+    @media (max-width:700px) {
+        .wrapper {
+            padding-inline:1rem;
+        }
+    }
+
+   
+
+
+}
+// Section Layout End
+

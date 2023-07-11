@@ -1,0 +1,73 @@
+@use "./variables";
+
+h1 {
+    font-family:variables.$raleway;
+    font-weight:500;
+    color:white;
+    font-size:variables.$h1;
+    line-height: variables.$h1 * 1;
+    
+    span {
+        color:variables.$white;
+        font-family:variables.$raleway;
+        font-weight:500;
+        font-size:variables.$h1;
+        line-height: variables.$h1 * 1;
+        &.purple {
+            color:variables.$purple;
+        }
+    }
+}
+.tagline {
+    font-size:variables.$base-font;
+    color:variables.$purple;
+    letter-spacing:0.5rem;
+    line-height:variables.$base-font * 1.6;
+}
+h2 {
+    font-family:variables.$raleway;
+    font-weight:400;
+    color:white;
+    font-size:variables.$h2;
+    line-height: variables.$h2 * 1.2;
+
+
+    span {
+        color:variables.$purple;
+        font-family:variables.$raleway;
+        font-weight:400;
+        font-size:variables.$h2;
+        line-height: variables.$h2 * 1.2;
+
+    }
+}
+h3 {
+    font-family:hell;
+    font-weight:400;
+    color:white;
+    font-size:variables.$h3;
+    line-height: variables.$h3 * 1.2;
+
+
+    span {
+        color:variables.$purple;
+        font-family:hell;
+        font-weight:400;
+        font-size:variables.$h3;
+        line-height: variables.$h3 * 1.2;
+
+    }
+}
+p {
+    font-size:variables.$base-font;
+    font-weight:400;
+    font-family: hell;
+    line-height:variables.$base-font * 1.6;
+
+    &.big {
+        font-size:variables.$big-text;
+        font-weight:500;
+        line-height: variables.$big-text * 1.6;
+    }
+
+}
