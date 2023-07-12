@@ -17,16 +17,6 @@ h1 {
             color:variables.$purple;
         }
     }
-   @media (max-width:700px) {
-    & {
-        // font-size:48px;
-        max-width:18ch;
-
-        span {
-            // font-size:48px ;
-        }
-    }
-   }
 }
 
 strong {
@@ -49,14 +39,11 @@ h2 {
     color:white;
     font-size:variables.$h2;
     line-height: variables.$h2 * 1.2;
-    
-
-
     span {
         color:variables.$purple;
         font-family:variables.$raleway;
         font-weight:400;
-        font-size:clamp(variables.$mobile-h2, 5vw, variables.$h2);
+        font-size:clamp(variables.$mobile-h2, 3.5vw, variables.$h2);
         line-height: clamp(variables.$mobile-h2, 3.5vw, variables.$h2);
     }
 }
@@ -64,17 +51,12 @@ h3 {
     font-family:hell;
     font-weight:400;
     color:white;
-    font-size:variables.$h3;
+    font-size:clamp(variables.$mobile-h3, 1.75vw,  variables.$h3);
     line-height: variables.$h3 * 1.2;
-
-
     span {
         color:variables.$purple;
         font-family:hell;
         font-weight:400;
-        font-size:variables.$h3;
-        line-height: variables.$h3 * 1.2;
-
     }
 }
 p {
