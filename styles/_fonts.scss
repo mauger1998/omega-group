@@ -4,19 +4,38 @@ h1 {
     font-family:variables.$raleway;
     font-weight:500;
     color:white;
-    font-size:variables.$h1;
+    // font-size:variables.$h1;
     line-height: variables.$h1 * 1;
+    font-size: clamp(variables.$mobile-h1, 8vw, variables.$h1);
+    line-height: clamp(variables.$mobile-h1, 8vw, variables.$h1);
     
     span {
         color:variables.$white;
         font-family:variables.$raleway;
         font-weight:500;
-        font-size:variables.$h1;
-        line-height: variables.$h1 * 1;
         &.purple {
             color:variables.$purple;
         }
     }
+   @media (max-width:700px) {
+    & {
+        // font-size:48px;
+        max-width:18ch;
+
+        span {
+            // font-size:48px ;
+        }
+    }
+   }
+}
+
+strong {
+    font-size:variables.$h0;
+    color:variables.$white;
+    font-weight:400;
+    margin-block-start:auto;
+    margin-block-end:-2rem;
+    line-height:variables.$h0;
 }
 .tagline {
     font-size:variables.$base-font;
@@ -30,15 +49,15 @@ h2 {
     color:white;
     font-size:variables.$h2;
     line-height: variables.$h2 * 1.2;
+    
 
 
     span {
         color:variables.$purple;
         font-family:variables.$raleway;
         font-weight:400;
-        font-size:variables.$h2;
-        line-height: variables.$h2 * 1.2;
-
+        font-size:clamp(variables.$mobile-h2, 5vw, variables.$h2);
+        line-height: clamp(variables.$mobile-h2, 3.5vw, variables.$h2);
     }
 }
 h3 {
@@ -65,9 +84,9 @@ p {
     line-height:variables.$base-font * 1.6;
 
     &.big {
-        font-size:variables.$big-text;
+        font-size:clamp(variables.$mobile-big-text, 3vw, variables.$big-text);
         font-weight:500;
-        line-height: variables.$big-text * 1.6;
+        line-height: clamp(variables.$mobile-big-text * 1.6, 3vw * 1.6, variables.$big-text * 1.6);
     }
 
 }

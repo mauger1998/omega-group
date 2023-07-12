@@ -1,0 +1,45 @@
+@use "./variables";
+
+.newsletter-section {
+    background-color: variables.$purple;
+
+    .wrapper {
+        padding-block:2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .newsletter-left {
+            p {
+                margin-block-start:1rem;
+                color:white;
+            }
+        }
+
+        .newsletter-right {
+            display:flex;
+            align-items: center;
+
+            button {
+                padding:1rem;
+            }
+
+            form {
+                width:100%;
+                fieldset {
+                    border:none;
+                    width:100%;
+                    display:flex;
+                    align-items: center;
+                    gap:1rem;
+
+
+                    input {
+                        padding:0.5rem;
+                        width:100%;
+                    }
+                }
+            }
+        }
+    }
+}
