@@ -44,11 +44,10 @@ main {
             .main-bottom-left {
                 display:flex;
                 align-items: flex-end;
+                justify-content: flex-start;
                 gap:2rem;
 
-                svg {
-                    width:50%;
-                }
+                
 
                 p {
                     color:white;

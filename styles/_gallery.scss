@@ -1,0 +1,36 @@
+@use "./variables";
+
+body {
+    overflow-x:hidden;
+}
+
+.gallery-section {
+
+    .wrapper {
+        display:grid;
+        align-items:end;
+        overflow:hidden;
+        h2 {
+            color:variables.$black;
+            margin-block-end:12rem;
+            max-width:22ch;
+        }
+        .gallery {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            align-items: end;
+            place-self:center;
+            width:125%;
+
+            @media (max-width:700px) {
+                width:200%;
+            }
+
+
+            img {
+                width:100%;
+                height:auto;
+            }
+        }
+    }
+}

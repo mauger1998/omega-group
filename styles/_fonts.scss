@@ -40,6 +40,10 @@ p {
     &.large {
         font-size:variables.$h3;
         line-height:1.2;
+
+        @media(max-width:380px){
+            font-size:variables.$mobile-h3;
+        }
     }
     &.number {
         font-size:variables.$h2;

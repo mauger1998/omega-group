@@ -3,18 +3,18 @@
 footer {
     .wrapper {
         display:flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         flex-direction: column;
-        gap:8rem;
-        padding-block-end:2rem;
+        gap:4rem;
+        padding-block-end:0rem;
 
         
 
         .footer-top {
-            width:100%;
+            width:75%;
             display:grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
 
             .column {
                 height:100%;
@@ -39,6 +39,17 @@ footer {
 
             p {
                 font-size:variables.$mobile-base;
+            }
+        }
+        .h0 {
+            font-size:variables.$h0;
+            font-weight:900;
+            line-height:1;
+            align-self:start;
+            margin-top:-2rem;
+            
+            span {
+                margin-inline-start:-1rem;
             }
         }
     }
