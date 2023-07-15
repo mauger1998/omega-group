@@ -1,74 +1,53 @@
 @use "./variables";
 
 h1 {
-    font-family:variables.$raleway;
-    font-weight:500;
+    font-size:variables.$h1;
+    line-height:1.2;
     color:white;
-    // font-size:variables.$h1;
-    line-height: variables.$h1 * 1;
-    font-size: clamp(variables.$mobile-h1, 8vw, variables.$h1);
-    line-height: clamp(variables.$mobile-h1, 8vw, variables.$h1);
-    
-    span {
-        color:variables.$white;
-        font-family:variables.$raleway;
-        font-weight:500;
-        &.purple {
-            color:variables.$purple;
-        }
-    }
+    font-weight:700;
+    font-family:twk;
 }
 
-strong {
-    font-size:variables.$h0;
-    color:variables.$white;
-    font-weight:400;
-    margin-block-start:auto;
-    margin-block-end:-2rem;
-    line-height:variables.$h0;
-}
-.tagline {
-    font-size:variables.$base-font;
-    color:variables.$purple;
-    letter-spacing:0.5rem;
-    line-height:variables.$base-font * 1.6;
-}
 h2 {
-    font-family:variables.$raleway;
-    font-weight:400;
-    color:white;
     font-size:variables.$h2;
-    line-height: variables.$h2 * 1.2;
-    span {
-        color:variables.$purple;
-        font-family:variables.$raleway;
-        font-weight:400;
-        font-size:clamp(variables.$mobile-h2, 3.5vw, variables.$h2);
-        line-height: clamp(variables.$mobile-h2, 3.5vw, variables.$h2);
-    }
-}
-h3 {
-    font-family:hell;
-    font-weight:400;
+    line-height:1.2;
     color:white;
-    font-size:clamp(variables.$mobile-h3, 1.75vw,  variables.$h3);
-    line-height: variables.$h3 * 1.2;
-    span {
-        color:variables.$purple;
-        font-family:hell;
-        font-weight:400;
+    font-weight:700;
+    font-family:twk;
+
+    @media (max-width:700px) {
+        font-size:variables.$mobile-h2;
     }
 }
-p {
-    font-size:variables.$base-font;
-    font-weight:400;
-    font-family: hell;
-    line-height:variables.$base-font * 1.6;
 
-    &.big {
-        font-size:clamp(variables.$mobile-big-text, 3vw, variables.$big-text);
-        font-weight:500;
-        line-height: clamp(variables.$mobile-big-text * 1.6, 3vw * 1.6, variables.$big-text * 1.6);
+h3 {
+    font-size:variables.$h3;
+    line-height:1.2;
+    color:white;
+    font-weight:700;
+    font-family:twk;
+}
+
+p {
+    line-height:1.6;
+    font-weight:300;
+    font-size:variables.$base-font;
+
+    &.tagline {
+        font-size:variables.$tagline;
     }
 
+    &.large {
+        font-size:variables.$h3;
+        line-height:1.2;
+    }
+    &.number {
+        font-size:variables.$h2;
+        line-height:1.2;
+        font-family:twk;
+    }
+}
+
+.purple {
+    color:variables.$purple;
 }

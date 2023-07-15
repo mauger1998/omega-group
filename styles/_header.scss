@@ -2,6 +2,8 @@
 
 header {
     position:absolute;
+    // mix-blend-mode:difference;
+    z-index:10;
     .header-wrapper {
         width:100%;
         max-width:1440px;
@@ -10,21 +12,19 @@ header {
         align-items: center;
         justify-content: space-between;
 
-        .header-logo-container {
-            width:30%;
-        }
 
         nav {
-            width:40%;
+            // width:40%;
             display:flex;
             align-items: center;
             justify-content: center;
+            gap:2rem;
             
             ul {
                 display:flex;
                 align-items: center;
                 justify-content: center;
-                gap:4rem;
+                gap:2rem;
                 li {
                     color:white;
                     display:flex;
@@ -35,7 +35,6 @@ header {
         }
 
         .header-right {
-            width:30%;
             display:flex;
             align-items: center;
             justify-content: flex-end;

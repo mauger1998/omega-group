@@ -1,0 +1,28 @@
+@use "./variables";
+
+.timeline-section {
+    .wrapper {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:2rem;
+
+        .timeline-card {
+            display:flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap:2rem;
+            border-top:0.5px solid variables.$black;
+            padding-block-start:2rem;
+
+            .timeline-card-top {
+                p.large {
+                    margin-block-start:0.5rem;
+                }
+                p.tagline {
+                    color:variables.$purple;
+                    font-weight:700;
+                }
+            }
+        }
+    }
+}

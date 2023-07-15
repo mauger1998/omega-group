@@ -1,15 +1,25 @@
 @use "./variables";
 
 @font-face {
-    font-family:hell;
+    font-family: twk;
+    src: url("../twk/TWKEverett-Light.ttf");
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: twk;
+    src: url("../twk/TWKEverett-Bold.ttf");
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: hell;
     src: url("../Helvetica-Font/Helvetica.ttf");
-    font-weight:400;
-}
-@font-face {
-    font-family:hell;
-    src: url("../Helvetica-Font/Helvetica-Bold.ttf");
-    font-weight:700;
-}
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: hell;
+    src: url("../Helvetica-Font/helvetica-light-587ebe5a59211.ttf");
+    font-weight: 300;
+  }
 
 *,
 *::before,
@@ -61,18 +71,19 @@ footer {
     .wrapper {
         width:100%;
         max-width:1440px;
-        padding:8rem 2rem;
+        padding:12rem 4rem;
     }
 
     @media (max-width:700px) {
         .wrapper {
+            padding-inline:2rem;
+        }
+    }
+    @media (max-width:500px) {
+        .wrapper {
             padding-inline:1rem;
         }
     }
-
-   
-
-
 }
 // Section Layout End
 
