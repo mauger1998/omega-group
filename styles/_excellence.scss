@@ -1,52 +1,89 @@
 @use "./variables";
 
 .excellence-section {
-    border-radius:32px 32px 0px 0px !important;
-    margin-top:-2rem;
-    z-index:1;
-    position:relative;
+    border-radius:2rem !important;
+    margin-top:-1.5rem;
     background-color:white;
+
+
     .wrapper {
-        display:grid;
-        place-content:center;
-        grid-template-columns: 1.25fr 1fr;
-        gap:2rem;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap:24rem;
+        
 
-        .excellence-left {
-            width:100%;
-            height:100%;
-            h2 {
-                color:variables.$black;
-                max-width:40ch;
-            }
-            p {
-                font-size:variables.$base-font;
-                margin-block:2rem;
-                max-width:60ch;
-            }
-        }
-        .excellence-right {
-            width:100%;
-            height:100%;
 
-            img {
+
+
+        .excellence-slider {
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap:4rem;
+            place-content: center;
+            align-items:start;
+            min-height:100vh;
+            width:100%;
+            // margin-block:12rem;
+
+            .excellence-slider-left {
                 width:100%;
-                height:100%;
-                object-fit:cover;
-            }
-          
-        }
-    }
-    @media (max-width:978px) {
-        .wrapper {
-            grid-template-columns: 1fr;
-            gap:6rem;
-            padding-top:6rem;
+                position:relative;
 
-            .excellence-right {
-                grid-row:1;
+                img {
+                    position:absolute;
+                    top:20%;
+
+                    &.slide-two,
+                    &.slide-three {
+                        opacity:0;
+                    }
+                }
+            }
+
+            .excellence-slider-right {
+                display:grid;
+                width:100%;
+                gap:20rem;
+                align-self:center;
+                
+                .excellence-slider-item {
+                    display:grid;
+                    padding:2rem;
+                    
+                    
+
+                    h3 {
+                        color:variables.$black;
+                        margin-block:1rem 0.5rem
+                    }
+
+                    p {
+                        max-width:40ch;
+                    }
+                }
             }
         }
+
+        .excellence-titles {
+            width:100%;
+            display:flex;
+            align-items: end;
+            justify-content: space-between;
+
+            .excellence-titles-left {
+                h2 {
+                    color:variables.$black;
+                    max-width:12ch;
+                }
+            }
+            .excellence-titles-right {
+                p {
+                    max-width:50ch;
+                }
+            }
+
+            
+        }
     }
- 
 }

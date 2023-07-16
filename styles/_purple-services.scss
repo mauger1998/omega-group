@@ -33,11 +33,6 @@
                 border-inline-start:0.5px solid white;
                 padding-inline-start:2rem;
 
-                &:nth-child(1) {
-                    border-inline-start:0px solid white;
-                    padding-inline-start:0rem;
-
-                }
                 
                 p {
                     width:100%;
@@ -67,20 +62,13 @@
         .wrapper {
             .purple-grid {
                 grid-template-columns: 1fr 1fr;
-                gap:2rem;
+                gap:1rem;
                 row-gap:4rem !important;
                 width:100%;
 
                 .purple-grid-item {
-                    &:nth-child(1) {
-                        padding-inline-end:2rem !important;
-
-                    }
-                    &:nth-child(3) {
-                        grid-column:span 2;
-                        width:50%;
-                        place-self:center;
-                    }
+                   
+                   
 
                     p {
                         font-size:variables.$mobile-base;
@@ -100,18 +88,7 @@
             .purple-grid {
                 grid-template-columns: 1fr 1fr;
 
-                .purple-grid-item {
-                    padding-inline-start:1rem;
-                    &:nth-child(1) {
-                        padding-inline-end:1rem !important;
-
-                    }
-                    &:nth-child(3) {
-                        grid-column:span 2;
-                        width:50%;
-                        place-self:center;
-                    }
-                }
+               
             }
         }
        
@@ -125,11 +102,7 @@
 
                 .purple-grid-item {
                     padding-inline-start:1rem;
-                    &:nth-child(3) {
-                        grid-column:span 2;
-                        width:50%;
-                        place-self:center;
-                    }
+                   
                 }
             }
         }
@@ -143,18 +116,8 @@
 
                 .purple-grid-item {
                     padding-inline-start:1rem;
-                    &:nth-child(1) {
-                        padding-inline-start:1rem !important;
-
-                    }
-                    &:nth-child(3) {
-                        grid-column:auto;
-                        width:100%;
-                        place-self:center;
-                    }
-                    &:nth-child(1) {
-                        border-inline-start:0.5px solid white;
-                    }
+                    
+                   
                 }
             }
         }
