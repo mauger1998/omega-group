@@ -10,6 +10,8 @@
             display:grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap:2rem;
+            row-gap:8rem;
+
     
             .timeline-card {
                 display:flex;

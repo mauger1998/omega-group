@@ -12,8 +12,26 @@ h1 {
         font-weight:700;
     }
 
+    .line {
+        overflow:hidden;
+    }
+    .char {
+        font-size:variables.$h1;
+        font-family:twk;
+        font-weight:700;
+    }
+
     @media (max-width:700px) {
         font-size:variables.$mobile-h1;
+
+        .line {
+            overflow:hidden;
+        }
+        .char {
+            font-size:variables.$mobile-h1;
+            font-family:twk;
+            font-weight:700;
+        }
     }
 }
 
@@ -40,6 +58,10 @@ h3 {
     color:white;
     font-weight:700;
     font-family:twk;
+
+    @media(max-width:700px) {
+        font-size:variables.$mobile-h3;
+    }
 }
 
 p {

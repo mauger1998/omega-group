@@ -90,9 +90,25 @@ h1 span {
   color: #403579;
   font-weight: 700;
 }
+h1 .line {
+  overflow: hidden;
+}
+h1 .char {
+  font-size: 96px;
+  font-family: twk;
+  font-weight: 700;
+}
 @media (max-width: 700px) {
   h1 {
     font-size: 64px;
+  }
+  h1 .line {
+    overflow: hidden;
+  }
+  h1 .char {
+    font-size: 64px;
+    font-family: twk;
+    font-weight: 700;
   }
 }
 
@@ -119,6 +135,11 @@ h3 {
   color: white;
   font-weight: 700;
   font-family: twk;
+}
+@media (max-width: 700px) {
+  h3 {
+    font-size: 20px;
+  }
 }
 
 p {
@@ -401,8 +422,143 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   }
 }
 
+.testimonials-section {
+  background-color: #403579;
+}
+.testimonials-section .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8rem;
+}
+.testimonials-section .wrapper .testimonials-grid {
+  display: grid;
+  width: 100%;
+  gap: 0rem;
+}
+.testimonials-section .wrapper .testimonials-grid .testimonials-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-top: 0.5px solid white;
+  padding-block: 4rem;
+  z-index: 10;
+}
+@media (max-width: 1024px) {
+  .testimonials-section .wrapper .testimonials-grid .testimonials-item {
+    gap: 2rem;
+  }
+}
+.testimonials-section .wrapper .testimonials-grid .testimonials-item .follow-container {
+  position: absolute;
+  width: 400px;
+  display: none;
+  transition: 400ms;
+}
+.testimonials-section .wrapper .testimonials-grid .testimonials-item .follow-container.display {
+  display: block;
+}
+.testimonials-section .wrapper .testimonials-grid .testimonials-item .follow-container img {
+  position: absolute;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  z-index: -1;
+  transition: 400ms;
+}
+.testimonials-section .wrapper .testimonials-grid .testimonials-item .follow-container img.show {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transition: 400ms;
+}
+.testimonials-section .wrapper .testimonials-grid .testimonials-item:nth-child(1) {
+  border-top: 0;
+}
+.testimonials-section .wrapper .testimonials-grid .testimonials-item .testimonials-item-left {
+  color: white;
+}
+.testimonials-section .wrapper .testimonials-grid .testimonials-item .testimonials-item-right {
+  max-width: 70%;
+}
+@media (max-width: 1024px) {
+  .testimonials-section .wrapper .testimonials-grid .testimonials-item .testimonials-item-right {
+    max-width: 80%;
+  }
+}
+.testimonials-section .wrapper .testimonials-grid .testimonials-item .testimonials-item-right h3 {
+  font-weight: 300;
+  line-height: 1.6;
+}
+.testimonials-section .wrapper .testimonials-grid .testimonials-item .testimonials-item-right .testimonials-item-right-bottom {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: #FFFFFF;
+  -webkit-margin-before: 2rem;
+          margin-block-start: 2rem;
+}
+.testimonials-section .wrapper .testimonials-grid .testimonials-item .testimonials-item-right .testimonials-item-right-bottom button {
+  border: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+@media (max-width: 500px) {
+  .testimonials-section .wrapper .testimonials-grid .testimonials-item {
+    flex-direction: column;
+  }
+  .testimonials-section .wrapper .testimonials-grid .testimonials-item .testimonials-item-right {
+    max-width: 100%;
+  }
+}
+
+.timeline-section .wrapper h2 {
+  color: #030303;
+  -webkit-margin-after: 6rem;
+          margin-block-end: 6rem;
+}
+.timeline-section .wrapper .timeline {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  row-gap: 8rem;
+}
+.timeline-section .wrapper .timeline .timeline-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  border-top: 0.5px solid #030303;
+  -webkit-padding-before: 2rem;
+          padding-block-start: 2rem;
+}
+.timeline-section .wrapper .timeline .timeline-card .timeline-card-top {
+  min-height: 200px;
+}
+.timeline-section .wrapper .timeline .timeline-card .timeline-card-top p.large {
+  -webkit-margin-before: 0.5rem;
+          margin-block-start: 0.5rem;
+}
+.timeline-section .wrapper .timeline .timeline-card .timeline-card-top p.tagline {
+  color: #403579;
+  font-weight: 700;
+}
+.timeline-section .wrapper .timeline .timeline-card img {
+  height: 220px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 869px) {
+  .timeline-section .wrapper .timeline {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 869px) {
+  .timeline-section .wrapper .timeline .timeline-card-top {
+    min-height: 250px;
+  }
+}
+
 .hire-section .wrapper .hire-card {
-  background-image: linear-gradient(to top, rgba(3, 3, 3, 0.6156862745), rgba(3, 3, 3, 0.6156862745) 100%), url(../public/images/omega-is-hiring.png);
+  background-image: linear-gradient(to top, rgba(3, 3, 3, 0.6156862745), rgba(3, 3, 3, 0.6156862745) 100%), url(../../public/images/omega-is-hiring.png);
   background-size: cover;
   padding: 2rem;
   height: 90svh;
@@ -429,15 +585,30 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   align-self: flex-end;
 }
 
+.cta-section {
+  background-color: #403579;
+  color: white;
+}
 .cta-section .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-block: 12rem;
+  position: relative;
 }
 .cta-section .wrapper .cta-button {
   display: flex;
   justify-content: flex-start;
   gap: 6rem;
+}
+.cta-section .wrapper svg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  z-index: 0;
+  opacity: 0.05;
 }
 .cta-section .wrapper h2 {
   display: flex;
@@ -446,18 +617,23 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   max-width: 24ch;
   -webkit-margin-after: 2rem;
           margin-block-end: 2rem;
-  color: #030303;
 }
 .cta-section .wrapper h2 span:nth-child(2) {
   align-self: flex-end;
   -webkit-margin-start: 6rem;
           margin-inline-start: 6rem;
+  color: white !important;
+}
+.cta-section .wrapper h2 span {
+  color: white !important;
 }
 .cta-section .wrapper p {
   max-width: 50ch;
 }
 .cta-section .wrapper button {
   align-self: flex-end;
+  background-color: white;
+  color: #403579;
 }
 
 footer .wrapper {

@@ -1,4 +1,5 @@
-
+gsap.registerPlugin(ScrollTrigger)
+let mm = gsap.matchMedia();
 
 // // Loader
 // // Select Content to be Loaded
@@ -11,6 +12,8 @@ const imgLoad = imagesLoaded(content)
 
 // Images Animation
 
+const mainTop = document.querySelector(".main-top")
+
 
 
 var tl = gsap.timeline({repeat: 0, repeatDelay: 1});
@@ -22,6 +25,18 @@ window.addEventListener("load", (e) => {
     ease:"Power1.easeInOut"
 })
 })
+
+// Split type
+let textLines = document.querySelectorAll(".text1, .text2")
+let firstSplit;
+
+
+textLines.forEach(textLine => {
+  firstSplit = new SplitType(textLine, {
+      type: "chars"
+  })
+})
+
 
 
 // Loader Dissapear
@@ -53,11 +68,82 @@ setTimeout(() => {
     tlTwo.to(".main-bottom-left", {
       clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
 
+      onComplete: () => {
+        ScrollTrigger.refresh()
+        // mainTop.style.overflow = "visible"
+      }
     },2.5)
+
+
+
     
+
  })
 }, 1500);
 
-// Button
+gsap.to("h1 .char", {
+  scrollTrigger: {
+    trigger:"h1",
+    start:"top 125px",
+    end:"+=300",
+    scrub:true,
+  },
+  yPercent:-100,
+  opacity:0,
+  ease:"Power1.ease",
+  stagger:0.25,
+
+})
+
+window.addEventListener("resize", (e) => {
+  SplitType.revert('h1')
+})
+
+// h1 out
+
+
+
+// Mouse Move
+
+
+
+mm.add("(min-width: 1024px)", () =>  {
+  const follow = document.querySelector(".follow-container")
+  const followImages = document.querySelectorAll(".follow-container img")
+  const testimonialsItems = document.querySelectorAll(".testimonials-item")
+  const testimonialsGrid = document.querySelector(".testimonials-grid");
+
+  testimonialsGrid.addEventListener("mouseenter", (e) => {
+    follow.setAttribute("id", "follow")
+    follow.classList.add("display")
+  })
+  testimonialsGrid.addEventListener("mouseleave", (e) => {
+    follow.removeAttribute("id", "follow")
+    follow.classList.remove("display")
+  
+  })
+  
+  testimonialsItems.forEach((item, index) => {
+  
+      item.addEventListener("mouseenter", (e) => {
+        
+        followImages[index].classList.toggle("show")
+      })
+      item.addEventListener("mouseleave", (e) => {
+        followImages[index].classList.toggle("show")
+      })
+      
+  })
+  
+  $(document).ready(function(){
+    $(document).mousemove(function(e){
+      $('#follow').css('left',e.pageX+"px");
+      $('#follow').css('top',e.pageY+"px");
+    });
+  });
+})
+
+
+
 
 

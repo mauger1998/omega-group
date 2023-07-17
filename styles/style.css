@@ -90,9 +90,25 @@ h1 span {
   color: #403579;
   font-weight: 700;
 }
+h1 .line {
+  overflow: hidden;
+}
+h1 .char {
+  font-size: 96px;
+  font-family: twk;
+  font-weight: 700;
+}
 @media (max-width: 700px) {
   h1 {
     font-size: 64px;
+  }
+  h1 .line {
+    overflow: hidden;
+  }
+  h1 .char {
+    font-size: 64px;
+    font-family: twk;
+    font-weight: 700;
   }
 }
 
@@ -119,6 +135,11 @@ h3 {
   color: white;
   font-weight: 700;
   font-family: twk;
+}
+@media (max-width: 700px) {
+  h3 {
+    font-size: 20px;
+  }
 }
 
 p {
@@ -473,6 +494,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
+  row-gap: 8rem;
 }
 .timeline-section .wrapper .timeline .timeline-card {
   display: flex;
@@ -768,15 +790,30 @@ body {
   align-self: flex-end;
 }
 
+.cta-section {
+  background-color: #403579;
+  color: white;
+}
 .cta-section .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-block: 12rem;
+  position: relative;
 }
 .cta-section .wrapper .cta-button {
   display: flex;
   justify-content: flex-start;
   gap: 6rem;
+}
+.cta-section .wrapper svg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  z-index: 0;
+  opacity: 0.05;
 }
 .cta-section .wrapper h2 {
   display: flex;
@@ -785,18 +822,23 @@ body {
   max-width: 24ch;
   -webkit-margin-after: 2rem;
           margin-block-end: 2rem;
-  color: #030303;
 }
 .cta-section .wrapper h2 span:nth-child(2) {
   align-self: flex-end;
   -webkit-margin-start: 6rem;
           margin-inline-start: 6rem;
+  color: white !important;
+}
+.cta-section .wrapper h2 span {
+  color: white !important;
 }
 .cta-section .wrapper p {
   max-width: 50ch;
 }
 .cta-section .wrapper button {
   align-self: flex-end;
+  background-color: white;
+  color: #403579;
 }
 
 footer .wrapper {

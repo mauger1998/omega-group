@@ -1,15 +1,29 @@
 @use "./variables";
 
 .cta-section {
+    background-color:variables.$purple;
+    color:white;
     .wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-block:12rem;
+        position:relative;
 
         .cta-button {
             display:flex;
             justify-content: flex-start;
             gap:6rem;
+        }
+
+        svg {
+            position:absolute;
+            top:0;
+            left:50%;
+            transform:translateX(-50%);
+            height:100%;
+            z-index:0;
+            opacity:0.05;
         }
 
         h2 {
@@ -18,12 +32,17 @@
             align-items: flex-start;
             max-width:24ch;
             margin-block-end:2rem;
-            color:variables.$black;
             
 
             span:nth-child(2) {
                 align-self:flex-end;
                 margin-inline-start:6rem;
+                color:white !important;
+
+            }
+
+            span {
+                color:white !important;
             }
         }
 
@@ -33,6 +52,8 @@
 
         button {
             align-self:flex-end;
+            background-color:white;
+            color:variables.$purple;
         }
     }
 }
