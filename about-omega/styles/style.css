@@ -188,33 +188,17 @@ button.secondary-button {
   border: 1px solid white;
   color: white;
   background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  max-height: 3rem;
+  overflow: hidden;
 }
-button .circle {
-  width: 2rem;
-  height: 2rem;
-  background-color: white;
-  -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
-  position: absolute;
-  scale: 0;
-  transform-origin: center;
-  inset: 0;
-  transition: 300ms ease, border-radius 1200ms ease;
-}
-button:hover .circle {
-  -webkit-clip-path: circle(70.7% at 50% 50%);
-          clip-path: circle(70.7% at 50% 50%);
-  scale: 1;
-  transition: border-radius width height 1200ms ease, -webkit-clip-path scale 300ms ease;
-  transition: clip-path scale 300ms ease, border-radius width height 1200ms ease;
-  transition: clip-path scale 300ms ease, border-radius width height 1200ms ease, -webkit-clip-path scale 300ms ease;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  z-index: -1;
-}
-button:hover {
-  color: #030303;
+button span {
+  height: 1rem;
+  border: 1px solid white;
 }
 
 header {
@@ -266,6 +250,48 @@ header .header-wrapper .header-right {
   header .header-wrapper {
     padding-inline: 1rem;
   }
+}
+
+.menu .open {
+  cursor: pointer !important;
+}
+.menu .overlay {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  padding: 4rem;
+  -webkit-clip-path: circle(0%);
+          clip-path: circle(0%);
+  opacity: 0;
+}
+.menu .overlay .close {
+  cursor: pointer !important;
+  z-index: 10;
+}
+.menu .overlay button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+}
+.menu .overlay ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.menu .overlay ul li {
+  color: black;
+  font-weight: 700;
+  font-size: 24px;
 }
 
 main {

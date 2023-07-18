@@ -101,47 +101,87 @@ window.addEventListener("resize", (e) => {
 
 // h1 out
 
+// Slider
 
-
-// Mouse Move
-
-
-
-mm.add("(min-width: 1024px)", () =>  {
-  const follow = document.querySelector(".follow-container")
-  const followImages = document.querySelectorAll(".follow-container img")
-  const testimonialsItems = document.querySelectorAll(".testimonials-item")
-  const testimonialsGrid = document.querySelector(".testimonials-grid");
-
-  testimonialsGrid.addEventListener("mouseenter", (e) => {
-    follow.setAttribute("id", "follow")
-    follow.classList.add("display")
-  })
-  testimonialsGrid.addEventListener("mouseleave", (e) => {
-    follow.removeAttribute("id", "follow")
-    follow.classList.remove("display")
-  
-  })
-  
-  testimonialsItems.forEach((item, index) => {
-  
-      item.addEventListener("mouseenter", (e) => {
-        
-        followImages[index].classList.toggle("show")
-      })
-      item.addEventListener("mouseleave", (e) => {
-        followImages[index].classList.toggle("show")
-      })
-      
-  })
-  
-  $(document).ready(function(){
-    $(document).mousemove(function(e){
-      $('#follow').css('left',e.pageX+"px");
-      $('#follow').css('top',e.pageY+"px");
-    });
-  });
+gsap.to(".excellence-slider-left", {
+  scrollTrigger: {
+    trigger:".excellence-slider-left img",
+    start:"center center",
+    pin:".excellence-slider-left",
+    end:"+=4000"
+  }
 })
+
+gsap.to(".excellence-slider-left .slide-one", {
+  scrollTrigger: {
+    trigger:".slider-one",
+    start:"top center",
+    scrub:true,
+    end:"+=100",
+  },
+  opacity:1,
+})
+gsap.to(".excellence-slider-left .slide-two", {
+  scrollTrigger: {
+    trigger:".slider-two",
+    start:"top center",
+    scrub:true,
+    end:"+=100",
+  },
+  opacity:1,
+})
+gsap.to(".excellence-slider-left .slide-three", {
+  scrollTrigger: {
+    trigger:".slider-three",
+    start:"top center",
+    scrub:true,
+    end:"+=100",
+  },
+  opacity:1,
+})
+gsap.to(".excellence-slider-left .slide-four", {
+  scrollTrigger: {
+    trigger:".slider-four",
+    start:"top center",
+    scrub:true,
+    end:"+=100",
+  },
+  opacity:1,
+})
+gsap.to(".excellence-slider-left .slide-five", {
+  scrollTrigger: {
+    trigger:".slider-five",
+    start:"top center",
+    scrub:true,
+    end:"+=100",
+  },
+  opacity:1,
+})
+gsap.to(".excellence-slider-left .slide-six", {
+  scrollTrigger: {
+    trigger:".slider-six",
+    start:"top center",
+    scrub:true,
+    end:"+=100",
+  },
+  opacity:1,
+})
+gsap.to(".excellence-slider-left .slide-seven", {
+  scrollTrigger: {
+    trigger:".slider-seven",
+    start:"top center",
+    scrub:true,
+    end:"+=100",
+  },
+  opacity:1,
+})
+
+ScrollSmoother.create({
+  smooth: 2,               // how long (in seconds) it takes to "catch up" to the native scroll position
+  effects: true,           // looks for data-speed and data-lag attributes on elements
+  smoothTouch: 0.1,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+});
+
 
 // Dropdown
 
@@ -149,6 +189,7 @@ const menuOpen = document.querySelector(".open")
 const menuClose = document.querySelector(".close")
 const overlay = document.querySelector(".overlay")
 const contactButton = document.querySelector("header .secondary-button")
+
 
 var timeline = gsap.timeline({defaults:{duration: 1, ease: Back.easeOut.config(2)}})
 
@@ -165,8 +206,3 @@ menuClose.addEventListener("click", () => {
   timeline.reverse(.5)
   contactButton.style.pointerEvents = "all"
 })
-
-
-
-
-

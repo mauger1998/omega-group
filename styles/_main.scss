@@ -16,6 +16,16 @@ main {
         padding-block:5rem;
         padding-block-start:14rem;
         height:100%;
+        position:relative;
+        & > svg {
+            position:absolute;
+            width:67.5%;
+            height:100%;
+            opacity:0.05;
+            right:-10%;
+            top:0;
+            
+        }
 
         .main-top {
             display:flex;
@@ -60,6 +70,18 @@ main {
                 p {
                     color:white;
                     max-width:40ch;
+                }
+
+                svg {
+                    width:56px;
+                    transition:width 500ms ease;
+
+
+                    &:hover {
+                        width:64px;
+                        transition:width 500ms ease;
+                        cursor:pointer;
+                    }
                 }
             }
 

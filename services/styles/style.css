@@ -295,7 +295,7 @@ header .header-wrapper .header-right {
 }
 
 main {
-  background-image: url(../public/images/home-hero.png);
+  background-image: url(../home-hero.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 95svh;
@@ -308,31 +308,22 @@ main .wrapper {
   justify-content: space-between;
   flex-direction: column;
   padding-block: 5rem;
-  -webkit-padding-before: 14rem;
-          padding-block-start: 14rem;
+  -webkit-padding-before: 12rem;
+          padding-block-start: 12rem;
   height: 100%;
-  position: relative;
-}
-main .wrapper > svg {
-  position: absolute;
-  width: 67.5%;
-  height: 100%;
-  opacity: 0.05;
-  right: -10%;
-  top: 0;
 }
 main .wrapper .main-top {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-main .wrapper .main-top > svg {
-  width: clamp(300px, 40vw, 400px);
   overflow: hidden;
 }
-main .wrapper .main-top > svg path {
-  transform: translateY(10rem);
+main .wrapper .main-top > h1 {
+  transform: translateY(14rem);
+  max-width: 12ch;
+  text-align: center;
+  line-height: 1;
 }
 main .wrapper .main-top p {
   font-size: 24px;
@@ -360,15 +351,6 @@ main .wrapper .main-bottom .main-bottom-left {
 main .wrapper .main-bottom .main-bottom-left p {
   color: white;
   max-width: 40ch;
-}
-main .wrapper .main-bottom .main-bottom-left svg {
-  width: 56px;
-  transition: width 500ms ease;
-}
-main .wrapper .main-bottom .main-bottom-left svg:hover {
-  width: 64px;
-  transition: width 500ms ease;
-  cursor: pointer;
 }
 main .wrapper .main-bottom .main-bottom-right {
   display: grid;
@@ -576,284 +558,8 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   }
 }
 
-.purple-services-section {
-  background-color: #403579;
-  color: white;
-}
-.purple-services-section .cursor {
-  background-color: white;
-  aspect-raio: 1;
-  border-radius: 50%;
-  width: 6rem;
-  height: 6rem;
-  position: absolute;
-  transition: 100ms ease;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  display: none;
-  border: 2px solid white;
-  box-shadow: 0px 0px 0px 2px #403579 inset;
-  margin: 2rem;
-}
-.purple-services-section .cursor.display {
-  display: grid;
-  place-content: center;
-}
-.purple-services-section .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 12rem;
-  position: relative;
-}
-.purple-services-section .wrapper h2 {
-  max-width: 20ch;
-}
-.purple-services-section .wrapper svg {
-  width: 2.25rem;
-  height: -moz-max-content;
-  height: max-content;
-}
-.purple-services-section .wrapper .purple-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 90%;
-  gap: 4rem;
-}
-.purple-services-section .wrapper .purple-grid .purple-grid-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  -webkit-border-start: 0.5px solid white;
-          border-inline-start: 0.5px solid white;
-  -webkit-padding-start: 2rem;
-          padding-inline-start: 2rem;
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-  transition: -webkit-clip-path 300ms ease;
-  transition: clip-path 300ms ease;
-  transition: clip-path 300ms ease, -webkit-clip-path 300ms ease;
-}
-.purple-services-section .wrapper .purple-grid .purple-grid-item svg {
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-  transition: -webkit-clip-path 300ms ease;
-  transition: clip-path 300ms ease;
-  transition: clip-path 300ms ease, -webkit-clip-path 300ms ease;
-}
-.purple-services-section .wrapper .purple-grid .purple-grid-item p {
-  width: 100%;
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-  transition: -webkit-clip-path 300ms ease;
-  transition: clip-path 300ms ease;
-  transition: clip-path 300ms ease, -webkit-clip-path 300ms ease;
-}
-.purple-services-section .wrapper .purple-grid .purple-grid-item p:nth-of-type(1) {
-  margin-block: 1rem 0.5rem;
-  font-weight: 700;
-  font-size: 24px;
-}
-.purple-services-section .wrapper .purple-grid .purple-grid-item p#title {
-  line-height: 1.2 !important;
-}
-.purple-services-section .wrapper > svg {
-  position: absolute;
-  width: 67.5%;
-  height: 100%;
-  opacity: 0.05;
-  right: -10%;
-  top: 0;
-}
-@media (max-width: 700px) {
-  .purple-services-section .wrapper .purple-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    row-gap: 4rem !important;
-    width: 100%;
-  }
-  .purple-services-section .wrapper .purple-grid .purple-grid-item p {
-    font-size: 14px;
-  }
-  .purple-services-section .wrapper .purple-grid .purple-grid-item p#title {
-    font-size: 20px;
-  }
-}
-@media (max-width: 500px) {
-  .purple-services-section .wrapper .purple-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 350px) {
-  .purple-services-section .wrapper .purple-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  .purple-services-section .wrapper .purple-grid .purple-grid-item {
-    -webkit-padding-start: 1rem;
-            padding-inline-start: 1rem;
-  }
-}
-@media (max-width: 320px) {
-  .purple-services-section .wrapper .purple-grid {
-    grid-template-columns: 1fr;
-  }
-  .purple-services-section .wrapper .purple-grid .purple-grid-item {
-    -webkit-padding-start: 1rem;
-            padding-inline-start: 1rem;
-  }
-}
-
-body {
-  overflow-x: hidden;
-}
-
-.scroll-wrapper {
-  overflow-x: hidden;
-  padding-inline: 4rem;
-}
-.scroll-wrapper .gallery {
-  display: flex;
-  gap: 6em;
-}
-.scroll-wrapper .gallery img {
-  aspect-ratio: 1/1;
-  width: 20%;
-}
-
-.gallery-section {
-  display: block;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-}
-.gallery-section h2 {
-  position: fixed;
-  color: #030303 !important;
-  z-index: 10;
-  top: 10%;
-}
-.gallery-section .scroll-container {
-  height: 100vh;
-  width: 400vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 6em;
-}
-.gallery-section .scroll-container .slide {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.faq-section .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8rem;
-}
-.faq-section .wrapper .faq-top h2 {
-  color: #030303;
-  max-width: 16ch;
-}
-.faq-section .wrapper .accordion {
-  margin-top: 20px;
-  width: 50%;
-  align-self: flex-end;
-}
-.faq-section .wrapper .accordion .accordion-item {
-  border-bottom: 1px solid #030303;
-  padding-top: 1rem;
-  transition: 300ms ease;
-  padding-inline: 1rem;
-}
-.faq-section .wrapper .accordion button {
-  position: relative;
-  display: block;
-  text-align: left;
-  width: 100%;
-  padding: 1em 0;
-  color: #030303;
-  font-size: 1.1rem;
-  font-weight: 400;
-  border: none;
-  outline: none;
-  background: none;
-}
-.faq-section .wrapper .accordion button:hover,
-.faq-section .wrapper .accordion button:focus {
-  cursor: pointer;
-  color: #030303;
-}
-.faq-section .wrapper .accordion button .accordion-title {
-  padding: 1em 1.5em 1em 0;
-}
-.faq-section .wrapper .accordion button .icon {
-  display: inline-block;
-  position: absolute;
-  top: 18px;
-  right: 0;
-  width: 22px;
-  height: 22px;
-  border: 1px solid;
-  border-radius: 22px;
-}
-.faq-section .wrapper .accordion button .icon::before {
-  display: block;
-  position: absolute;
-  content: "";
-  top: 9px;
-  left: 5px;
-  width: 10px;
-  height: 2px;
-  background-color: #030303;
-}
-.faq-section .wrapper .accordion button .icon::after {
-  display: block;
-  position: absolute;
-  content: "";
-  top: 5px;
-  left: 9px;
-  width: 2px;
-  height: 10px;
-  background: #030303;
-}
-.faq-section .wrapper .accordion .accordion-item button[aria-expanded=true] {
-  color: #030303;
-}
-.faq-section .wrapper .accordion .accordion-item button[aria-expanded=true] .icon::after {
-  width: 0;
-}
-.faq-section .wrapper .accordion .accordion-item button[aria-expanded=true] + .content {
-  opacity: 1;
-  max-height: 9em;
-  transition: all 200ms linear;
-}
-.faq-section .wrapper .content {
-  opacity: 0;
-  max-height: 0;
-  transition: opacity 200ms linear, max-height 200ms linear;
-}
-.faq-section .wrapper .content p {
-  font-size: 1rem;
-  font-weight: 300;
-  margin: 1rem 0;
-}
-
-.accordion-title {
-  width: 100%;
-  max-width: 100%;
-  border: 2px solid transparent;
-}
-
 .hire-section .wrapper .hire-card {
-  background-image: linear-gradient(to top, rgba(3, 3, 3, 0.6156862745), rgba(3, 3, 3, 0.6156862745) 100%), url(../public/images/omega-is-hiring.png);
+  background-image: linear-gradient(to top, rgba(3, 3, 3, 0.6156862745), rgba(3, 3, 3, 0.6156862745) 100%), url(../../public/images/omega-is-hiring.png);
   background-size: cover;
   padding: 2rem;
   height: 90svh;

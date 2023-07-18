@@ -22,34 +22,19 @@ button {
         border:1px solid white;
         color:white;
         background-color:transparent;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap:1rem;
+        max-height:3rem;
+        overflow:hidden;
     }
 
-    .circle {
-        width:2rem;
-        height:2rem;
-        background-color:white;
-        clip-path: circle(50% at 50% 50%);
-        position:absolute;
-        scale:0;
-        transform-origin:center;
-        inset:0;
-        // border-radius:inherit;
-        transition:300ms ease, border-radius 1200ms ease;;
-        
-    }
-    &:hover .circle {
-        clip-path: circle(70.7% at 50% 50%);        
-        scale:1;
-        transition:clip-path scale 300ms ease,  border-radius width height  1200ms ease;
-        width:100%;
-        height:100%;
-        border-radius:inherit;
-
-        z-index:-1;
-    }
-    &:hover {
-        color: variables.$black;
-        // transition:500ms ease;
+    span {
+        // overflow:hidden;
+        height:1rem;
+        border:1px solid white;
     }
     
 

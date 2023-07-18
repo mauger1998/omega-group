@@ -34,8 +34,14 @@
                     position:absolute;
                     top:20%;
 
+                  
                     &.slide-two,
-                    &.slide-three {
+                    &.slide-three,
+                    &.slide-four,
+                    &.slide-five,
+                    &.slide-six,
+                    &.slide-seven, 
+                    &.slide-eight {
                         opacity:0;
                     }
                 }

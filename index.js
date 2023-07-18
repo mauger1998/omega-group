@@ -1,19 +1,24 @@
+// Register Plugins
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+
+// Gsap media Queries
+let mm = gsap.matchMedia();
+
 
 
 // // Loader
+
 // // Select Content to be Loaded
+
 const content = document.querySelector("main")
 // // Select Loader
+
 const loader = document.querySelector(".loader")
 
 // // Get all images
 const imgLoad = imagesLoaded(content)
 
 // Images Animation
-
-
-
 var tl = gsap.timeline({repeat: 0, repeatDelay: 1});
 
 window.addEventListener("load", (e) => {
@@ -24,12 +29,11 @@ window.addEventListener("load", (e) => {
 })
 })
 
+let tlTwo = gsap.timeline({repeat: 0, repeatDelay: 1});
 
-// Loader Dissapear
-
+// Loader Dissapear Content Come In
 setTimeout(() => {
   const imgLoad = imagesLoaded(content, { background: true })
- let tlTwo = gsap.timeline({repeat: 0, repeatDelay: 1});
   imgLoad.on("done", instance => {
     tlTwo.to(".loader", {
       clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
@@ -54,32 +58,31 @@ setTimeout(() => {
     tlTwo.to(".main-bottom-left", {
       clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
 
+      onComplete: () => {
+        ScrollTrigger.refresh()
+        // mainTop.style.overflow = "visible"
+      }
+
     },2.5)
+   
     
  })
+ 
 }, 1500);
 
-// Button
 
 
 
-// Accordian
-const items = document.querySelectorAll(".accordion button");
 
-items.forEach((item) => item.addEventListener("click", toggleAccordion));
-
-function toggleAccordion() {
-  const itemToggle = this.getAttribute("aria-expanded");
-
-  for (let item of items) {
-    item.setAttribute("aria-expanded", false);
-  }
-
-  if (itemToggle === "false") {
-    this.setAttribute("aria-expanded", true);
-  }
-}
-
+gsap.to(".main-top svg path", {
+  scrollTrigger: {
+    trigger:".main-top svg path",
+    start:"top 150px",
+    scrub:0.1,
+  },
+  yPercent:-100,
+  
+})
 
 
 
@@ -119,6 +122,62 @@ gsap.to(".excellence-slider-left .slide-three", {
 })
 
 
+// Purple Services
+
+var tlPurple = gsap.timeline({repeat: 0, repeatDelay: 1});
+
+
+tlPurple.to(".purple-grid-item", {
+  scrollTrigger: {
+    trigger:".purple-services-section",
+    start:"top 150px",
+    scrub:0.1,
+    end:"+=250",
+  },
+  clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  stagger:0.2,
+})
+tlPurple.to(".purple-grid-item svg", {
+  scrollTrigger: {
+    trigger:".purple-services-section",
+    start:"top 150px",
+    scrub:0.1,
+    end:"+=275",
+  },
+  clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  stagger:0.2,
+})
+tlPurple.to(".purple-grid-item p", {
+  scrollTrigger: {
+    trigger:".purple-services-section",
+    start:"top 150px",
+    scrub:0.1,
+    end:"+=300",
+  },
+  clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  stagger:0.2,
+})
+
+const serviceWrapper = document.querySelector(".purple-services-section")
+const follow = document.querySelector(".cursor")
+
+serviceWrapper.addEventListener("mouseenter", (e) => {
+  follow.setAttribute("id", "cursor")
+  follow.classList.add("display")
+})
+serviceWrapper.addEventListener("mouseleave", (e) => {
+  follow.removeAttribute("id", "cursor")
+  follow.classList.remove("display")
+
+})
+  
+  $(document).ready(function(){
+    $(document).mousemove(function(e){
+      $('#cursor').css('left',e.pageX+"px");
+      $('#cursor').css('top',e.pageY+"px");
+    });
+  });
+
 // Velocity
 
 let slides = gsap.utils.toArray(".scroll-container .slide")
@@ -134,7 +193,6 @@ let scrollTween = gsap.to(slides, {
 
     onUpdate: self => {
       let skewAmount = self.getVelocity() / 200
-      console.log(skewAmount)
       let scaleAmount = 1 + Math.abs(self.getVelocity() / 5000)
 
        slides.forEach(slide => {
@@ -160,8 +218,48 @@ let scrollTween = gsap.to(slides, {
   }
 })
 
-// ScrollSmoother.create({
-//   smooth: 1,               // how long (in seconds) it takes to "catch up" to the native scroll position
-//   effects: true,           // looks for data-speed and data-lag attributes on elements
-//   smoothTouch: 0.1,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-// });
+
+// Accordian
+const items = document.querySelectorAll(".accordion button");
+
+items.forEach((item) => item.addEventListener("click", toggleAccordion));
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute("aria-expanded");
+
+  for (let item of items) {
+    item.setAttribute("aria-expanded", false);
+  }
+
+  if (itemToggle === "false") {
+    this.setAttribute("aria-expanded", true);
+  }
+}
+
+
+
+
+
+// Dropdown
+
+const menuOpen = document.querySelector(".open")
+const menuClose = document.querySelector(".close")
+const overlay = document.querySelector(".overlay")
+const contactButton = document.querySelector("header .secondary-button")
+
+
+var timeline = gsap.timeline({defaults:{duration: 1, ease: Back.easeOut.config(2)}})
+
+timeline.paused(true)
+
+timeline.to(".overlay", {clipPath: "circle(100%)", "opacity":1,})
+
+menuOpen.addEventListener("click", () => {
+  timeline.play()
+  contactButton.style.pointerEvents = "none"
+})
+
+menuClose.addEventListener("click", () => {
+  timeline.reverse(.5)
+  contactButton.style.pointerEvents = "all"
+})
