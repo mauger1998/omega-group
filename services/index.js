@@ -176,11 +176,6 @@ gsap.to(".excellence-slider-left .slide-seven", {
   opacity:1,
 })
 
-ScrollSmoother.create({
-  smooth: 2,               // how long (in seconds) it takes to "catch up" to the native scroll position
-  effects: true,           // looks for data-speed and data-lag attributes on elements
-  smoothTouch: 0.1,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-});
 
 
 // Dropdown
@@ -200,9 +195,14 @@ timeline.to(".overlay", {clipPath: "circle(100%)", "opacity":1,})
 menuOpen.addEventListener("click", () => {
   timeline.play()
   contactButton.style.pointerEvents = "none"
+  contactButton.style.display = "none"
+
 })
 
 menuClose.addEventListener("click", () => {
   timeline.reverse(.5)
   contactButton.style.pointerEvents = "all"
+  contactButton.style.display = "block"
+
 })
+

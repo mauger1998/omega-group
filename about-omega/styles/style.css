@@ -269,6 +269,10 @@ header .header-wrapper .header-right {
   -webkit-clip-path: circle(0%);
           clip-path: circle(0%);
   opacity: 0;
+  background-color: #403579;
+}
+.menu .overlay button {
+  color: white;
 }
 .menu .overlay .close {
   cursor: pointer !important;
@@ -289,7 +293,7 @@ header .header-wrapper .header-right {
   gap: 2rem;
 }
 .menu .overlay ul li {
-  color: black;
+  color: white;
   font-weight: 700;
   font-size: 24px;
 }
@@ -446,6 +450,61 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   main .wrapper .main-bottom .main-bottom-right .stat-item .number-item .number {
     font-size: 40px;
   }
+}
+
+.meet-the-team-section .wrapper .meet-the-team-titles {
+  text-align: left;
+}
+.meet-the-team-section .wrapper .meet-the-team-titles h2 {
+  color: #030303;
+}
+.meet-the-team-section .wrapper .meet-the-team-grid {
+  display: grid;
+  gap: 4rem;
+}
+.meet-the-team-section .wrapper .meet-the-team-grid .meet-the-team-grid-item {
+  background-color: #F5F5F5;
+  color: #030303;
+  padding: 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-padding-after: 0;
+          padding-block-end: 0;
+  -webkit-margin-before: 8rem;
+          margin-block-start: 8rem;
+}
+.meet-the-team-section .wrapper .meet-the-team-grid .meet-the-team-grid-item .meet-the-team-grid-item-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  -webkit-padding-before: 6rem;
+          padding-block-start: 6rem;
+}
+.meet-the-team-section .wrapper .meet-the-team-grid .meet-the-team-grid-item .meet-the-team-grid-item-left p:not(.tag-button) {
+  max-width: 40ch;
+  margin-block: 1rem 2rem;
+}
+.meet-the-team-section .wrapper .meet-the-team-grid .meet-the-team-grid-item .meet-the-team-grid-item-left h2 {
+  color: #030303;
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+}
+.meet-the-team-section .wrapper .meet-the-team-grid .meet-the-team-grid-item .meet-the-team-grid-item-left .tag-button {
+  background-color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  color: #030303;
+  font-weight: 700;
+  border-radius: 4rem;
+  max-width: none;
+}
+.meet-the-team-section .wrapper .meet-the-team-grid .meet-the-team-grid-item .meet-the-team-grid-item-right {
+  width: 100%;
+}
+.meet-the-team-section .wrapper .meet-the-team-grid .meet-the-team-grid-item .meet-the-team-grid-item-right img {
+  width: 100%;
+  margin-top: -4rem;
 }
 
 .testimonials-section {
@@ -686,6 +745,10 @@ footer .wrapper .footer-top .column ul {
   flex-direction: column;
   gap: 1rem;
   align-items: flex-start;
+}
+footer .wrapper .footer-top .column ul li,
+footer .wrapper .footer-top .column ul a {
+  color: #030303;
 }
 footer .wrapper .footer-bottom {
   display: flex;

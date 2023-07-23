@@ -26,6 +26,11 @@ footer {
                     flex-direction: column;
                     gap:1rem;
                     align-items: flex-start;
+
+                    li,
+                    a {
+                        color:variables.$black;
+                    }
                 }
             } 
         }

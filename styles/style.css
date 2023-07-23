@@ -269,6 +269,10 @@ header .header-wrapper .header-right {
   -webkit-clip-path: circle(0%);
           clip-path: circle(0%);
   opacity: 0;
+  background-color: #403579;
+}
+.menu .overlay button {
+  color: white;
 }
 .menu .overlay .close {
   cursor: pointer !important;
@@ -289,7 +293,7 @@ header .header-wrapper .header-right {
   gap: 2rem;
 }
 .menu .overlay ul li {
-  color: black;
+  color: white;
   font-weight: 700;
   font-size: 24px;
 }
@@ -494,6 +498,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 .excellence-section .wrapper .excellence-slider .excellence-slider-left img {
   position: absolute;
   top: 20%;
+  border-radius: 16rem;
 }
 .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-two, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-three, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-four, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-five, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-six, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-seven, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-eight {
   opacity: 0;
@@ -955,6 +960,10 @@ footer .wrapper .footer-top .column ul {
   flex-direction: column;
   gap: 1rem;
   align-items: flex-start;
+}
+footer .wrapper .footer-top .column ul li,
+footer .wrapper .footer-top .column ul a {
+  color: #030303;
 }
 footer .wrapper .footer-bottom {
   display: flex;

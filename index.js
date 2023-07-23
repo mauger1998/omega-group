@@ -1,5 +1,5 @@
 // Register Plugins
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+gsap.registerPlugin(ScrollTrigger)
 
 // Gsap media Queries
 let mm = gsap.matchMedia();
@@ -257,9 +257,12 @@ timeline.to(".overlay", {clipPath: "circle(100%)", "opacity":1,})
 menuOpen.addEventListener("click", () => {
   timeline.play()
   contactButton.style.pointerEvents = "none"
+  contactButton.style.display = "none"
 })
 
 menuClose.addEventListener("click", () => {
   timeline.reverse(.5)
   contactButton.style.pointerEvents = "all"
+  contactButton.style.display = "block"
+
 })

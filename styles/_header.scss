@@ -61,6 +61,7 @@ header {
 // Dropdown
 
 .menu {
+    
     .open {
         cursor:pointer !important;
     }
@@ -78,6 +79,11 @@ header {
         padding:4rem;
         clip-path:circle(0%);
         opacity:0;
+        background-color:variables.$purple;
+
+        button {
+            color:white;
+        }
 
         .close {
             cursor:pointer !important;
@@ -101,7 +107,7 @@ header {
             align-items: flex-start;
             gap:2rem;
             li {
-                color:black;
+                color:white;
                 font-weight:700;
                 font-size:variables.$h3;
             }
