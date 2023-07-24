@@ -1,0 +1,23 @@
+@use "./variables";
+
+.quote-section {
+    .wrapper {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            color:variables.$black;
+            max-width:20ch;
+            text-align:center;
+            text-wrap:balance;
+
+
+        span {
+            color:variables.$purple;
+            font-family:gt;
+        }
+        }
+
+    }
+}

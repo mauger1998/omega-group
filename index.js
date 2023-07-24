@@ -266,3 +266,4 @@ menuClose.addEventListener("click", () => {
   contactButton.style.display = "block"
 
 })
+

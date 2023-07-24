@@ -1,0 +1,60 @@
+@use "./variables";
+
+.contact-section {
+    background-color:variables.$purple;
+    .wrapper {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .contact-titles {
+            h2 {
+                color:variables.$white;
+                text-align:center;
+            }
+        }
+
+        .contact-form {
+            width:40%;
+            margin-block-start:6rem;
+            form {
+                width:100%;
+                display:flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap:1rem;
+
+                
+
+                fieldset {
+                    border:none;
+                    display:flex;
+                    flex-direction: row;                    
+                    align-items: center;
+                    gap:1rem;
+                    width:100%;
+
+
+                    & > fieldset {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap:0.5rem;
+                        
+                        label {
+                            color:variables.$white;
+                        }
+
+                        input,
+                        textarea {
+                            padding:0.5rem;
+                            width:100%;
+                        }
+
+                       
+                    }
+                }
+            }
+        }
+    }
+}
