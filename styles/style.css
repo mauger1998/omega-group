@@ -965,8 +965,7 @@ body {
 }
 
 .cta-section {
-  background-color: #403579;
-  color: white;
+  background-color: #FFFFFF;
 }
 .cta-section .wrapper {
   display: flex;
@@ -999,10 +998,10 @@ body {
 .cta-section .wrapper h2 span:nth-child(2) {
   align-self: flex-end;
   margin-inline-start: 6rem;
-  color: white !important;
+  color: #030303 !important;
 }
 .cta-section .wrapper h2 span {
-  color: white !important;
+  color: #030303 !important;
 }
 .cta-section .wrapper p {
   max-width: 50ch;

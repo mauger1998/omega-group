@@ -1,8 +1,7 @@
 @use "./variables";
 
 .cta-section {
-    background-color:variables.$purple;
-    color:white;
+    background-color:variables.$white;
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -37,17 +36,18 @@
             span:nth-child(2) {
                 align-self:flex-end;
                 margin-inline-start:6rem;
-                color:white !important;
+                color:variables.$black !important;
 
             }
 
             span {
-                color:white !important;
+                color:variables.$black !important;
             }
         }
 
         p {
             max-width:50ch;
+
         }
 
         button {

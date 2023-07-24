@@ -576,6 +576,42 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   }
 }
 
+.values-section .wrapper {
+  padding-block-start: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16rem;
+}
+.values-section .wrapper .values-titles h2 {
+  text-align: center;
+  color: #030303;
+  max-width: 22ch;
+}
+.values-section .wrapper .values-list {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+}
+.values-section .wrapper .values-list .values-list-left,
+.values-section .wrapper .values-list .values-list-right {
+  display: grid;
+  gap: 2rem;
+}
+.values-section .wrapper .values-list .values-list-left .values-list-item,
+.values-section .wrapper .values-list .values-list-right .values-list-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.values-section .wrapper .values-list .values-list-left .values-list-item p,
+.values-section .wrapper .values-list .values-list-right .values-list-item p {
+  line-height: 1.2;
+  font-weight: 500;
+  font-size: 24px;
+}
+
 .timeline-section .wrapper h2 {
   color: #030303;
   margin-block-end: 6rem;
@@ -649,8 +685,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 }
 
 .cta-section {
-  background-color: #403579;
-  color: white;
+  background-color: #FFFFFF;
 }
 .cta-section .wrapper {
   display: flex;
@@ -683,10 +718,10 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 .cta-section .wrapper h2 span:nth-child(2) {
   align-self: flex-end;
   margin-inline-start: 6rem;
-  color: white !important;
+  color: #030303 !important;
 }
 .cta-section .wrapper h2 span {
-  color: white !important;
+  color: #030303 !important;
 }
 .cta-section .wrapper p {
   max-width: 50ch;

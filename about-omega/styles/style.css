@@ -461,6 +461,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 }
 .meet-the-team-section .wrapper .meet-the-team-titles h2 {
   color: #030303;
+  max-width: 16ch;
 }
 .meet-the-team-section .wrapper .meet-the-team-grid {
   display: grid;
@@ -666,8 +667,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 }
 
 .cta-section {
-  background-color: #403579;
-  color: white;
+  background-color: #FFFFFF;
 }
 .cta-section .wrapper {
   display: flex;
@@ -700,10 +700,10 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 .cta-section .wrapper h2 span:nth-child(2) {
   align-self: flex-end;
   margin-inline-start: 6rem;
-  color: white !important;
+  color: #030303 !important;
 }
 .cta-section .wrapper h2 span {
-  color: white !important;
+  color: #030303 !important;
 }
 .cta-section .wrapper p {
   max-width: 50ch;
