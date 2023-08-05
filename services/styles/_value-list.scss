@@ -2,7 +2,7 @@
 
 .values-section {
     .wrapper {
-        padding-block-start:8rem;
+        padding-block-start:16rem;
         display:flex;
         flex-direction: column;
         align-items: center;
@@ -19,7 +19,21 @@
         .values-list {
             display:flex;
             align-items: center;
-            gap:8rem;
+            justify-content: space-between;
+            max-width:80%;
+            gap:2rem;
+
+            @media(max-width:700px) {
+                max-width:100%;
+                width:100%;
+
+            }
+            @media(max-width:500px) {
+                flex-direction: column;
+                gap:4rem;
+                
+
+            }
 
             .values-list-left,
             .values-list-right {
@@ -30,6 +44,13 @@
                     display:flex;
                     align-items: center;
                     gap:1rem;
+
+                    svg {
+                        width:50px !important;
+                        height:50px !important;
+                        flex-shrink:0;
+
+                    }
 
                     p {
                         line-height:1.2;

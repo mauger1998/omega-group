@@ -1,0 +1,20 @@
+@use "./variables";
+
+.question-section {
+    background-color:variables.$purple;
+    .wrapper {
+        padding-block:12rem;
+        display:grid;
+        place-items:center;
+        gap:4rem;
+        
+        h2 {
+            max-width:20ch;
+            text-align: center;
+        }
+        button {
+            color:variables.$purple;
+            background-color:variables.$white;
+        }
+    }
+}

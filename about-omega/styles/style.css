@@ -118,7 +118,7 @@ h1 .char {
 }
 
 h2 {
-  font-size: 60px;
+  font-size: 48px;
   line-height: 1.2;
   color: white;
   font-weight: 700;
@@ -130,7 +130,7 @@ h2 span {
 }
 @media (max-width: 700px) {
   h2 {
-    font-size: 40px;
+    font-size: 32px;
   }
 }
 
@@ -165,7 +165,7 @@ p.large {
   }
 }
 p.number {
-  font-size: 60px;
+  font-size: 48px;
   line-height: 1.2;
   font-family: twk;
 }
@@ -452,7 +452,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
     font-size: 14px;
   }
   main .wrapper .main-bottom .main-bottom-right .stat-item .number-item .number {
-    font-size: 40px;
+    font-size: 32px;
   }
 }
 
@@ -504,8 +504,14 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   width: 100%;
 }
 .meet-the-team-section .wrapper .meet-the-team-grid .meet-the-team-grid-item .meet-the-team-grid-item-right img {
-  width: 100%;
-  margin-top: -4rem;
+  height: 100%;
+  width: auto;
+}
+@media (max-width: 1129px) {
+  .meet-the-team-section .wrapper .meet-the-team-grid .meet-the-team-grid-item .meet-the-team-grid-item-right img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .testimonials-section {
@@ -594,126 +600,6 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   }
 }
 
-.timeline-section .wrapper h2 {
-  color: #030303;
-  margin-block-end: 6rem;
-}
-.timeline-section .wrapper .timeline {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
-  row-gap: 8rem;
-}
-.timeline-section .wrapper .timeline .timeline-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2rem;
-  border-top: 0.5px solid #030303;
-  padding-block-start: 2rem;
-}
-.timeline-section .wrapper .timeline .timeline-card .timeline-card-top {
-  min-height: 200px;
-}
-.timeline-section .wrapper .timeline .timeline-card .timeline-card-top p.large {
-  margin-block-start: 0.5rem;
-}
-.timeline-section .wrapper .timeline .timeline-card .timeline-card-top p.tagline {
-  color: #403579;
-  font-weight: 700;
-}
-.timeline-section .wrapper .timeline .timeline-card img {
-  height: 220px !important;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (max-width: 869px) {
-  .timeline-section .wrapper .timeline {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 869px) {
-  .timeline-section .wrapper .timeline .timeline-card-top {
-    min-height: 250px;
-  }
-}
-
-.hire-section .wrapper .hire-card {
-  background-image: linear-gradient(to top, rgba(3, 3, 3, 0.6156862745), rgba(3, 3, 3, 0.6156862745) 100%), url(../../public/images/omega-is-hiring.png);
-  background-size: cover;
-  padding: 2rem;
-  height: 90svh;
-  max-height: 800px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-.hire-section .wrapper .hire-card .hire-left .tag {
-  color: #403579;
-  letter-spacing: 0.5rem;
-}
-.hire-section .wrapper .hire-card .hire-left h2 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 16ch;
-  color: #FFFFFF !important;
-}
-.hire-section .wrapper .hire-card .hire-left h2 .white {
-  color: #FFFFFF !important;
-}
-.hire-section .wrapper .hire-card .hire-left h2 .white:nth-child(2) {
-  align-self: flex-end;
-}
-
-.cta-section {
-  background-color: #FFFFFF;
-}
-.cta-section .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-block: 12rem;
-  position: relative;
-}
-.cta-section .wrapper .cta-button {
-  display: flex;
-  justify-content: flex-start;
-  gap: 6rem;
-}
-.cta-section .wrapper svg {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 100%;
-  z-index: 0;
-  opacity: 0.05;
-}
-.cta-section .wrapper h2 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 24ch;
-  margin-block-end: 2rem;
-}
-.cta-section .wrapper h2 span:nth-child(2) {
-  align-self: flex-end;
-  margin-inline-start: 6rem;
-  color: #030303 !important;
-}
-.cta-section .wrapper h2 span {
-  color: #030303 !important;
-}
-.cta-section .wrapper p {
-  max-width: 50ch;
-}
-.cta-section .wrapper button {
-  align-self: flex-end;
-  background-color: white;
-  color: #403579;
-}
-
 footer .wrapper {
   display: flex;
   align-items: flex-start;
@@ -754,7 +640,7 @@ footer .wrapper .footer-bottom p {
   font-size: 14px;
 }
 footer .wrapper .h0 {
-  font-size: 256px;
+  font-size: 192px;
   font-weight: 900;
   line-height: 1;
   align-self: start;

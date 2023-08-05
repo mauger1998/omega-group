@@ -1,58 +1,62 @@
 @use "./variables";
 
 .contact-section {
-    background-color:variables.$purple;
-    .wrapper {
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    background-image: linear-gradient(#0303038e, #0303038e), url(../public/images/contact.png);
+    background-size:cover;
+    background-position:center;
 
-        .contact-titles {
-            h2 {
-                color:variables.$white;
-                text-align:center;
-            }
+    .wrapper {
+        display:grid;
+        place-items: center;
+
+        h2 {
+            text-align:center;
+            max-width:10ch;
+            margin-block-end:4rem;
         }
 
-        .contact-form {
+        form {
             width:40%;
-            margin-block-start:6rem;
-            form {
-                width:100%;
+            display:flex;
+            flex-direction: column;
+            gap:2rem;
+            align-items: flex-start;
+
+            button {
+                color:variables.$purple;
+                background-color:variables.$white;
+                border:2px solid white;
+            }
+            fieldset {
+                border:none;
                 display:flex;
-                flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
                 gap:1rem;
+                width:100%;
 
-                
-
+                &.textarea,
                 fieldset {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap:0.5rem;
+                }
+
+                input,
+                textarea {
+                    padding:0.75rem;
+                    color:white;
+                    background-color:transparent;
                     border:none;
-                    display:flex;
-                    flex-direction: row;                    
-                    align-items: center;
-                    gap:1rem;
+                    border-bottom:1px solid white;
                     width:100%;
+                    border-radius:0.25rem;
 
+                }
 
-                    & > fieldset {
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap:0.5rem;
-                        
-                        label {
-                            color:variables.$white;
-                        }
+              
 
-                        input,
-                        textarea {
-                            padding:0.5rem;
-                            width:100%;
-                        }
-
-                       
-                    }
+                label {
+                    color:white;
                 }
             }
         }

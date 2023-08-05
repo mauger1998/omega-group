@@ -122,101 +122,7 @@ gsap.to(".excellence-slider-left .slide-three", {
 })
 
 
-// Purple Services
 
-var tlPurple = gsap.timeline({repeat: 0, repeatDelay: 1});
-
-
-tlPurple.to(".purple-grid-item", {
-  scrollTrigger: {
-    trigger:".purple-services-section",
-    start:"top 150px",
-    scrub:0.1,
-    end:"+=250",
-  },
-  clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-  stagger:0.2,
-})
-tlPurple.to(".purple-grid-item svg", {
-  scrollTrigger: {
-    trigger:".purple-services-section",
-    start:"top 150px",
-    scrub:0.1,
-    end:"+=275",
-  },
-  clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-  stagger:0.2,
-})
-tlPurple.to(".purple-grid-item p", {
-  scrollTrigger: {
-    trigger:".purple-services-section",
-    start:"top 150px",
-    scrub:0.1,
-    end:"+=300",
-  },
-  clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-  stagger:0.2,
-})
-
-const serviceWrapper = document.querySelector(".purple-services-section")
-const follow = document.querySelector(".cursor")
-
-serviceWrapper.addEventListener("mouseenter", (e) => {
-  follow.setAttribute("id", "cursor")
-  follow.classList.add("display")
-})
-serviceWrapper.addEventListener("mouseleave", (e) => {
-  follow.removeAttribute("id", "cursor")
-  follow.classList.remove("display")
-
-})
-  
-  $(document).ready(function(){
-    $(document).mousemove(function(e){
-      $('#cursor').css('left',e.pageX+"px");
-      $('#cursor').css('top',e.pageY+"px");
-    });
-  });
-
-// Velocity
-
-let slides = gsap.utils.toArray(".scroll-container .slide")
-
-let scrollTween = gsap.to(slides, {
-  xPercent: -100 * (slides.length - 1),
-  ease:"none",
-  scrollTrigger: {
-    trigger: ".gallery-section",
-    pin:true,
-    scrub: 0.01,
-    end: "+=3000",
-
-    onUpdate: self => {
-      let skewAmount = self.getVelocity() / 200
-      let scaleAmount = 1 + Math.abs(self.getVelocity() / 5000)
-
-       slides.forEach(slide => {
-        gsap.to(slide.querySelector(".skew-group"), {
-          skewX: skewAmount,
-          scaleY: scaleAmount,
-          overwrite: true,
-          ease:"power1.out"
-        })
-       })
-    },
-
-    onScrubComplete: () => {
-      slides.forEach(slide => {
-        gsap.to(slide.querySelector(".skew-group"), {
-          skewX: 0,
-          scaleY:1,
-          duration: 0.5,
-          ease:"power1.out"
-        })
-       })
-    }
-  }
-})
 
 
 // Accordian
@@ -266,4 +172,24 @@ menuClose.addEventListener("click", () => {
   contactButton.style.display = "block"
 
 })
+
+
+
+// Swiper 
+
+const swiper = new Swiper('.swiper', {
+  speed: 400,
+  spaceBetween: 50,
+});
+
+const swiperNext = document.querySelector(".swiper-button-next")
+const swiperPrev = document.querySelector(".swiper-button-prev")
+
+swiperNext.addEventListener("click", (e) => {
+  swiper.slideNext();
+})
+swiperPrev.addEventListener("click", (e) => {
+  swiper.slidePrev();
+})
+
 
