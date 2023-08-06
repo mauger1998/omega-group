@@ -26,7 +26,6 @@
                 .gallery-outer-grid:last-child {
                     grid-template-columns: 1fr 1fr;
                     grid-column: span 2;
-
                     @media (max-width:350px) {
                         grid-template-columns: 1fr;
                         grid-column:auto;
