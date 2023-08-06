@@ -307,7 +307,7 @@ main {
   background-image: url(../home-hero.png);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 95svh;
+  height: 95vh;
   max-height: 950px;
   background-attachment: fixed;
 }
@@ -407,7 +407,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 }
 @media (max-width: 1024px) {
   main {
-    height: 100svh;
+    height: 100vh;
   }
   main .wrapper .main-bottom {
     flex-direction: column;

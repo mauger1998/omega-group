@@ -427,7 +427,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 }
 @media (max-width: 1024px) {
   main {
-    height: 100svh;
+    height: 100vh;
   }
   main .wrapper .main-bottom {
     flex-direction: column;
