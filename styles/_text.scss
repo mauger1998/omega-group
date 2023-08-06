@@ -7,19 +7,7 @@
         place-items:center;
         padding-block:12rem;
 
-        p.h0 {
-            font-size:clamp(100px, 15vw, variables.$h0);
-            color:variables.$purple;
-            margin-block:6rem;
-            font-weight:600;
-
-            @media (max-width:616px) {
-                font-size:clamp(64px, 15vw, 100px);
-            }
-            @media (max-width:406px) {
-                font-size:clamp(40px, 15vw, 64px);
-            }
-        }
+      
         h2 {
             color:variables.$black;
             max-width:80%;
@@ -34,5 +22,19 @@
                 font-family:twk;
             }
         }
+    }
+}
+
+p.h0 {
+    font-size:clamp(100px, 15vw, variables.$h0) !important;
+    color:variables.$purple;
+    margin-block:6rem;
+    font-weight:600;
+
+    @media (max-width:616px) {
+        font-size:clamp(64px, 15vw, 100px) !important;
+    }
+    @media (max-width:406px) {
+        font-size:clamp(40px, 15vw, 64px) !important;
     }
 }

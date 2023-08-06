@@ -180,7 +180,10 @@ menuClose.addEventListener("click", () => {
 const swiper = new Swiper('.swiper', {
   speed: 400,
   spaceBetween: 50,
+ 
 });
+
+
 
 const swiperNext = document.querySelector(".swiper-button-next")
 const swiperPrev = document.querySelector(".swiper-button-prev")

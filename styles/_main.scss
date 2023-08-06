@@ -8,6 +8,7 @@ main {
     height:95svh;
     max-height:950px;
     background-attachment: fixed;
+    overflow:hidden;
 
     .wrapper {
         display:flex;

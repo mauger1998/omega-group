@@ -557,7 +557,6 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   .excellence-section .wrapper .excellence-slider .excellence-slider-right .excellence-slider-item h3 {
     color: #030303;
     margin-block: 1rem 0.5rem;
-    font-size: 48px;
   }
   .excellence-section .wrapper .excellence-slider .excellence-slider-right .excellence-slider-item p {
     max-width: 100%;
@@ -644,6 +643,7 @@ footer .wrapper {
 footer .wrapper .footer-top {
   width: 75%;
   display: grid;
+  gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 footer .wrapper .footer-top .column {
@@ -661,6 +661,24 @@ footer .wrapper .footer-top .column ul li,
 footer .wrapper .footer-top .column ul a {
   color: #030303;
 }
+@media (max-width: 500px) {
+  footer .wrapper .footer-top {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+  }
+  footer .wrapper .footer-top .column:nth-child(2), footer .wrapper .footer-top .column:nth-child(4), footer .wrapper .footer-top .column:nth-child(3) {
+    grid-row: 2;
+  }
+}
+@media (max-width: 409px) {
+  footer .wrapper .footer-top {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  footer .wrapper .footer-top .column:nth-child(2), footer .wrapper .footer-top .column:nth-child(4), footer .wrapper .footer-top .column:nth-child(3) {
+    grid-row: auto;
+  }
+}
 footer .wrapper .footer-bottom {
   display: flex;
   align-items: center;
@@ -668,6 +686,14 @@ footer .wrapper .footer-bottom {
   width: 100%;
   border-block-start: 0.5px solid black;
   padding-block-start: 2rem;
+  padding-block-end: 0;
+}
+@media (max-width: 327px) {
+  footer .wrapper .footer-bottom {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 2rem;
+  }
 }
 footer .wrapper .footer-bottom p {
   font-size: 14px;
@@ -678,9 +704,20 @@ footer .wrapper .h0 {
   line-height: 1;
   align-self: start;
   margin-top: -2rem;
+  margin-bottom: 0;
 }
 footer .wrapper .h0 span {
   margin-inline-start: -1rem;
+}
+footer .wrapper .h0 span svg {
+  width: 35px;
+  height: -moz-max-content;
+  height: max-content;
+}
+@media (max-width: 700px) {
+  footer .wrapper .h0 span svg {
+    width: 15px;
+  }
 }
 
 .loader {
