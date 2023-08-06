@@ -33,7 +33,7 @@ let tlTwo = gsap.timeline({repeat: 0, repeatDelay: 1});
 
 // Loader Dissapear Content Come In
 setTimeout(() => {
-  const imgLoad = imagesLoaded(content, { background: true })
+  const imgLoad = imagesLoaded(content, {  })
   imgLoad.on("done", instance => {
     tlTwo.to(".loader", {
       clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
