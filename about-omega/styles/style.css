@@ -673,9 +673,9 @@ footer .wrapper .h0 {
   align-self: start;
   margin-top: -2rem;
   margin-bottom: 0;
-}
-footer .wrapper .h0 span {
-  margin-inline-start: -1rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
 }
 footer .wrapper .h0 span svg {
   width: 35px;

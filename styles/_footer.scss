@@ -87,9 +87,11 @@ footer {
             align-self:start;
             margin-top:-2rem;
             margin-bottom:0;
+            display:flex;
+            align-items: flex-end;
+            gap:1rem;
             
             span {
-                margin-inline-start:-1rem;
 
                 svg {
                     width:35px;
