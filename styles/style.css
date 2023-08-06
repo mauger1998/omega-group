@@ -304,7 +304,7 @@ header .header-wrapper .header-right {
 }
 
 main {
-  background-image: linear-gradient(rgba(3, 3, 3, 0.5019607843), rgba(3, 3, 3, 0.5019607843) 100%), url(../public/images/new-clear-hero.png);
+  background-image: linear-gradient(rgba(3, 3, 3, 0.5019607843), rgba(3, 3, 3, 0.5019607843) 100%), url(../public/images/hero-image-retry.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
