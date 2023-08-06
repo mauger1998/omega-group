@@ -308,7 +308,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 95svh;
+  height: 95vh;
   max-height: 950px;
   background-attachment: fixed;
   overflow: hidden;
