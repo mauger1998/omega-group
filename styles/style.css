@@ -923,7 +923,7 @@ p.h0 {
 
 .faq-section {
   background-image: linear-gradient(rgba(3, 3, 3, 0.5568627451), rgba(3, 3, 3, 0.5568627451)), url(../public/images/1920-faq.png);
-  background-size: cover;
+  background-size: fill;
   background-repeat: no-repeat;
   background-position: center;
 }
