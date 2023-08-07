@@ -309,6 +309,7 @@ main {
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
+  background-attachment: scroll;
 }
 main .wrapper {
   display: flex;
