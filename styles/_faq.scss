@@ -3,13 +3,13 @@
 p.h0 {
   font-size:variables.$h0;
   color:variables.$purple;
-  margin-block:4rem;
   font-weight:600;
 }
 
 .faq-section {
   background-image: linear-gradient(#0303038e, #0303038e), url(../public/images/1920-faq.png);
   background-size:cover;
+  background-repeat:no-repeat;
   background-position:center;
     .wrapper {
         display:flex;

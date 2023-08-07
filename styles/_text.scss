@@ -26,13 +26,20 @@
 p.h0 {
     font-size:clamp(100px, 15vw, variables.$h0) !important;
     color:variables.$purple;
-    margin-block:6rem;
     font-weight:600;
 
     @media (max-width:616px) {
         font-size:clamp(64px, 15vw, 100px) !important;
+        align-self:start;
     }
     @media (max-width:406px) {
         font-size:clamp(40px, 15vw, 64px) !important;
+    }
+
+    &.artistry {
+        margin-block-end:-8rem;
+    }
+    &.precision {
+        margin-block:6rem;
     }
 }

@@ -304,11 +304,10 @@ header .header-wrapper .header-right {
 }
 
 main {
-  background-image: linear-gradient(rgba(3, 3, 3, 0.5019607843), rgba(3, 3, 3, 0.5019607843) 100%), url(../public/images/hero-image-retry.png);
+  background-image: linear-gradient(rgba(3, 3, 3, 0.5019607843), rgba(3, 3, 3, 0.5019607843) 100%), url(../omega-kitchen-hero-image.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   overflow: hidden;
 }
 main .wrapper {
@@ -548,18 +547,24 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 p.h0 {
   font-size: clamp(100px, 15vw, 192px) !important;
   color: #403579;
-  margin-block: 6rem;
   font-weight: 600;
 }
 @media (max-width: 616px) {
   p.h0 {
     font-size: clamp(64px, 15vw, 100px) !important;
+    align-self: start;
   }
 }
 @media (max-width: 406px) {
   p.h0 {
     font-size: clamp(40px, 15vw, 64px) !important;
   }
+}
+p.h0.artistry {
+  margin-block-end: -8rem;
+}
+p.h0.precision {
+  margin-block: 6rem;
 }
 
 .excellence-section {
@@ -676,7 +681,7 @@ p.h0 {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media (max-width: 340px) {
+@media (max-width: 423px) {
   .excellence-section .wrapper .excellence-slider .excellence-slider-right {
     grid-template-columns: 1fr;
   }
@@ -729,7 +734,7 @@ html {
   width: 60%;
   color: white;
   padding-block: 4rem;
-  min-height: 500px;
+  min-height: 550px;
   background-color: #403579;
   position: relative;
   z-index: 10;
@@ -765,23 +770,27 @@ html {
   color: white;
 }
 .service-cards .wrapper .swiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
   color: white;
   background-color: #463B7D;
   padding: 2rem;
   padding-block-end: 4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  min-height: 500px;
   border: 1px solid white;
+}
+@media (max-width: 856px) {
+  .service-cards .wrapper .swiper .swiper-slide {
+    padding: 1rem;
+  }
 }
 .service-cards .wrapper .swiper .swiper-slide .number {
   font-weight: 500;
 }
 .service-cards .wrapper .swiper .swiper-slide p {
-  margin-block-start: 2rem;
-  max-width: 36ch;
+  max-width: 45ch;
 }
 
 .team-section {
@@ -908,13 +917,13 @@ html {
 p.h0 {
   font-size: 192px;
   color: #403579;
-  margin-block: 4rem;
   font-weight: 600;
 }
 
 .faq-section {
   background-image: linear-gradient(rgba(3, 3, 3, 0.5568627451), rgba(3, 3, 3, 0.5568627451)), url(../public/images/1920-faq.png);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 .faq-section .wrapper {
