@@ -340,9 +340,6 @@ main .wrapper .main-top > svg {
   width: clamp(300px, 40vw, 400px);
   overflow: hidden;
 }
-main .wrapper .main-top > svg path {
-  transform: translateY(10rem);
-}
 main .wrapper .main-top p {
   font-size: 24px;
   color: white;
@@ -821,9 +818,12 @@ html {
 .team-section .wrapper .team-grid .team-grid-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: center;
   gap: 2rem;
+}
+.team-section .wrapper .team-grid .team-grid-item:nth-child(1) {
+  align-items: flex-start;
 }
 .team-section .wrapper .team-grid .team-grid-item p {
   color: white;
@@ -832,6 +832,25 @@ html {
 .team-section .wrapper .team-grid .team-grid-item button {
   color: #403579;
   background-color: white;
+}
+.team-section .wrapper .team-grid .team-grid-item .image-relative {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team-section .wrapper .team-grid .team-grid-item .image-relative img {
+  width: 100%;
+}
+.team-section .wrapper .team-grid .team-grid-item .image-relative img:not(:nth-child(1)) {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  transition: opacity 300ms;
+}
+.team-section .wrapper .team-grid .team-grid-item .image-relative img:not(:nth-child(1)):hover {
+  opacity: 0;
+  transition: opacity 300ms;
 }
 .team-section .wrapper .team-grid .team-grid-item:not(:nth-child(1)) {
   border: 1px solid white;

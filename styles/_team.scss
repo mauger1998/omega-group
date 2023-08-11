@@ -23,9 +23,13 @@
             .team-grid-item {
                 display:flex;
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: stretch;
                 justify-content: center;
                 gap:2rem;
+
+                &:nth-child(1) {
+                    align-items: flex-start;
+                }
 
                 p {
                     color:white;
@@ -35,6 +39,31 @@
                 button {
                     color:variables.$purple;
                     background-color:white;
+                }
+
+                .image-relative {
+                    position:relative;
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+
+
+                    img {
+                        width:100%;
+                    }
+
+                    img:not(:nth-child(1)) {
+                        position:absolute;
+                        inset:0;
+                        width:100%;
+                        transition:opacity 300ms;
+
+
+                        &:hover {
+                            opacity:0;
+                            transition:opacity 300ms;
+                        }
+                    }
                 }
             }
 

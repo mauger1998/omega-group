@@ -50,15 +50,15 @@ let tlTwo = gsap.timeline({repeat: 0, repeatDelay: 1});
 
 
 
-gsap.to(".main-top svg path", {
-  scrollTrigger: {
-    trigger:".main-top svg path",
-    start:"top 150px",
-    scrub:0.1,
-  },
-  yPercent:-100,
+// gsap.to(".main-top svg path", {
+//   scrollTrigger: {
+//     trigger:".main-top svg path",
+//     start:"top 150px",
+//     scrub:0.1,
+//   },
+//   yPercent:-100,
   
-})
+// })
 
 
 
