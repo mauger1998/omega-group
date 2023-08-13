@@ -47,7 +47,7 @@ html {
             width:60%;
             color:white;
             padding-block:4rem;
-            min-height:550px;
+            min-height:650px;
             background-color:variables.$purple;
             position:relative;
             z-index:10;
@@ -64,6 +64,7 @@ html {
             h2 {
                 max-width:12ch;
                 margin-block-end:4rem;
+                text-transform:uppercase;
             }
 
             p {
@@ -106,6 +107,10 @@ html {
 
             .number {
                 font-weight:500;
+            }
+
+            h2 {
+                max-width:10ch;
             }
 
             p {

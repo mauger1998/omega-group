@@ -1,0 +1,26 @@
+@use "./variables";
+
+.update-section {
+    background-color:variables.$purple;
+    background-image:url(../public/images/water-full.png);
+    background-blend-mode: luminosity;
+    background-size:cover;
+
+    .wrapper {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .tagline {
+            font-weight:700;
+            color:white;
+        }
+
+        h2 {
+            max-width:20ch;
+            text-align: center;
+            margin-block-end:2rem;
+        }
+    }
+}

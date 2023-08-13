@@ -2,16 +2,22 @@
 
 .question-section {
     background-color:variables.$purple;
+    background-image:url(../public/images/water-full.png);
+    background-blend-mode: luminosity;
+    background-size:cover;
+
     .wrapper {
-        padding-block:12rem;
+        padding-block:6rem;
         display:grid;
         place-items:center;
-        gap:4rem;
+        gap:2rem;
         position:relative;
         overflow-y:hidden;
         h2 {
             max-width:20ch;
             text-align: center;
+            text-transform:uppercase;
+            font-size:variables.$big-type;
         }
         button {
             color:variables.$purple;

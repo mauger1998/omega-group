@@ -4,12 +4,12 @@
 .text-section {
     .wrapper {
         display:grid;
-        place-items:center;
         padding-block:12rem;
         h2 {
             color:variables.$black;
-            max-width:80%;
+            max-width:100%;
             line-height:1.4;
+            font-size:60px;
 
             @media (max-width:616px) {
                 max-width:100%;
@@ -27,6 +27,8 @@ p.h0 {
     font-size:clamp(100px, 15vw, variables.$h0) !important;
     color:variables.$purple;
     font-weight:600;
+    opacity:0.1;
+    margin-block-end:-3rem !important;
 
     @media (max-width:616px) {
         font-size:clamp(64px, 15vw, 100px) !important;
@@ -37,9 +39,11 @@ p.h0 {
     }
 
     &.artistry {
-        margin-block-end:-8rem;
+        // margin-block-end:-8rem;
     }
     &.precision {
-        margin-block:6rem;
+        margin-block:0rem;
+        line-height:clamp(100px, 15vw, variables.$h0) !important;
+
     }
 }

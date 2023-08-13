@@ -2,6 +2,8 @@
 
 .gallery-section {
     .wrapper {
+        padding-block-start:0;
+        margin-block-start:-3rem;
         .gallery-title {
             margin-block-end:12rem;
             @media (max-width:1024px) {

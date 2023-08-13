@@ -3,6 +3,10 @@
 
 .team-section {
     background-color:variables.$light-purple;
+    background-image:url(../public/images/water-full.png);
+    background-blend-mode: luminosity;
+    background-size:cover;
+
     .wrapper {
         display:grid;
         place-items:center;
@@ -29,6 +33,10 @@
 
                 &:nth-child(1) {
                     align-items: flex-start;
+
+                    h2 {
+                        text-transform:uppercase;
+                    }
                 }
 
                 p {

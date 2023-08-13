@@ -304,12 +304,14 @@ header .header-wrapper .header-right {
 }
 
 main {
-  background-image: linear-gradient(rgba(3, 3, 3, 0.5019607843), rgba(3, 3, 3, 0.5019607843) 100%), url(../omega-kitchen-hero-image.png);
+  background-image: linear-gradient(rgba(3, 3, 3, 0.2431372549), rgba(3, 3, 3, 0.2431372549) 100%), url(../public/images/blurred-hero.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
   background-attachment: scroll;
+  height: 96vh;
+  max-height: 1000px;
 }
 main .wrapper {
   display: flex;
@@ -472,65 +474,37 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   }
 }
 
-.intro-section {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8705882353), rgba(255, 255, 255, 0.8705882353)), url(../public/images/working-construction-tool-builder-s-accessories-house-house-renovation-concept.jpg);
+.update-section {
+  background-color: #403579;
+  background-image: url(../public/images/water-full.png);
+  background-blend-mode: luminosity;
   background-size: cover;
 }
-.intro-section .wrapper {
+.update-section .wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
 }
-.intro-section .wrapper h2 {
-  color: #030303;
-  max-width: 22ch;
+.update-section .wrapper .tagline {
+  font-weight: 700;
+  color: white;
 }
-.intro-section .wrapper .intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 2rem;
-}
-@media (max-width: 1024px) {
-  .intro-section .wrapper .intro-grid {
-    grid-template-columns: 1fr;
-  }
-}
-.intro-section .wrapper .intro-grid .intro-grid-item {
-  display: grid;
-  gap: 2rem;
-}
-.intro-section .wrapper .intro-grid .intro-grid-item p {
-  max-width: 34ch;
-}
-@media (max-width: 1024px) {
-  .intro-section .wrapper .intro-grid .intro-grid-item p {
-    max-width: 64ch;
-    margin-block-end: 4rem;
-  }
-}
-.intro-section .wrapper .intro-grid .intro-grid-item:nth-child(1) img {
-  width: 80%;
-}
-@media (max-width: 1024px) {
-  .intro-section .wrapper .intro-grid .intro-grid-item:nth-child(1) img {
-    display: none;
-  }
-}
-.intro-section .wrapper .intro-grid .intro-grid-item:nth-child(2) {
-  place-content: end;
-  width: 100%;
+.update-section .wrapper h2 {
+  max-width: 20ch;
+  text-align: center;
+  margin-block-end: 2rem;
 }
 
 .text-section .wrapper {
   display: grid;
-  place-items: center;
   padding-block: 12rem;
 }
 .text-section .wrapper h2 {
   color: #030303;
-  max-width: 80%;
+  max-width: 100%;
   line-height: 1.4;
+  font-size: 60px;
 }
 @media (max-width: 616px) {
   .text-section .wrapper h2 {
@@ -546,6 +520,8 @@ p.h0 {
   font-size: clamp(100px, 15vw, 192px) !important;
   color: #403579;
   font-weight: 600;
+  opacity: 0.1;
+  margin-block-end: -3rem !important;
 }
 @media (max-width: 616px) {
   p.h0 {
@@ -558,131 +534,24 @@ p.h0 {
     font-size: clamp(40px, 15vw, 64px) !important;
   }
 }
-p.h0.artistry {
-  margin-block-end: -8rem;
-}
 p.h0.precision {
-  margin-block: 6rem;
+  margin-block: 0rem;
+  line-height: clamp(100px, 15vw, 192px) !important;
 }
 
-.excellence-section {
-  border-radius: 2rem !important;
-  margin-top: -1.5rem;
-  background-color: white;
-}
-.excellence-section .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24rem;
-}
-.excellence-section .wrapper .excellence-slider {
+.omega-cards .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  -moz-column-gap: 4rem;
-       column-gap: 4rem;
-  place-content: center;
-  align-items: start;
-  min-height: 100vh;
-  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-block-start: 4rem;
+  gap: 4rem;
 }
-.excellence-section .wrapper .excellence-slider .excellence-slider-left {
-  width: 100%;
-  position: relative;
-}
-.excellence-section .wrapper .excellence-slider .excellence-slider-left img {
-  position: absolute;
-  top: 20%;
-  border-radius: 16rem;
-}
-.excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-two, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-three, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-four, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-five, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-six, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-seven, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-eight {
-  opacity: 0;
-}
-.excellence-section .wrapper .excellence-slider .excellence-slider-right {
+.omega-cards .wrapper .excellence-slider-item {
   display: grid;
-  width: 100%;
-  gap: 20rem;
-  align-self: center;
+  gap: 1rem;
 }
-.excellence-section .wrapper .excellence-slider .excellence-slider-right .excellence-slider-item {
-  display: grid;
-  padding: 2rem;
-}
-.excellence-section .wrapper .excellence-slider .excellence-slider-right .excellence-slider-item h3 {
-  color: #030303;
-  margin-block: 1rem 0.5rem;
-}
-.excellence-section .wrapper .excellence-slider .excellence-slider-right .excellence-slider-item p {
-  max-width: 40ch;
-}
-.excellence-section .wrapper .excellence-titles {
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-.excellence-section .wrapper .excellence-titles .excellence-titles-left h2 {
-  color: #030303;
-  max-width: 12ch;
-}
-.excellence-section .wrapper .excellence-titles .excellence-titles-right p {
-  max-width: 50ch;
-}
-@media (max-width: 1024px) {
-  .excellence-section .excellence-titles {
-    flex-direction: column;
-    align-items: flex-start !important;
-    gap: 2rem;
-  }
-}
-@media (max-width: 825px) {
-  .excellence-section .wrapper {
-    gap: 12rem;
-  }
-  .excellence-section .wrapper .excellence-slider {
-    display: grid;
-    grid-template-columns: 1fr;
-    -moz-column-gap: 4rem;
-         column-gap: 4rem;
-    place-content: center;
-    align-items: start;
-    min-height: auto;
-    width: 100%;
-  }
-  .excellence-section .wrapper .excellence-slider .excellence-slider-left {
-    display: none;
-  }
-  .excellence-section .wrapper .excellence-slider .excellence-slider-right {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100% !important;
-    gap: 2rem !important;
-    align-self: center;
-  }
-  .excellence-section .wrapper .excellence-slider .excellence-slider-right .excellence-slider-item {
-    display: grid;
-    padding: 1rem;
-  }
-  .excellence-section .wrapper .excellence-slider .excellence-slider-right .excellence-slider-item h3 {
-    color: #030303;
-    margin-block: 1rem 0.5rem;
-  }
-  .excellence-section .wrapper .excellence-slider .excellence-slider-right .excellence-slider-item p {
-    max-width: 100%;
-  }
-  .excellence-section .wrapper .excellence-slider .excellence-slider-right .empty {
-    display: none;
-  }
-}
-@media (max-width: 600px) {
-  .excellence-section .wrapper .excellence-slider .excellence-slider-right {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 423px) {
-  .excellence-section .wrapper .excellence-slider .excellence-slider-right {
-    grid-template-columns: 1fr;
-  }
+.omega-cards .wrapper .excellence-slider-item h2 {
+  color: black;
+  max-width: 10ch;
 }
 
 html {
@@ -732,7 +601,7 @@ html {
   width: 60%;
   color: white;
   padding-block: 4rem;
-  min-height: 550px;
+  min-height: 650px;
   background-color: #403579;
   position: relative;
   z-index: 10;
@@ -748,6 +617,7 @@ html {
 .service-cards .wrapper .service-cards-left h2 {
   max-width: 12ch;
   margin-block-end: 4rem;
+  text-transform: uppercase;
 }
 .service-cards .wrapper .service-cards-left p {
   max-width: 34ch;
@@ -787,12 +657,18 @@ html {
 .service-cards .wrapper .swiper .swiper-slide .number {
   font-weight: 500;
 }
+.service-cards .wrapper .swiper .swiper-slide h2 {
+  max-width: 10ch;
+}
 .service-cards .wrapper .swiper .swiper-slide p {
   max-width: 45ch;
 }
 
 .team-section {
   background-color: #463B7D;
+  background-image: url(../public/images/water-full.png);
+  background-blend-mode: luminosity;
+  background-size: cover;
 }
 .team-section .wrapper {
   display: grid;
@@ -824,6 +700,9 @@ html {
 }
 .team-section .wrapper .team-grid .team-grid-item:nth-child(1) {
   align-items: flex-start;
+}
+.team-section .wrapper .team-grid .team-grid-item:nth-child(1) h2 {
+  text-transform: uppercase;
 }
 .team-section .wrapper .team-grid .team-grid-item p {
   color: white;
@@ -862,6 +741,10 @@ html {
   }
 }
 
+.gallery-section .wrapper {
+  padding-block-start: 0;
+  margin-block-start: -3rem;
+}
 .gallery-section .wrapper .gallery-title {
   margin-block-end: 12rem;
 }
@@ -950,11 +833,13 @@ p.h0 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4rem;
+  gap: 2rem;
+  padding-block-end: 4rem;
 }
 .faq-section .wrapper .faq-top h2 {
   color: #FFFFFF;
   max-width: 16ch;
+  text-transform: uppercase;
 }
 .faq-section .wrapper .accordion {
   margin-top: 20px;
@@ -974,9 +859,6 @@ p.h0 {
           backdrop-filter: blur(8px);
   transition: 300ms ease;
   padding-inline: 1rem;
-  padding-top: 0.5rem;
-  min-height: 75px;
-  max-height: 250px;
 }
 .faq-section .wrapper .accordion button {
   position: relative;
@@ -1052,7 +934,7 @@ p.h0 {
   font-size: 1rem;
   font-weight: 300;
   color: white;
-  margin-block: 2rem;
+  margin-block: 0.75rem;
 }
 
 .accordion-title {
@@ -1063,18 +945,23 @@ p.h0 {
 
 .question-section {
   background-color: #403579;
+  background-image: url(../public/images/water-full.png);
+  background-blend-mode: luminosity;
+  background-size: cover;
 }
 .question-section .wrapper {
-  padding-block: 12rem;
+  padding-block: 6rem;
   display: grid;
   place-items: center;
-  gap: 4rem;
+  gap: 2rem;
   position: relative;
   overflow-y: hidden;
 }
 .question-section .wrapper h2 {
   max-width: 20ch;
   text-align: center;
+  text-transform: uppercase;
+  font-size: 96px;
 }
 .question-section .wrapper button {
   color: #403579;
@@ -1144,7 +1031,7 @@ footer .wrapper {
   justify-content: center;
   flex-direction: column;
   gap: 4rem;
-  padding-block-end: 0rem;
+  padding-block-end: 2rem;
 }
 footer .wrapper .footer-top {
   width: 75%;
