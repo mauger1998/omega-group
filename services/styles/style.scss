@@ -3,27 +3,7 @@
 @use "../../styles/fonts";
 @use "../../styles/button";
 @use "../../styles/header";
-@use "../../about-omega/styles/main";
-@use "../../styles/excellence";
-@use  "./value-list";
+@use "./main";
+@use"./services";
 @use "../../styles/footer";
 
-// Loader 
-
-.loader {
-    position:fixed;
-    background-color:white;
-    height:100vh;
-    z-index:10;
-    width:100%;
-    transition: 300ms ease;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-
-    img {
-        width:25%;
-        position:absolute;
-        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-        transition:clip-path 300ms ease;
-        // opacity:0;
-    }
-}

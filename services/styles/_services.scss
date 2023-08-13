@@ -1,0 +1,74 @@
+@use "../../styles/variables";
+
+.services-section {
+    background-color:variables.$purple;
+    z-index:0;
+    position:relative;
+    .wrapper {
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        button {
+            margin-block-start:2rem;
+            background-color:white;
+            color:variables.$purple;
+            visibility:hidden;
+        }
+        .services-top {
+            display:flex;
+            align-items: center;
+
+        .started-left {
+            h2 {
+                font-size:variables.$massive;
+                line-height:variables.$massive;
+                max-width:8ch;
+                margin-block-end:2rem;
+            }
+            p {
+                max-width:32ch;
+                color:white;
+            }
+        }
+        .started-right {
+            margin-inline-start:-12rem;
+            margin-block-start:-16rem;
+            z-index:-1;
+            
+        }
+        }
+        .services-bottom {
+            display:grid;
+            margin-block-start:6rem;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap:2rem;
+           
+
+            .services-card {
+                background-color:variables.$light-purple;
+                padding:2rem;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                svg {
+                    width:25px;
+                }
+                h3 {
+                    margin-block-start:0.5rem;
+                    text-align:center;
+
+                }
+                p {
+                    color:white;
+                    margin-block-start:0.75rem;
+                    text-align:center;
+                }
+               
+            }
+           
+        }
+        
+    }
+}

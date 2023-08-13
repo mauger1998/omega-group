@@ -172,6 +172,7 @@ p.number {
 
 .purple {
   color: #403579;
+  font-weight: 700 !important;
 }
 
 button {
@@ -304,7 +305,7 @@ header .header-wrapper .header-right {
 }
 
 main {
-  background-image: url(../home-hero.png);
+  background-image: linear-gradient(rgba(3, 3, 3, 0.2431372549), rgba(3, 3, 3, 0.2431372549) 100%), url(../../public/images/blurred-hero.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 95vh;
@@ -456,180 +457,66 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   }
 }
 
-.excellence-section {
-  border-radius: 2rem !important;
-  margin-top: -1.5rem;
-  background-color: white;
+.services-section {
+  background-color: #403579;
+  z-index: 0;
+  position: relative;
 }
-.excellence-section .wrapper {
+.services-section .wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24rem;
 }
-.excellence-section .wrapper .excellence-slider {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  -moz-column-gap: 4rem;
-       column-gap: 4rem;
-  place-content: center;
-  align-items: start;
-  min-height: 100vh;
-  width: 100%;
+.services-section .wrapper button {
+  margin-block-start: 2rem;
+  background-color: white;
+  color: #403579;
+  visibility: hidden;
 }
-.excellence-section .wrapper .excellence-slider .excellence-slider-left {
-  width: 100%;
-  position: relative;
-}
-.excellence-section .wrapper .excellence-slider .excellence-slider-left img {
-  position: absolute;
-  top: 20%;
-  border-radius: 16rem;
-}
-.excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-two, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-three, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-four, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-five, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-six, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-seven, .excellence-section .wrapper .excellence-slider .excellence-slider-left img.slide-eight {
-  opacity: 0;
-}
-.excellence-section .wrapper .excellence-slider .excellence-slider-right {
-  display: grid;
-  width: 100%;
-  gap: 20rem;
-  align-self: center;
-}
-.excellence-section .wrapper .excellence-slider .excellence-slider-right .excellence-slider-item {
-  display: grid;
-  padding: 2rem;
-}
-.excellence-section .wrapper .excellence-slider .excellence-slider-right .excellence-slider-item h3 {
-  color: #030303;
-  margin-block: 1rem 0.5rem;
-}
-.excellence-section .wrapper .excellence-slider .excellence-slider-right .excellence-slider-item p {
-  max-width: 40ch;
-}
-.excellence-section .wrapper .excellence-titles {
-  width: 100%;
+.services-section .wrapper .services-top {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  align-items: center;
 }
-.excellence-section .wrapper .excellence-titles .excellence-titles-left h2 {
-  color: #030303;
-  max-width: 12ch;
+.services-section .wrapper .services-top .started-left h2 {
+  font-size: 166px;
+  line-height: 166px;
+  max-width: 8ch;
+  margin-block-end: 2rem;
 }
-.excellence-section .wrapper .excellence-titles .excellence-titles-right p {
-  max-width: 50ch;
+.services-section .wrapper .services-top .started-left p {
+  max-width: 32ch;
+  color: white;
 }
-@media (max-width: 1024px) {
-  .excellence-section .excellence-titles {
-    flex-direction: column;
-    align-items: flex-start !important;
-    gap: 2rem;
-  }
+.services-section .wrapper .services-top .started-right {
+  margin-inline-start: -12rem;
+  margin-block-start: -16rem;
+  z-index: -1;
 }
-@media (max-width: 825px) {
-  .excellence-section .wrapper {
-    gap: 12rem;
-  }
-  .excellence-section .wrapper .excellence-slider {
-    display: grid;
-    grid-template-columns: 1fr;
-    -moz-column-gap: 4rem;
-         column-gap: 4rem;
-    place-content: center;
-    align-items: start;
-    min-height: auto;
-    width: 100%;
-  }
-  .excellence-section .wrapper .excellence-slider .excellence-slider-left {
-    display: none;
-  }
-  .excellence-section .wrapper .excellence-slider .excellence-slider-right {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100% !important;
-    gap: 2rem !important;
-    align-self: center;
-  }
-  .excellence-section .wrapper .excellence-slider .excellence-slider-right .excellence-slider-item {
-    display: grid;
-    padding: 1rem;
-  }
-  .excellence-section .wrapper .excellence-slider .excellence-slider-right .excellence-slider-item h3 {
-    color: #030303;
-    margin-block: 1rem 0.5rem;
-  }
-  .excellence-section .wrapper .excellence-slider .excellence-slider-right .excellence-slider-item p {
-    max-width: 100%;
-  }
-  .excellence-section .wrapper .excellence-slider .excellence-slider-right .empty {
-    display: none;
-  }
+.services-section .wrapper .services-bottom {
+  display: grid;
+  margin-block-start: 6rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
 }
-@media (max-width: 600px) {
-  .excellence-section .wrapper .excellence-slider .excellence-slider-right {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 423px) {
-  .excellence-section .wrapper .excellence-slider .excellence-slider-right {
-    grid-template-columns: 1fr;
-  }
-}
-
-.values-section .wrapper {
-  padding-block-start: 16rem;
+.services-section .wrapper .services-bottom .services-card {
+  background-color: #463B7D;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16rem;
 }
-.values-section .wrapper .values-titles h2 {
+.services-section .wrapper .services-bottom .services-card svg {
+  width: 25px;
+}
+.services-section .wrapper .services-bottom .services-card h3 {
+  margin-block-start: 0.5rem;
   text-align: center;
-  color: #030303;
-  max-width: 22ch;
 }
-.values-section .wrapper .values-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 80%;
-  gap: 2rem;
-}
-@media (max-width: 700px) {
-  .values-section .wrapper .values-list {
-    max-width: 100%;
-    width: 100%;
-  }
-}
-@media (max-width: 500px) {
-  .values-section .wrapper .values-list {
-    flex-direction: column;
-    gap: 4rem;
-  }
-}
-.values-section .wrapper .values-list .values-list-left,
-.values-section .wrapper .values-list .values-list-right {
-  display: grid;
-  gap: 2rem;
-}
-.values-section .wrapper .values-list .values-list-left .values-list-item,
-.values-section .wrapper .values-list .values-list-right .values-list-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.values-section .wrapper .values-list .values-list-left .values-list-item svg,
-.values-section .wrapper .values-list .values-list-right .values-list-item svg {
-  width: 50px !important;
-  height: 50px !important;
-  flex-shrink: 0;
-}
-.values-section .wrapper .values-list .values-list-left .values-list-item p,
-.values-section .wrapper .values-list .values-list-right .values-list-item p {
-  line-height: 1.2;
-  font-weight: 500;
-  font-size: 24px;
+.services-section .wrapper .services-bottom .services-card p {
+  color: white;
+  margin-block-start: 0.75rem;
+  text-align: center;
 }
 
 footer .wrapper {
@@ -638,7 +525,7 @@ footer .wrapper {
   justify-content: center;
   flex-direction: column;
   gap: 4rem;
-  padding-block-end: 0rem;
+  padding-block-end: 2rem;
 }
 footer .wrapper .footer-top {
   width: 75%;
@@ -718,24 +605,4 @@ footer .wrapper .h0 span svg {
   footer .wrapper .h0 span svg {
     width: 15px;
   }
-}
-
-.loader {
-  position: fixed;
-  background-color: white;
-  height: 100vh;
-  z-index: 10;
-  width: 100%;
-  transition: 300ms ease;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-.loader img {
-  width: 25%;
-  position: absolute;
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-  transition: -webkit-clip-path 300ms ease;
-  transition: clip-path 300ms ease;
-  transition: clip-path 300ms ease, -webkit-clip-path 300ms ease;
 }/*# sourceMappingURL=style.css.map */
