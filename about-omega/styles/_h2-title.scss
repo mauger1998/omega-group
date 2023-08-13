@@ -1,0 +1,8 @@
+@use "../../styles/variables";
+
+.h2-title {
+    background-color:variables.$purple;
+    .wrapper {
+        padding-block:2rem 0;
+    }
+}

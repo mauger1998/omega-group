@@ -1,0 +1,27 @@
+@use "../../styles/variables";
+
+.slider-section {
+    .wrapper {
+        .swiper {
+            .swiper-wrapper {
+                // display:flex;
+
+                .swiper-slide {
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        width:75%;
+                    }
+                    p {
+                        font-size:variables.$h3;
+                        line-height:1.2;
+                        margin-block:1.5rem 4rem;
+                        max-width:75%;
+                    }
+                }
+            }
+        }
+    }
+}

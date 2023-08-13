@@ -1,0 +1,71 @@
+@use "../../styles/variables";
+
+.hiring-section {
+    background-color:variables.$purple;
+    background-image:url(../../public/images/water-full.png);
+    background-blend-mode: luminosity;
+    background-size:cover;
+    .wrapper {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap:4rem;
+        padding-inline:0 !important;
+        padding-block: 4rem 0;
+
+        .hiring-top {
+            h2 {
+                font-size:variables.$massive;
+                line-height:1;
+                max-width:100%;
+            }
+        }
+        .hiring-wrapper {
+            display:flex;
+            width:100%;
+            gap:4rem;
+            align-items: center;
+
+            .hiring-left {
+                width:50%;
+                
+            }
+            .hiring-right {
+                width:50%;
+                padding-inline-end:4rem;
+                @media (max-width:700px) {
+                    padding-inline-end:2rem;
+                }
+                @media (max-width:500px) {
+                    padding-inline-end:1rem;
+                }
+                .hiring-list {
+                    display:flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap:0rem;
+                    width:100%;
+    
+    
+                    .hiring-list-item {
+                        display:flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width:100%;
+                        padding-block:4rem;
+
+                        &:not(:nth-child(1)) {
+                            border-block-start:0.5px solid white;
+                        }
+                        
+                        svg {
+                            width:50px;
+                        }
+                    }
+                }
+            }
+
+           
+        }
+    }
+}

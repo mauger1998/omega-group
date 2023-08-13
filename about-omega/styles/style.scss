@@ -4,26 +4,13 @@
 @use "../../styles/button";
 @use "../../styles/header";
 @use "./main";
-@use "./team";
-@use "./testimonials";
-@use "../../styles/footer";
+@use "./future";
+@use "../../styles/text";
+@use "./started";
+@use "./slider";
+@use "../../styles/service-cards";
+@use "./h2-title";
+@use "./helmets";
+@use "./hiring";
 
-// Loader 
 
-.loader {
-    position:fixed;
-    background-color:white;
-    height:100vh;
-    z-index:10;
-    width:100%;
-    transition: 300ms ease;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-
-    img {
-        width:25%;
-        position:absolute;
-        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-        transition:clip-path 300ms ease;
-        // opacity:0;
-    }
-}

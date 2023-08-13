@@ -15,6 +15,8 @@ html {
         align-items: center;
         padding-left:0;
         padding-right:12rem;
+        
+
         @media (max-width:1024px) {
             width:100%;
             padding-left:4rem;
@@ -75,6 +77,20 @@ html {
         .swiper {
            width:40%;
            overflow-x:visible;
+
+           &.swiper2 {
+            img {
+                width:75px;
+            }
+
+            h3 {
+                line-height:1.2;
+                margin-block:2rem 1rem;
+            }
+            .swiper-slide {
+                gap:0;
+            }
+           }
 
         @media (max-width:1024px) {
             width:100%;

@@ -1,0 +1,26 @@
+@use "../../styles/variables";
+
+.started-section {
+    .wrapper {
+        display:flex;
+        align-items: center;
+
+        .started-left {
+            h2 {
+                font-size:variables.$massive;
+                line-height:variables.$massive;
+                color:black;
+                max-width:8ch;
+                margin-block-end:2rem;
+            }
+            p {
+                max-width:32ch;
+            }
+        }
+        .started-right {
+            margin-inline-start:-12rem;
+            margin-block-start:-16rem;
+            z-index:-1;
+        }
+    }
+}

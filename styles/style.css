@@ -172,6 +172,7 @@ p.number {
 
 .purple {
   color: #403579;
+  font-weight: 700 !important;
 }
 
 button {
@@ -625,6 +626,16 @@ html {
 .service-cards .wrapper .swiper {
   width: 40%;
   overflow-x: visible;
+}
+.service-cards .wrapper .swiper.swiper2 img {
+  width: 75px;
+}
+.service-cards .wrapper .swiper.swiper2 h3 {
+  line-height: 1.2;
+  margin-block: 2rem 1rem;
+}
+.service-cards .wrapper .swiper.swiper2 .swiper-slide {
+  gap: 0;
 }
 @media (max-width: 1024px) {
   .service-cards .wrapper .swiper {

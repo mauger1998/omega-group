@@ -1,0 +1,19 @@
+@use "../../styles/variables";
+
+.future-section {
+    background-color:variables.$purple;
+
+    .wrapper {
+        padding-inline:0;
+        padding-block:2rem 0;
+        h2 {
+            font-size:variables.$massive;
+            line-height:1;
+            text-align:center;
+        }
+
+        .team-grid {
+            margin-block-start:-10rem;
+        }
+    }
+}
