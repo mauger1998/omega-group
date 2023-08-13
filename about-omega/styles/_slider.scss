@@ -1,6 +1,7 @@
 @use "../../styles/variables";
 
 .slider-section {
+    display:flex;
     .wrapper {
         .swiper {
             .swiper-wrapper {

@@ -536,6 +536,9 @@ p.h0.precision {
   z-index: -1;
 }
 
+.slider-section {
+  display: flex;
+}
 .slider-section .wrapper .swiper .swiper-wrapper .swiper-slide {
   display: flex;
   flex-direction: column;
