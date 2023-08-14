@@ -483,6 +483,11 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   line-height: 1.4;
   font-size: 60px;
 }
+@media (max-width: 700px) {
+  .text-section .wrapper h2 {
+    font-size: 32px;
+  }
+}
 @media (max-width: 616px) {
   .text-section .wrapper h2 {
     max-width: 100%;

@@ -18,10 +18,19 @@
             text-align: center;
             text-transform:uppercase;
             font-size:variables.$big-type;
+            font-size:clamp(60px, 6vw, variables.$big-type);
         }
         button {
             color:variables.$purple;
             background-color:variables.$white;
+        }
+    }
+    @media (max-width:800px) {
+        .wrapper {
+            h2 {
+                font-size:clamp(40px, 6vw, 60px);
+                text-wrap:balance;
+            }
         }
     }
 }
