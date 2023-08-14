@@ -430,6 +430,9 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   transition: clip-path 300ms ease, -webkit-clip-path 300ms ease;
 }
 @media (max-width: 1024px) {
+  main {
+    height: auto;
+  }
   main .wrapper {
     gap: 6rem;
   }
