@@ -914,6 +914,7 @@ html {
   width: 50%;
   display: flex;
   align-items: flex-end;
+  overflow-y: hidden;
 }
 .hiring-section .wrapper .hiring-wrapper .hiring-right {
   width: 50%;
