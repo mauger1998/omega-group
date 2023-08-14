@@ -313,9 +313,8 @@ main {
   background-image: linear-gradient(rgba(3, 3, 3, 0.2431372549), rgba(3, 3, 3, 0.2431372549) 100%), url(../../public/images/blurred-hero.png);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 95vh;
-  max-height: 950px;
-  background-attachment: fixed;
+  height: 96vh;
+  max-height: 1000px;
 }
 main .wrapper {
   display: flex;
