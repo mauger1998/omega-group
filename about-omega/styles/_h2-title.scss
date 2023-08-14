@@ -3,6 +3,16 @@
 .h2-title {
     background-color:variables.$purple;
     .wrapper {
-        padding-block:2rem 0;
+        padding-block:4rem 0;
+
+        h2 {
+            font-size:variables.$massive;
+            font-size:clamp(60px, 11vw, variables.$massive);
+
+            @media (max-width:500px) {
+                font-size:clamp(32px, 11vw, 60px);
+
+            }
+        }
     }
 }

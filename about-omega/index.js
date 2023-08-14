@@ -88,10 +88,23 @@ window.addEventListener("resize", (e) => {
 const swiper = new Swiper('.swiper:not(.swiper2)', {
   speed: 400,
   spaceBetween: 0,
-  slidesPerView:2,
+  slidesPerView:1.25,
   centeredSlides:true,
   direction:"horizontal",
   loop:true,
+
+  breakpoints: {
+    // when window width is >= 320px
+    397: {
+      slidesPerView:1.5,
+    },
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 0
+    },
+    // when window width is >= 480px
+   
+  }
  
 });
 

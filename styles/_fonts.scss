@@ -86,6 +86,9 @@ p {
         line-height:1.2;
         font-family:twk;
     }
+    @media (max-width:700px) {
+        font-size:variables.$mobile-base;
+    }
 }
 
 .purple {

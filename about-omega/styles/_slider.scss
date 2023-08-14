@@ -1,8 +1,8 @@
 @use "../../styles/variables";
 
 .slider-section {
-    display:flex;
     .wrapper {
+        padding-block-start:0;
         .swiper {
             .swiper-wrapper {
                 .swiper-slide {
@@ -18,6 +18,26 @@
                         line-height:1.2;
                         margin-block:1.5rem 4rem;
                         max-width:75%;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width:1024px) {
+        .wrapper {
+            .swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        img {
+                            width:80%;
+                        }
+                        p {
+                            max-width:80%;
+
+                            @media (max-width:700px) {
+                                font-size:variables.$mobile-h3;
+                            }
+                        }
                     }
                 }
             }

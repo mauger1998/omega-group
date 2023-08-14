@@ -1,0 +1,161 @@
+@use "../../styles/variables";
+
+
+
+html {
+    overflow-x:hidden;
+}
+
+.service-cards {
+    background-color:variables.$purple;
+    overflow:hidden !important;
+
+    .wrapper {
+        display:flex;
+        gap:2rem;
+        align-items: center;
+        padding-left:0;
+        padding-right:12rem;
+
+        @media (max-width:1024px) {
+            padding-right:0rem;
+        }
+        @media (max-width:700px) {
+            padding-right:0rem;
+        }
+        @media (max-width:500px) {
+            padding-right:0rem;
+        }
+        
+
+      
+
+        
+
+        .service-cards-left {
+            width:60%;
+            color:white;
+            padding-block:4rem;
+            min-height:650px;
+            background-color:variables.$purple;
+            position:relative;
+            z-index:10;
+            padding-left:12rem;
+
+            @media (max-width:1024px) {
+                padding-left:4rem;
+            }
+            @media (max-width:700px) {
+                padding-left:2rem;
+            }
+            @media (max-width:500px) {
+                padding-left:1rem;
+                min-height:auto !important;
+                height:auto !important;
+            }
+
+           
+
+           
+
+            h2 {
+                max-width:12ch;
+                margin-block-end:4rem;
+                text-transform:uppercase;
+            }
+
+            p {
+                max-width:34ch;
+            }
+        }
+
+        .swiper {
+           width:40%;
+           overflow-x:visible;
+
+           &.swiper2 {
+            img {
+                width:75px;
+            }
+
+            h3 {
+                line-height:1.2;
+                margin-block:2rem 1rem;
+            }
+            .swiper-slide {
+                gap:0;
+            }
+           }
+
+       
+
+           .swiper-button-next {
+                color:white;
+           }
+           .swiper-button-prev {
+            color:white;
+           }
+
+
+           .swiper-slide {
+            display:flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap:2rem;
+            color:white;
+            background-color:variables.$light-purple;
+            padding:2rem;
+            padding-block-end:4rem;
+            border:1px solid white;
+
+            @media(max-width:856px) {
+                padding:1rem;
+            }
+            
+
+            .number {
+                font-weight:500;
+            }
+
+            h2 {
+                max-width:10ch;
+            }
+
+            p {
+                max-width:45ch;
+                
+            }
+           }
+        }
+    }
+    @media (max-width:1024px) {
+        .wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+
+            .swiper {
+                width:100%;
+                padding-inline:4rem;
+                
+                .swiper-wrapper {
+                    width:100%;
+
+
+                    .swiper-slide {
+                        width:100%;
+                    }
+                }
+
+                @media (max-width:700px) {
+                    padding-inline:2rem;
+                }
+                @media (max-width:500px) {
+                    padding-inline:1rem;
+                }
+            }
+
+
+        }
+    }
+}

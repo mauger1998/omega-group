@@ -13,6 +13,7 @@
             h2 {
                 color:black;
                 font-size:variables.$big-type;
+                font-size:clamp(48px, 6vw, variables.$big-type);
                 max-width:16ch;
             }
             button {
@@ -23,6 +24,70 @@
         .helmets-right {
             margin-top:-5rem;
             margin-left:-8rem;
+
+            @media (max-width:1119px) {
+                margin-left:-10rem;
+            }
+        }
+    }
+
+    @media (max-width:1024px) {
+        .wrapper {
+            flex-direction: column;
+            padding-right:4rem;
+
+            @media (max-width:700px) {
+                padding-right:2rem;
+            }
+            @media (max-width:500px) {
+                padding-right:1rem;
+            }
+
+            .helmets-right {
+                margin-top:-2rem;
+                z-index:1;
+                margin-left:0;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                @media (max-width:346px) {
+                    margin-top:-1rem;
+                }
+
+                img {
+                    width:50%;
+
+                    @media (max-width:600px) {
+                        width:75%;
+                    }
+                    @media (max-width:346px) {
+                        width:90%;
+                    }
+                }
+            }
+            .helmets-left {
+                margin-top:0;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                h2 {
+                    text-align:center;
+                    max-width:90%;
+                    font-size:clamp(40px, 6vw, variables.$big-type);
+
+                    @media (max-width:346px) {
+                        font-size:clamp(32px, 10vw, 40px);
+                    }
+                }
+
+                button {
+                    margin-block-start:2rem;
+                    display:none;
+                }
+            }
         }
     }
 }

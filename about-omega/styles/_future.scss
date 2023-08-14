@@ -8,12 +8,44 @@
         padding-block:2rem 0;
         h2 {
             font-size:variables.$massive;
+            font-size:clamp(variables.$big-type, 11vw, variables.$massive);
             line-height:1;
             text-align:center;
         }
 
         .team-grid {
-            margin-block-start:-10rem;
+            margin-block-start:-8rem;
+
+            img {
+                margin-bottom:-0.35rem;
+            }
+        }
+    }
+    @media (max-width:1024px) {
+        .wrapper {
+            .team-grid {
+                margin-block-start:-4rem;
+            }
+        }
+    }
+    @media (max-width:600px) {
+        .wrapper {
+            h2 {
+                font-size:clamp(60px, 16vw, variables.$big-type);
+            }
+            .team-grid {
+                margin-block-start:-4rem;
+            }
+        }
+    }
+    @media (max-width:500px) {
+        .wrapper {
+            h2 {
+                font-size:clamp(48px, 16vw, variables.$big-type);
+            }
+            .team-grid {
+                margin-block-start:-2rem;
+            }
         }
     }
 }
