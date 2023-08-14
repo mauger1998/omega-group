@@ -112,9 +112,11 @@ main {
     }
     @media (max-width:1024px) {
 
-        height:100vh;
+        // height:100vh;
+        height:auto;
 
         .wrapper {
+            gap:6rem;
             // padding-bottom:2rem;
 
             .main-bottom {
