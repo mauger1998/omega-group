@@ -128,6 +128,7 @@ const menuOpen = document.querySelector(".open")
 const menuClose = document.querySelector(".close")
 const overlay = document.querySelector(".overlay")
 const contactButton = document.querySelector("header .secondary-button")
+const menuLinks = document.querySelectorAll(".overlay ul a")
 
 
 var timeline = gsap.timeline({defaults:{duration: 1, ease: Back.easeOut.config(2)}})
@@ -140,6 +141,22 @@ menuOpen.addEventListener("click", () => {
   timeline.play()
   contactButton.style.pointerEvents = "none"
   contactButton.style.display = "none"
+
+  menuLinks.forEach((link, index) => {
+    link.addEventListener("click", (e) => {
+
+      if (link[index] == 0 || 1 || 2 || 3 || 4 || 9) {
+        timeline.reverse(.5)
+        contactButton.style.pointerEvents = "all"
+        contactButton.style.display = "block"
+      }
+      
+    })
+  })
+
+  
+
+  
 })
 
 menuClose.addEventListener("click", () => {
