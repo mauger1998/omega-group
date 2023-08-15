@@ -313,8 +313,6 @@ main {
   background-image: linear-gradient(rgba(3, 3, 3, 0.2431372549), rgba(3, 3, 3, 0.2431372549) 100%), url(../../public/images/blurred-hero.png);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 96vh;
-  max-height: 1000px;
 }
 main .wrapper {
   display: flex;
@@ -322,8 +320,10 @@ main .wrapper {
   justify-content: space-between;
   flex-direction: column;
   padding-block: 5rem;
-  padding-block-start: 12rem;
+  padding-block-start: 14rem;
   height: 100%;
+  position: relative;
+  gap: 12rem;
 }
 main .wrapper .main-top {
   display: flex;
@@ -790,7 +790,7 @@ html {
   color: black;
   font-size: 96px;
   font-size: clamp(48px, 6vw, 96px);
-  max-width: 16ch;
+  max-width: 12ch;
 }
 .helmets-section .wrapper .helmets-left button {
   margin-block-start: 1rem;
@@ -986,5 +986,93 @@ html {
   }
   .hiring-section .wrapper .hiring-wrapper .hiring-right .hiring-list .hiring-list-item svg {
     width: 40px;
+  }
+}
+
+footer .wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+  padding-block-end: 2rem;
+}
+footer .wrapper .footer-top {
+  width: 75%;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+footer .wrapper .footer-top .column {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+footer .wrapper .footer-top .column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+footer .wrapper .footer-top .column ul li,
+footer .wrapper .footer-top .column ul a {
+  color: #030303;
+}
+@media (max-width: 500px) {
+  footer .wrapper .footer-top {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+  }
+  footer .wrapper .footer-top .column:nth-child(2), footer .wrapper .footer-top .column:nth-child(4), footer .wrapper .footer-top .column:nth-child(3) {
+    grid-row: 2;
+  }
+}
+@media (max-width: 409px) {
+  footer .wrapper .footer-top {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  footer .wrapper .footer-top .column:nth-child(2), footer .wrapper .footer-top .column:nth-child(4), footer .wrapper .footer-top .column:nth-child(3) {
+    grid-row: auto;
+  }
+}
+footer .wrapper .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-block-start: 0.5px solid black;
+  padding-block-start: 2rem;
+  padding-block-end: 0;
+}
+@media (max-width: 327px) {
+  footer .wrapper .footer-bottom {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+footer .wrapper .footer-bottom p {
+  font-size: 14px;
+}
+footer .wrapper .h0 {
+  font-size: 192px;
+  font-weight: 900;
+  line-height: 1;
+  align-self: start;
+  margin-top: -2rem;
+  margin-bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+footer .wrapper .h0 span svg {
+  width: 35px;
+  height: -moz-max-content;
+  height: max-content;
+}
+@media (max-width: 700px) {
+  footer .wrapper .h0 span svg {
+    width: 15px;
   }
 }/*# sourceMappingURL=style.css.map */

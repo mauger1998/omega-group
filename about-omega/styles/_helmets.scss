@@ -14,7 +14,7 @@
                 color:black;
                 font-size:variables.$big-type;
                 font-size:clamp(48px, 6vw, variables.$big-type);
-                max-width:16ch;
+                max-width:12ch;
             }
             button {
                 margin-block-start:1rem;

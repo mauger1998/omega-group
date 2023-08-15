@@ -10,16 +10,7 @@ var tl = gsap.timeline({repeat: 0, repeatDelay: 1});
 
 
 
-// Split type
-let textLines = document.querySelectorAll(".text1, .text2")
-let firstSplit;
 
-
-textLines.forEach(textLine => {
-  firstSplit = new SplitType(textLine, {
-      type: "chars"
-  })
-})
 
 
 

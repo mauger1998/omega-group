@@ -313,8 +313,6 @@ main {
   background-image: linear-gradient(rgba(3, 3, 3, 0.2431372549), rgba(3, 3, 3, 0.2431372549) 100%), url(../../public/images/blurred-hero.png);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 96vh;
-  max-height: 1000px;
 }
 main .wrapper {
   display: flex;
@@ -322,8 +320,10 @@ main .wrapper {
   justify-content: space-between;
   flex-direction: column;
   padding-block: 5rem;
-  padding-block-start: 12rem;
+  padding-block-start: 14rem;
   height: 100%;
+  position: relative;
+  gap: 12rem;
 }
 main .wrapper .main-top {
   display: flex;
@@ -334,7 +334,7 @@ main .wrapper .main-top {
 }
 main .wrapper .main-top > h1 {
   transform: translateY(14rem);
-  max-width: 12ch;
+  max-width: 14ch;
   text-align: center;
   line-height: 1;
 }
