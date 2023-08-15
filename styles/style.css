@@ -483,42 +483,35 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   }
 }
 
-.update-section {
+.question-section {
   background-color: #403579;
   background-image: url(../public/images/water-full.png);
   background-blend-mode: luminosity;
   background-size: cover;
 }
-.update-section .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.question-section .wrapper {
+  padding-block: 6rem;
+  display: grid;
+  place-items: center;
+  gap: 2rem;
   position: relative;
-  padding-block: 10rem;
+  overflow-y: hidden;
 }
-.update-section .wrapper .tagline {
-  font-weight: 700;
-  color: white;
-}
-.update-section .wrapper h2 {
+.question-section .wrapper h2 {
   max-width: 20ch;
   text-align: center;
-  margin-block-end: 2rem;
+  text-transform: uppercase;
+  font-size: 96px;
+  font-size: clamp(60px, 6vw, 96px);
 }
-.update-section .wrapper img {
-  position: absolute;
-  width: 40%;
-  bottom: 0;
-  right: 0%;
+.question-section .wrapper button {
+  color: #403579;
+  background-color: #FFFFFF;
 }
-@media (max-width: 700px) {
-  .update-section .wrapper {
-    padding-block-end: 0;
-  }
-  .update-section .wrapper img {
-    position: static;
-    width: 100%;
+@media (max-width: 800px) {
+  .question-section .wrapper h2 {
+    font-size: clamp(40px, 6vw, 60px);
+    text-wrap: balance;
   }
 }
 
@@ -1002,35 +995,42 @@ p.h0 {
   border: 2px solid transparent;
 }
 
-.question-section {
+.update-section {
   background-color: #403579;
   background-image: url(../public/images/water-full.png);
   background-blend-mode: luminosity;
   background-size: cover;
 }
-.question-section .wrapper {
-  padding-block: 6rem;
-  display: grid;
-  place-items: center;
-  gap: 2rem;
+.update-section .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  overflow-y: hidden;
+  padding-block: 10rem;
 }
-.question-section .wrapper h2 {
+.update-section .wrapper .tagline {
+  font-weight: 700;
+  color: white;
+}
+.update-section .wrapper h2 {
   max-width: 20ch;
   text-align: center;
-  text-transform: uppercase;
-  font-size: 96px;
-  font-size: clamp(60px, 6vw, 96px);
+  margin-block-end: 2rem;
 }
-.question-section .wrapper button {
-  color: #403579;
-  background-color: #FFFFFF;
+.update-section .wrapper img {
+  position: absolute;
+  width: 40%;
+  bottom: 0;
+  right: 0%;
 }
-@media (max-width: 800px) {
-  .question-section .wrapper h2 {
-    font-size: clamp(40px, 6vw, 60px);
-    text-wrap: balance;
+@media (max-width: 700px) {
+  .update-section .wrapper {
+    padding-block-end: 0;
+  }
+  .update-section .wrapper img {
+    position: static;
+    width: 100%;
   }
 }
 
