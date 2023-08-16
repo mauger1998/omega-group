@@ -1088,6 +1088,18 @@ p.h0 {
   color: white;
 }
 
+.file::-webkit-file-upload-button {
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  font-size: 12px;
+  cursor: pointer;
+}
+
 footer .wrapper {
   display: flex;
   align-items: flex-start;
