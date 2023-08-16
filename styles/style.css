@@ -482,7 +482,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 
 .question-section {
   background-color: #403579;
-  background-image: url(../public/images/water-full.png);
+  background-image: url(../public/summer-background-sea-water3.png);
   background-blend-mode: luminosity;
   background-size: cover;
 }
@@ -715,7 +715,7 @@ html {
 
 .team-section {
   background-color: #463B7D;
-  background-image: url(../public/images/water-full.png);
+  background-image: url(../public/summer-background-sea-water3.png);
   background-blend-mode: luminosity;
   background-size: cover;
 }
@@ -994,7 +994,7 @@ p.h0 {
 
 .update-section {
   background-color: #403579;
-  background-image: url(../public/images/water-full.png);
+  background-image: url(../public/summer-background-sea-water3.png);
   background-blend-mode: luminosity;
   background-size: cover;
 }
