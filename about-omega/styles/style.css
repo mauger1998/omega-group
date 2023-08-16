@@ -196,8 +196,8 @@ button.primary-button {
 }
 button.secondary-button {
   border: 1px solid white;
-  color: white;
-  background-color: transparent;
+  color: #403579;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -940,11 +940,35 @@ html {
   width: 100%;
 }
 .hiring-section .wrapper .hiring-wrapper .hiring-right .hiring-list .hiring-list-item {
+  width: 100%;
+  padding-block: 4rem 2rem;
+}
+.hiring-section .wrapper .hiring-wrapper .hiring-right .hiring-list .hiring-list-item .question {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding-block: 4rem;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0 !important;
+  border-radius: 0;
+}
+.hiring-section .wrapper .hiring-wrapper .hiring-right .hiring-list .hiring-list-item button[aria-expanded=true] {
+  color: #FFFFFF;
+}
+.hiring-section .wrapper .hiring-wrapper .hiring-right .hiring-list .hiring-list-item button[aria-expanded=true] + .answer {
+  max-height: 16rem;
+  transition: max-height 200ms linear;
+}
+.hiring-section .wrapper .hiring-wrapper .hiring-right .hiring-list .hiring-list-item .answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 200ms linear;
+}
+.hiring-section .wrapper .hiring-wrapper .hiring-right .hiring-list .hiring-list-item .answer p {
+  color: white;
+  margin-block-start: 2rem;
 }
 .hiring-section .wrapper .hiring-wrapper .hiring-right .hiring-list .hiring-list-item:not(:nth-child(1)) {
   border-block-start: 0.5px solid white;

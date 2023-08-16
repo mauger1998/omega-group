@@ -68,11 +68,47 @@
     
     
                     .hiring-list-item {
-                        display:flex;
-                        align-items: center;
-                        justify-content: space-between;
+                        
                         width:100%;
-                        padding-block:4rem;
+                        padding-block:4rem 2rem;
+
+                        .question {
+                            display:flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            width:100%;
+                            cursor:pointer;
+                            border:none;
+                            background-color:transparent;
+                            padding:0 !important;
+                            border-radius:0;
+                        }
+
+                         button[aria-expanded="true"] {
+                            color: variables.$white;
+                          }
+                          
+                        //   .accordion .accordion-item button[aria-expanded="true"] .icon::after {
+                        //     width: 0;
+                        //   }
+                          
+                           button[aria-expanded="true"] + .answer {
+                            max-height: 16rem;
+                            transition: max-height 200ms linear;
+                          }
+
+                        .answer {
+                            max-height:0;
+                            overflow:hidden;
+                            transition: max-height 200ms linear;
+
+
+                            p {
+                                color:white;
+                                margin-block-start:2rem;
+                               
+                            }
+                        }
 
                         &:not(:nth-child(1)) {
                             border-block-start:0.5px solid white;

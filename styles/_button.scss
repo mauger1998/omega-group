@@ -19,8 +19,8 @@ button {
 
     &.secondary-button {
         border:1px solid white;
-        color:white;
-        background-color:transparent;
+        color:variables.$purple;
+        background-color:white;
         display:flex;
         flex-direction: column;
         align-items: center;

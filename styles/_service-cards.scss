@@ -55,6 +55,10 @@ html {
             z-index:10;
             padding-left:12rem;
 
+            button {
+                margin-block-start:2rem;
+            }
+
             @media (max-width:1024px) {
                 width:100%;
                 padding:0rem;
