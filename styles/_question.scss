@@ -8,11 +8,12 @@
 
     .wrapper {
         padding-block:6rem;
-        display:grid;
-        place-items:center;
+        display:flex;
+        align-items: center;
+        justify-content: center;
         gap:2rem;
         position:relative;
-        overflow-y:hidden;
+        overflow:hidden;
         h2 {
             max-width:20ch;
             text-align: center;
@@ -29,6 +30,14 @@
         .wrapper {
             h2 {
                 font-size:clamp(40px, 6vw, 60px);
+                text-wrap:balance;
+            }
+        }
+    }
+    @media (max-width:372px) {
+        .wrapper {
+            h2 {
+                font-size:clamp(32px, 6vw, 40px);
                 text-wrap:balance;
             }
         }
