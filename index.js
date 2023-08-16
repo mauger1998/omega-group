@@ -42,6 +42,9 @@ let tlTwo = gsap.timeline({repeat: 0, repeatDelay: 1});
 
     },2.5)
    
+
+
+
     
 
 
@@ -60,63 +63,107 @@ let tlTwo = gsap.timeline({repeat: 0, repeatDelay: 1});
   
 // })
 
+// Cms
+
+let URL = "https://f9u8zfhq.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22gallery%22%5D+%7B%0A++%22imgUrl%22%3A+image.asset-%3Eurl%0A%7D%0A"
 
 
 
+// fetch the content
+fetch(URL)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    const galleryGrid = document.querySelector(".gallery-grid")
+    if (result.length > 0) {
+      galleryGrid.innerHTML = ""
+      result.forEach((result) => {
+        const galleryGridItem = document.createElement("img")
+        galleryGridItem.src = result.imgUrl
+        galleryGrid.appendChild(galleryGridItem)
+      });
+      
+    }
+  })
+  .catch((err) => console.error(err));
+
+let URLTWO = "https://f9u8zfhq.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22faq%22%5D+%7B%0A++question%2C%0A++++answer%0A%7D"
 
 
 
+// fetch the content
+fetch(URLTWO)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    console.log(result)
+
+    const accordionFaq = document.querySelector(".accordion")
+    if (result.length > 0) {
+      accordionFaq.innerHTML = ""
+      result.forEach((result) => {
+        let accordionItem = document.createElement("div")
+        accordionItem.classList.add("accordion-item")
+        accordionFaq.appendChild(accordionItem)
+
+        let accordionQuestion = document.createElement("button")
+        accordionQuestion.setAttribute("aria-expanded", "false")
+        accordionItem.appendChild(accordionQuestion)
+
+        let accordionTitle = document.createElement("span")
+        accordionTitle.classList.add("accordion-title")
+        accordionTitle.textContent = result.question
+        accordionQuestion.appendChild(accordionTitle)
+
+        let accordionIcon = document.createElement("span")
+        accordionIcon.classList.add("icon")
+        accordionIcon.setAttribute("aria-hidden", "true")
+        accordionQuestion.appendChild(accordionIcon)
+
+        let content = document.createElement("div")
+        content.classList.add("content")
+
+        accordionItem.appendChild(content)
+
+        let contentP = document.createElement("p")
+        contentP.textContent = result.answer
+        content.appendChild(contentP)
 
 
-// Slider
+      });
 
-gsap.to(".excellence-slider-left", {
-  scrollTrigger: {
-    trigger:".excellence-slider-left img",
-    start:"center center",
-    pin:".excellence-slider-left",
-    end:"+=1600"
-  }
-})
-gsap.to(".excellence-slider-left .slide-two", {
-  scrollTrigger: {
-    trigger:".slider-three",
-    start:"top center",
-    scrub:true,
-    end:"+=100",
-  },
-  opacity:1,
-})
-gsap.to(".excellence-slider-left .slide-three", {
-  scrollTrigger: {
-    trigger:".slider-four",
-    start:"top center",
-    scrub:true,
-    end:"+=100",
-  },
-  opacity:1,
-})
+        // Accordian
+        const items = document.querySelectorAll(".accordion button");
 
+        items.forEach((item) => item.addEventListener("click", toggleAccordion));
 
+        function toggleAccordion() {
+          const itemToggle = this.getAttribute("aria-expanded");
 
+          for (let item of items) {
+            item.setAttribute("aria-expanded", false);
+          }
 
-
-// Accordian
-const items = document.querySelectorAll(".accordion button");
-
-items.forEach((item) => item.addEventListener("click", toggleAccordion));
-
-function toggleAccordion() {
-  const itemToggle = this.getAttribute("aria-expanded");
-
-  for (let item of items) {
-    item.setAttribute("aria-expanded", false);
-  }
-
-  if (itemToggle === "false") {
-    this.setAttribute("aria-expanded", true);
-  }
+          if (itemToggle === "false") {
+            this.setAttribute("aria-expanded", true);
+          }
 }
+      
+    }
+  })
+  .catch((err) => console.error(err));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -236,3 +283,7 @@ function countdown() {
 }
 let i = setInterval(countdown, 1000);
 countdown();
+
+
+
+

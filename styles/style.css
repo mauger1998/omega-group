@@ -890,18 +890,6 @@ html {
     grid-template-columns: 1fr;
   }
 }
-.gallery-section .wrapper .gallery-grid .gallery-outer-grid,
-.gallery-section .wrapper .gallery-grid .gallery-inner-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-@media (max-width: 1024px) {
-  .gallery-section .wrapper .gallery-grid .gallery-outer-grid,
-  .gallery-section .wrapper .gallery-grid .gallery-inner-grid {
-    gap: 1rem;
-  }
-}
 
 p.h0 {
   font-size: 192px;
