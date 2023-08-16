@@ -787,7 +787,7 @@ html {
 .team-section .wrapper .team-grid .team-grid-item:nth-child(1) {
   align-items: flex-start;
 }
-.team-section .wrapper .team-grid .team-grid-item:nth-child(1) h2 {
+.team-section .wrapper .team-grid .team-grid-item:nth-child(1) h3 {
   text-transform: uppercase;
 }
 .team-section .wrapper .team-grid .team-grid-item p {
