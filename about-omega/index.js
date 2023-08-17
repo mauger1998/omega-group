@@ -1,6 +1,66 @@
 gsap.registerPlugin(ScrollTrigger)
 let mm = gsap.matchMedia();
 
+let URLTHREE = "https://f9u8zfhq.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22careers%22%5D"
+
+fetch(URLTHREE)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    const hiringList = document.querySelector(".hiring-list")
+    if (result.length > 0) {
+      hiringList.innerHTML = ""
+
+      result.forEach((result, index) => {
+        const hiringListItem = document.createElement("div")
+        hiringListItem.classList.add("hiring-list-item")
+        hiringList.appendChild(hiringListItem)
+
+        const question = document.createElement("button")
+        question.classList.add("question")
+        question.setAttribute("aria-expanded", "false")
+        hiringListItem.appendChild(question)
+
+        const questionH2 = document.createElement("h2")
+        questionH2.textContent = result.position
+        question.appendChild(questionH2)
+
+        const svgContainer = document.createElement("div")
+        svgContainer.innerHTML = `<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+        <svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 12H18M12 6V18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>`
+        question.appendChild(svgContainer)
+
+        const answer = document.createElement("div")
+        answer.classList.add("answer")
+        hiringListItem.appendChild(answer)
+
+        const answerP = document.createElement("p")
+        answerP.textContent = result.moreInfo
+        answer.appendChild(answerP)
+      })
+
+      // Accordian
+const items = document.querySelectorAll(".hiring-list-item button");
+
+items.forEach((item) => item.addEventListener("click", toggleAccordion));
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute("aria-expanded");
+
+  for (let item of items) {
+    item.setAttribute("aria-expanded", false);
+  }
+
+  if (itemToggle === "false") {
+    this.setAttribute("aria-expanded", true);
+  }
+}
+      
+    }
+  })
+  .catch((err) => console.error(err));
+
 
 // Images Animation
 
@@ -202,22 +262,7 @@ menuClose.addEventListener("click", () => {
 
 
 
-// Accordian
-const items = document.querySelectorAll(".hiring-list-item button");
 
-items.forEach((item) => item.addEventListener("click", toggleAccordion));
-
-function toggleAccordion() {
-  const itemToggle = this.getAttribute("aria-expanded");
-
-  for (let item of items) {
-    item.setAttribute("aria-expanded", false);
-  }
-
-  if (itemToggle === "false") {
-    this.setAttribute("aria-expanded", true);
-  }
-}
 
 
 // CMS
@@ -265,3 +310,4 @@ fetch(URLTWO)
     }
   })
   .catch((err) => console.error(err));
+
