@@ -218,3 +218,19 @@ function toggleAccordion() {
     this.setAttribute("aria-expanded", true);
   }
 }
+
+
+// CMS
+
+let URL = "https://f9u8zfhq.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22aboutBigText%22%5D+"
+
+fetch(URL)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    const bigText = document.querySelector(".text-section .wrapper h2")
+    if (result.length > 0) {
+      bigText.textContent = result[0].bigText
+      
+    }
+  })
+  .catch((err) => console.error(err));
