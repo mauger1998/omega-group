@@ -1149,4 +1149,58 @@ footer .wrapper .h0 span svg {
   footer .wrapper .h0 span svg {
     width: 15px;
   }
+}
+
+.loader {
+  position: fixed;
+  background-color: #403579;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: 300ms ease;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.loader > svg {
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% - 5rem));
+  opacity: 0;
+}
+@media (max-width: 600px) {
+  .loader > svg {
+    width: 150px;
+  }
+}
+.loader .svg-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.loader .svg-full svg {
+  margin-block-end: 10rem;
+  transform: translateX(30rem);
+  width: 75px;
+}
+@media (max-width: 600px) {
+  .loader .svg-full svg {
+    width: 50px;
+  }
+}
+.loader .svg-full svg:not(:nth-child(1)) {
+  margin-inline-start: -0.5rem;
+}
+.loader .svg-full svg:nth-child(2) {
+  width: 115px;
+}
+@media (max-width: 600px) {
+  .loader .svg-full svg:nth-child(2) {
+    width: 78px;
+  }
 }/*# sourceMappingURL=style.css.map */

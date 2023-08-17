@@ -1235,22 +1235,56 @@ footer .wrapper .h0 span svg {
 
 .loader {
   position: fixed;
-  background-color: white;
+  background-color: #403579;
   height: 100vh;
-  z-index: 10;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   transition: 300ms ease;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
-.loader img {
-  width: 25%;
+.loader > svg {
+  width: 200px;
   position: absolute;
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-  transition: -webkit-clip-path 300ms ease;
-  transition: clip-path 300ms ease;
-  transition: clip-path 300ms ease, -webkit-clip-path 300ms ease;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% - 5rem));
+  opacity: 0;
+}
+@media (max-width: 600px) {
+  .loader > svg {
+    width: 150px;
+  }
+}
+.loader .svg-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.loader .svg-full svg {
+  margin-block-end: 10rem;
+  transform: translateX(30rem);
+  width: 75px;
+}
+@media (max-width: 600px) {
+  .loader .svg-full svg {
+    width: 50px;
+  }
+}
+.loader .svg-full svg:not(:nth-child(1)) {
+  margin-inline-start: -0.5rem;
+}
+.loader .svg-full svg:nth-child(2) {
+  width: 115px;
+}
+@media (max-width: 600px) {
+  .loader .svg-full svg:nth-child(2) {
+    width: 78px;
+  }
 }
 
 .countdown {

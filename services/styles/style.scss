@@ -7,3 +7,66 @@
 @use"./services";
 @use "../../styles/footer";
 
+
+// Loader 
+.loader {
+    position:fixed;
+    background-color:variables.$purple;
+    height:100vh;
+    z-index:1000;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    transition: 300ms ease;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+    & > svg {
+        width:200px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(calc(-50% ), calc(-50% - 5rem));
+        opacity:0;
+        @media (max-width:600px) {
+            width:150px;
+        }
+        
+
+       
+    }
+
+    .svg-full {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        overflow:hidden;
+
+        svg {
+            // position:absolute;
+            margin-block-end:10rem;
+            transform:translateX(30rem);
+            width:75px;
+
+            @media (max-width:600px) {
+                width:50px;
+            }
+            
+            &:not(:nth-child(1)) {
+                margin-inline-start:-0.5rem;
+            }
+            &:nth-child(2) {
+                width:115px;
+
+                @media (max-width:600px) {
+                    width:78px;
+                }
+            }
+    
+    
+        }
+    }
+
+  
+        
+}
