@@ -38,9 +38,9 @@ main {
                 width:clamp(300px, 40vw, 400px);
                 overflow:hidden;
 
-                // path {
-                //     transform:translateY(10rem);
-                // }
+                path {
+                    transform:translateY(10rem);
+                }
             }
 
             p {

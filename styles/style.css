@@ -389,6 +389,9 @@ main .wrapper .main-top > svg {
   width: clamp(300px, 40vw, 400px);
   overflow: hidden;
 }
+main .wrapper .main-top > svg path {
+  transform: translateY(10rem);
+}
 main .wrapper .main-top p {
   font-size: 24px;
   color: white;
