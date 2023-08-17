@@ -234,3 +234,34 @@ fetch(URL)
     }
   })
   .catch((err) => console.error(err));
+
+let URLTWO = "https://f9u8zfhq.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22testimonials%22%5D+%7C+order%28order%29+%7B%0A++%22imgUrl%22%3A+profilePicture.asset-%3Eurl%2C%0A++name%2C%0A++review%2C%0A++order%0A%7D"
+
+fetch(URLTWO)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    const testimonialsSlider = document.querySelector(".swiper2 .swiper-wrapper")
+    if (result.length > 0) {
+      testimonialsSlider.innerHTML = ""
+
+      result.forEach((result, index) => {
+        const swiperSlide = document.createElement("div")
+        swiperSlide.classList.add("swiper-slide")
+        testimonialsSlider.appendChild(swiperSlide)
+
+        const swiperImage = document.createElement("img")
+        swiperImage.src = result.imgUrl
+        swiperSlide.appendChild(swiperImage)
+
+        const swiperH3 = document.createElement("h3")
+        swiperH3.textContent = result.name
+        swiperSlide.appendChild(swiperH3)
+
+        const swiperP = document.createElement("p")
+        swiperP.textContent = result.review
+        swiperSlide.appendChild(swiperP)
+      })
+      
+    }
+  })
+  .catch((err) => console.error(err));

@@ -72,10 +72,15 @@ html {
         .swiper {
            width:40%;
            overflow-x:visible;
+           display:grid;
 
            &.swiper2 {
             img {
                 width:75px;
+                aspect-ratio:1;
+                object-fit:cover;
+                background-color:white;
+                border-radius:50%;
             }
 
             h3 {
@@ -84,6 +89,7 @@ html {
             }
             .swiper-slide {
                 gap:0;
+                height:100%;
             }
            }
 
@@ -101,7 +107,7 @@ html {
             display:flex;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: center;
+            justify-content: flex-start;
             gap:2rem;
             color:white;
             background-color:variables.$light-purple;

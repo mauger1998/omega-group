@@ -733,9 +733,15 @@ html {
 .service-cards .wrapper .swiper {
   width: 40%;
   overflow-x: visible;
+  display: grid;
 }
 .service-cards .wrapper .swiper.swiper2 img {
   width: 75px;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: white;
+  border-radius: 50%;
 }
 .service-cards .wrapper .swiper.swiper2 h3 {
   line-height: 1.2;
@@ -743,6 +749,7 @@ html {
 }
 .service-cards .wrapper .swiper.swiper2 .swiper-slide {
   gap: 0;
+  height: 100%;
 }
 .service-cards .wrapper .swiper .swiper-button-next {
   color: white;
@@ -754,7 +761,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 2rem;
   color: white;
   background-color: #463B7D;
