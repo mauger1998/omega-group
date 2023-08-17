@@ -72,49 +72,38 @@ var tl = gsap.timeline({repeat: 0, repeatDelay: 1});
 
 
 
-// Split type
-let textLines = document.querySelectorAll(".text1, .text2")
-let firstSplit;
-
-
-textLines.forEach(textLine => {
-  firstSplit = new SplitType(textLine, {
-      type: "chars"
-  })
-})
 
 
 
 // Loader Dissapear
 
 
- let tlTwo = gsap.timeline({repeat: 0, repeatDelay: 1});
+let tlTwo = gsap.timeline({repeat: 0, repeatDelay: 1});
   
-   
-    tlTwo.to(".main-top h1", {
-      y:0,
-    },0.85)
-   
-    tlTwo.to(".stat-item", {
-      clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-      stagger:0.5,
-    },0.5)
-    tlTwo.to(".number-item", {
-      clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+tlTwo.to(".main-top h1", {
+  y:0,
+},0.25)
 
-    },2.25)
-    tlTwo.to(".stat-item > p", {
-      clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+tlTwo.to(".stat-item", {
+  clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  stagger:0.1,
+},0.35)
+tlTwo.to(".number-item", {
+  clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
 
-    },2.25)
-    tlTwo.to(".main-bottom-left", {
-      clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+},0.4)
+tlTwo.to(".stat-item > p", {
+  clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
 
-      onComplete: () => {
-        ScrollTrigger.refresh()
-        // mainTop.style.overflow = "visible"
-      }
-    },2.5)
+},0.45)
+tlTwo.to(".main-bottom-left", {
+  clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+
+  onComplete: () => {
+    ScrollTrigger.refresh()
+    // mainTop.style.overflow = "visible"
+  }
+},0.5)
 
 
 

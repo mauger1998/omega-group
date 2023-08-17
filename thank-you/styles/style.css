@@ -1,0 +1,265 @@
+@font-face {
+  font-family: twk;
+  src: url("../twk/TWKEverett-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: twk;
+  src: url("../twk/TWKEverett-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: hell;
+  src: url("../Helvetica-Font/Helvetica.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: hell;
+  src: url("../Helvetica-Font/helvetica-light-587ebe5a59211.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: gt;
+  src: url("../GT-ALPINA/GT-Alpina-Standard-Regular-Trial.ttf");
+  font-weight: 300;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: hell, sans-serif;
+  font-weight: 400;
+}
+
+img {
+  width: 100%;
+}
+img.icon {
+  width: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+section,
+main,
+header,
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .wrapper,
+main .wrapper,
+header .wrapper,
+footer .wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding: 8rem 4rem;
+}
+@media (max-width: 700px) {
+  section .wrapper,
+  main .wrapper,
+  header .wrapper,
+  footer .wrapper {
+    padding-inline: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  section .wrapper,
+  main .wrapper,
+  header .wrapper,
+  footer .wrapper {
+    padding-inline: 1rem;
+  }
+}
+
+h1 {
+  font-size: 96px;
+  line-height: 1.2;
+  color: white;
+  font-weight: 700;
+  font-family: twk;
+}
+h1 span {
+  color: #403579;
+  font-weight: 700;
+}
+h1 .line {
+  overflow: hidden;
+}
+h1 .char {
+  font-size: 96px;
+  font-family: twk;
+  font-weight: 700;
+}
+@media (max-width: 700px) {
+  h1 {
+    font-size: 64px;
+  }
+  h1 .line {
+    overflow: hidden;
+  }
+  h1 .char {
+    font-size: 64px;
+    font-family: twk;
+    font-weight: 700;
+  }
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 1.2;
+  color: white;
+  font-weight: 700;
+  font-family: twk;
+}
+h2 span {
+  color: #403579;
+  font-weight: 700;
+}
+@media (max-width: 700px) {
+  h2 {
+    font-size: 32px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.2;
+  color: white;
+  font-weight: 700;
+  font-family: twk;
+}
+@media (max-width: 700px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
+p {
+  line-height: 1.6;
+  font-weight: 300;
+  font-size: 16px;
+}
+p.tagline {
+  font-size: 14px;
+}
+p.large {
+  font-size: 24px;
+  line-height: 1.2;
+}
+@media (max-width: 380px) {
+  p.large {
+    font-size: 20px;
+  }
+}
+p.number {
+  font-size: 48px;
+  line-height: 1.2;
+  font-family: twk;
+}
+@media (max-width: 700px) {
+  p {
+    font-size: 14px;
+  }
+}
+
+.purple {
+  color: #403579;
+  font-weight: 700 !important;
+}
+
+button {
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+button.primary-button {
+  border: 1px solid #403579;
+  color: white;
+  background-color: #403579;
+}
+button.secondary-button {
+  border: 1px solid white;
+  color: #403579;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  max-height: 3rem;
+  overflow: hidden;
+}
+button.header-button {
+  border: 1px solid white;
+  color: #FFFFFF;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  max-height: 3rem;
+  overflow: hidden;
+}
+button span {
+  height: 1rem;
+  border: 1px solid white;
+}
+
+main {
+  background-image: linear-gradient(rgba(3, 3, 3, 0.2431372549), rgba(3, 3, 3, 0.2431372549) 100%), url(../../public/images/blurred-hero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  background-attachment: scroll;
+}
+main .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 12rem;
+}
+main .wrapper .h1-wrapper {
+  overflow: hidden;
+}
+main .wrapper .h1-wrapper h1 {
+  max-width: 10ch;
+  text-align: center;
+  line-height: 1.2;
+  transform: translateY(14rem);
+}
+main .wrapper .p-wrapper {
+  overflow: hidden;
+}
+main .wrapper .p-wrapper p {
+  color: white;
+  max-width: 60ch;
+  margin-block: 2rem 3rem;
+  text-align: center;
+  transform: translateY(8rem);
+}
+main .wrapper a {
+  overflow: hidden;
+}
+main .wrapper a button {
+  transform: translateY(8rem);
+}/*# sourceMappingURL=style.css.map */

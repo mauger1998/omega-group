@@ -21,20 +21,20 @@ var tl = gsap.timeline({repeat: 0, repeatDelay: 1});
   
     tlTwo.to(".main-top h1", {
       y:0,
-    },0.85)
+    },0.25)
    
     tlTwo.to(".stat-item", {
       clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-      stagger:0.5,
-    },0.5)
+      stagger:0.1,
+    },0.35)
     tlTwo.to(".number-item", {
       clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
 
-    },2.25)
+    },0.4)
     tlTwo.to(".stat-item > p", {
       clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
 
-    },2.25)
+    },0.45)
     tlTwo.to(".main-bottom-left", {
       clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
 
@@ -42,106 +42,14 @@ var tl = gsap.timeline({repeat: 0, repeatDelay: 1});
         ScrollTrigger.refresh()
         // mainTop.style.overflow = "visible"
       }
-    },2.5)
+    },0.5)
 
 
 
 
 
-gsap.to("h1 .char", {
-  scrollTrigger: {
-    trigger:"h1",
-    start:"top 125px",
-    end:"+=300",
-    scrub:true,
-  },
-  yPercent:-100,
-  opacity:0,
-  ease:"Power1.ease",
-  stagger:0.25,
-
-})
-
-window.addEventListener("resize", (e) => {
-  SplitType.revert('h1')
-})
 
 // h1 out
-
-// Slider
-
-gsap.to(".excellence-slider-left", {
-  scrollTrigger: {
-    trigger:".excellence-slider-left img",
-    start:"center center",
-    pin:".excellence-slider-left",
-    end:"+=4000"
-  }
-})
-
-gsap.to(".excellence-slider-left .slide-one", {
-  scrollTrigger: {
-    trigger:".slider-one",
-    start:"top center",
-    scrub:true,
-    end:"+=100",
-  },
-  opacity:1,
-})
-gsap.to(".excellence-slider-left .slide-two", {
-  scrollTrigger: {
-    trigger:".slider-two",
-    start:"top center",
-    scrub:true,
-    end:"+=100",
-  },
-  opacity:1,
-})
-gsap.to(".excellence-slider-left .slide-three", {
-  scrollTrigger: {
-    trigger:".slider-three",
-    start:"top center",
-    scrub:true,
-    end:"+=100",
-  },
-  opacity:1,
-})
-gsap.to(".excellence-slider-left .slide-four", {
-  scrollTrigger: {
-    trigger:".slider-four",
-    start:"top center",
-    scrub:true,
-    end:"+=100",
-  },
-  opacity:1,
-})
-gsap.to(".excellence-slider-left .slide-five", {
-  scrollTrigger: {
-    trigger:".slider-five",
-    start:"top center",
-    scrub:true,
-    end:"+=100",
-  },
-  opacity:1,
-})
-gsap.to(".excellence-slider-left .slide-six", {
-  scrollTrigger: {
-    trigger:".slider-six",
-    start:"top center",
-    scrub:true,
-    end:"+=100",
-  },
-  opacity:1,
-})
-gsap.to(".excellence-slider-left .slide-seven", {
-  scrollTrigger: {
-    trigger:".slider-seven",
-    start:"top center",
-    scrub:true,
-    end:"+=100",
-  },
-  opacity:1,
-})
 
 
 
