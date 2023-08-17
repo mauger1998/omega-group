@@ -283,11 +283,16 @@ header .header-wrapper .header-right {
   }
 }
 
+.menu {
+  position: relative;
+  z-index: 10000 !important;
+}
 .menu .open {
   cursor: pointer !important;
 }
 .menu .overlay {
   position: fixed;
+  z-index: 10000 !important;
   display: flex;
   align-items: center;
   justify-content: center;

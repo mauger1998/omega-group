@@ -70,6 +70,8 @@ header {
 // Dropdown
 
 .menu {
+    position:relative;
+    z-index:10000 !important;
     
     .open {
         cursor:pointer !important;
@@ -77,6 +79,8 @@ header {
    
     .overlay {
         position:fixed;
+        // position:relative;
+        z-index:10000 !important;
         display:flex;
         align-items: center;
         justify-content: center;
