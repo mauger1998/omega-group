@@ -616,20 +616,32 @@ p.h0.precision {
 
 .omega-cards .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   padding-block-start: 4rem;
   gap: 4rem;
 }
 .omega-cards .wrapper .excellence-slider-item {
   display: grid;
+  align-items: center;
+  justify-content: center;
+  place-content: center;
+  place-items: center;
   gap: 1rem;
 }
 .omega-cards .wrapper .excellence-slider-item h3 {
   color: black;
   max-width: 10ch;
+  text-align: center;
 }
 .omega-cards .wrapper .excellence-slider-item p {
   max-width: 40ch;
+  text-align: center;
+}
+.omega-cards .wrapper .excellence-slider-item svg {
+  width: 150px;
+}
+.omega-cards .wrapper .excellence-slider-item:nth-child(4) svg {
+  width: 130px;
 }
 @media (max-width: 1024px) {
   .omega-cards .wrapper {

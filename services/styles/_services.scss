@@ -21,6 +21,7 @@
         .services-top {
             display:flex;
             align-items: center;
+            margin-block-start:8rem;
 
         .started-left {
             h2 {
@@ -36,7 +37,7 @@
         }
         .started-right {
             margin-inline-start:-12rem;
-            margin-block-start:-16rem;
+            margin-block-start:-26rem;
             z-index:-1;
             
         }
@@ -111,7 +112,7 @@
         .wrapper {
             .started-right {
                 margin-inline-start:-14rem;
-                margin-block-start:-26rem;
+                // margin-block-start:-26rem;
 
             }
         }

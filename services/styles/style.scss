@@ -70,3 +70,39 @@
   
         
 }
+
+
+p.h0 {
+    font-size:clamp(96px, 12vw, variables.$h0) !important;
+    color:variables.$purple;
+    font-weight:600;
+    opacity:0.1;
+    margin-block-end:-3rem !important;
+
+    @media (max-width:616px) {
+        font-size:clamp(48px, 12vw, 100px) !important;
+        align-self:start;
+        
+    }
+    @media (max-width:426px) {
+        font-size:clamp(32px, 12vw, 48px) !important;
+    }
+
+    &.innovate {
+        margin-block-end:-6rem !important;
+
+        @media (max-width:616px) {
+            margin-block-end:-2rem !important;
+        }
+
+    }
+
+    &.artistry {
+        // margin-block-end:-8rem;
+    }
+    &.precision {
+        margin-block:0rem;
+        line-height:clamp(100px, 12vw, variables.$h0) !important;
+
+    }
+}
