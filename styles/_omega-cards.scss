@@ -4,13 +4,13 @@
 .omega-cards {
     .wrapper {
         display:grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         padding-block-start:4rem;
         gap:4rem;
         .excellence-slider-item {
             display:grid;
             gap:1rem;
-            h2 {
+            h3 {
                 color:black;
                 max-width:10ch;
             }

@@ -616,7 +616,7 @@ p.h0.precision {
 
 .omega-cards .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   padding-block-start: 4rem;
   gap: 4rem;
 }
@@ -624,7 +624,7 @@ p.h0.precision {
   display: grid;
   gap: 1rem;
 }
-.omega-cards .wrapper .excellence-slider-item h2 {
+.omega-cards .wrapper .excellence-slider-item h3 {
   color: black;
   max-width: 10ch;
 }
@@ -802,13 +802,23 @@ html {
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
-  gap: 2rem;
+}
+.team-section .wrapper .team-grid .team-grid-item h4 {
+  color: white;
+  font-size: 18px;
+  margin-block: 1rem 2rem;
+}
+.team-section .wrapper .team-grid .team-grid-item h3 {
+  margin-block: 2rem 0.5rem;
 }
 .team-section .wrapper .team-grid .team-grid-item:nth-child(1) {
   align-items: flex-start;
 }
 .team-section .wrapper .team-grid .team-grid-item:nth-child(1) h3 {
   text-transform: uppercase;
+}
+.team-section .wrapper .team-grid .team-grid-item:nth-child(1) p {
+  margin-block: 1rem 2rem;
 }
 .team-section .wrapper .team-grid .team-grid-item p {
   color: white;
