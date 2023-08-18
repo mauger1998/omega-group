@@ -521,14 +521,14 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   text-align: center;
 }
 .future-section .wrapper .team-grid {
-  margin-block-start: -8rem;
+  margin-block-start: -4rem;
 }
 .future-section .wrapper .team-grid img {
   margin-bottom: -0.35rem;
 }
 @media (max-width: 1024px) {
   .future-section .wrapper .team-grid {
-    margin-block-start: -4rem;
+    margin-block-start: -3rem;
   }
 }
 @media (max-width: 600px) {
@@ -536,7 +536,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
     font-size: clamp(60px, 16vw, 96px);
   }
   .future-section .wrapper .team-grid {
-    margin-block-start: -4rem;
+    margin-block-start: -2rem;
   }
 }
 @media (max-width: 500px) {
@@ -549,19 +549,17 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 }
 
 .text-section .wrapper {
-  display: grid;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
   padding-block: 12rem;
 }
 .text-section .wrapper h2 {
   color: #030303;
-  max-width: 100%;
+  max-width: auto;
   line-height: 1.4;
-  font-size: 60px;
-}
-@media (max-width: 700px) {
-  .text-section .wrapper h2 {
-    font-size: 32px;
-  }
+  font-size: clamp(40px, 4vw, 60px);
 }
 @media (max-width: 616px) {
   .text-section .wrapper h2 {
@@ -574,7 +572,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 }
 
 p.h0 {
-  font-size: clamp(100px, 15vw, 192px) !important;
+  font-size: clamp(96px, 12vw, 176px) !important;
   color: #403579;
   font-weight: 600;
   opacity: 0.1;
@@ -582,18 +580,18 @@ p.h0 {
 }
 @media (max-width: 616px) {
   p.h0 {
-    font-size: clamp(64px, 15vw, 100px) !important;
+    font-size: clamp(48px, 12vw, 100px) !important;
     align-self: start;
   }
 }
-@media (max-width: 406px) {
+@media (max-width: 426px) {
   p.h0 {
-    font-size: clamp(40px, 15vw, 64px) !important;
+    font-size: clamp(32px, 12vw, 48px) !important;
   }
 }
 p.h0.precision {
   margin-block: 0rem;
-  line-height: clamp(100px, 15vw, 192px) !important;
+  line-height: clamp(100px, 12vw, 176px) !important;
 }
 
 .started-section .wrapper {
@@ -1130,7 +1128,7 @@ footer .wrapper .footer-bottom p {
   font-size: 14px;
 }
 footer .wrapper .h0 {
-  font-size: 192px;
+  font-size: 176px;
   font-weight: 900;
   line-height: 1;
   align-self: start;

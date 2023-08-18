@@ -592,7 +592,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 }
 
 p.h0 {
-  font-size: clamp(100px, 15vw, 192px) !important;
+  font-size: clamp(100px, 15vw, 176px) !important;
   color: #403579;
   font-weight: 600;
   opacity: 0.1;
@@ -611,7 +611,7 @@ p.h0 {
 }
 p.h0.precision {
   margin-block: 0rem;
-  line-height: clamp(100px, 15vw, 192px) !important;
+  line-height: clamp(100px, 15vw, 176px) !important;
 }
 
 .omega-cards .wrapper {
@@ -922,7 +922,7 @@ html {
 }
 
 p.h0 {
-  font-size: 192px;
+  font-size: 176px;
   color: #403579;
   font-weight: 600;
 }
@@ -1222,7 +1222,7 @@ footer .wrapper .footer-bottom p {
   font-size: 14px;
 }
 footer .wrapper .h0 {
-  font-size: 192px;
+  font-size: 176px;
   font-weight: 900;
   line-height: 1;
   align-self: start;

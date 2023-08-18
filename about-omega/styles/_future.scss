@@ -14,7 +14,7 @@
         }
 
         .team-grid {
-            margin-block-start:-8rem;
+            margin-block-start:-4rem;
 
             img {
                 margin-bottom:-0.35rem;
@@ -24,7 +24,7 @@
     @media (max-width:1024px) {
         .wrapper {
             .team-grid {
-                margin-block-start:-4rem;
+                margin-block-start:-3rem;
             }
         }
     }
@@ -34,7 +34,7 @@
                 font-size:clamp(60px, 16vw, variables.$big-type);
             }
             .team-grid {
-                margin-block-start:-4rem;
+                margin-block-start:-2rem;
             }
         }
     }
