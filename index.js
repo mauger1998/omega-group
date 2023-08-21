@@ -262,7 +262,28 @@ let minBox = document.getElementById("min-box");
 let secBox = document.getElementById("sec-box");
 //Format: Date(year, month, day, hour, minute)
 //Year is counter from 0 to 11
-let endDate = new Date(2023, 7, 31, 12, 00);
+
+// Get Current Month
+
+let toMonth = new Date();
+let month = toMonth.getMonth()
+
+
+
+// Get Current Year
+
+var currentYear = new Date().getFullYear()  // returns the current year
+
+// Get Last Day of Current Month
+var lastday = function(y,m){
+  return  new Date(y, m +1, 0).getDate();
+  }
+var lastDayOfMonth =  lastday(currentYear, month)
+
+// Set End Date
+let endDate = new Date(currentYear, month, lastDayOfMonth, 12, 0o0)
+
+
 //Output value in milliseconds
 let endTime = endDate.getTime();
 function countdown() {
