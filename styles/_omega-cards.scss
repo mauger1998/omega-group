@@ -4,7 +4,7 @@
 .omega-cards {
     .wrapper {
         display:grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         padding-block-start:4rem;
         gap:4rem;
         .excellence-slider-item {
@@ -24,7 +24,7 @@
                 text-align:center;
             }
             svg {
-                width:150px;
+                width:75px;
 
                 
             }
@@ -38,7 +38,7 @@
             &:nth-child(4) {
                 svg {
                     
-                        width:130px;
+                        width:75px;
                     
                 }
             }

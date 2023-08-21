@@ -616,7 +616,7 @@ p.h0.precision {
 
 .omega-cards .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   padding-block-start: 4rem;
   gap: 4rem;
 }
@@ -638,10 +638,10 @@ p.h0.precision {
   text-align: center;
 }
 .omega-cards .wrapper .excellence-slider-item svg {
-  width: 150px;
+  width: 75px;
 }
 .omega-cards .wrapper .excellence-slider-item:nth-child(4) svg {
-  width: 130px;
+  width: 75px;
 }
 @media (max-width: 1024px) {
   .omega-cards .wrapper {
