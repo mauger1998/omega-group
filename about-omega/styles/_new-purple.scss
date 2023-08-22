@@ -72,7 +72,7 @@ html {
         .swiper {
            width:40%;
            overflow-x:visible;
-           display:grid;
+           
 
            &.swiper2 {
             img {
@@ -87,9 +87,17 @@ html {
                 line-height:1.2;
                 margin-block:2rem 1rem;
             }
+            
+            h4 {
+                color:white;
+                font-size:18px;
+                margin-block:0rem 1.5rem;
+                font-weight:500 !important;
+            }
             .swiper-slide {
-                gap:0;
+                gap:0rem;
                 height:100%;
+                width:100%;
             }
            }
 

@@ -336,6 +336,10 @@ fetch(URLTWO)
         swiperH3.textContent = result.name
         swiperSlide.appendChild(swiperH3)
 
+        const swiperH4 = document.createElement("h4")
+        swiperH4.textContent = result.position
+        swiperSlide.appendChild(swiperH4)
+
         const swiperP = document.createElement("p")
         swiperP.textContent = result.review
         swiperSlide.appendChild(swiperP)
