@@ -129,9 +129,16 @@ fetch(URL)
         direction: 'horizontal',
         loop: true,
         spaceBetween:0o0,
-        slidesPerView:3,
+        slidesPerView:2.5,
         freeMode:true,
         mousewheel:true,
+
+        breakpoints: {
+          // when window width is >= 640px
+          640: {
+            slidesPerView:6.25,
+          }
+        }
       });
 
 
