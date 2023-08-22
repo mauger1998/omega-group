@@ -12,18 +12,36 @@ button {
         border:1px solid variables.$purple;
         color:white;
         background-color:variables.$purple;
+
+        
     }
 
     &.secondary-button {
         border:1px solid white;
         color:variables.$purple;
         background-color:white;
+        transition: background-color 300ms ease;
+
+
+        &:hover {
+            color:white;
+            background-color:transparent;
+            transition: background-color 300ms ease;
+        }
         
     }
     &.header-button {
         border:1px solid white;
         color:variables.$white;
         background-color:transparent;
+        transition: background-color 300ms ease;
+
+
+        &:hover {
+            color:variables.$purple;
+            background-color:white;
+            transition: background-color 300ms ease;
+        }
     }
 
   

@@ -7,6 +7,73 @@
 @use"./services";
 @use "../../styles/footer";
 
+// Current Page Indicator
+
+// Current Page Indicator
+
+header {
+    .header-wrapper {
+        nav {
+            ul {
+
+                a:not(:nth-of-type(3)) {
+                    li {
+                        position:relative;
+
+                        &:hover {
+                            &::after {
+                                transform:scaleX(1);
+                                transform-origin:left;
+                                transition:transform 300ms ease-in-out;
+                            }
+                            
+                        }
+                        &::after {
+                            content:"";
+                            width:100%;
+                            height:0.25rem;
+                            background-color:white;
+                            position:absolute;
+                            bottom:0;
+                            transform:scaleX(0);
+                            transform-origin:left;
+                            transition:transform 300ms ease-in-out;
+
+                        }
+                    }
+                }
+
+                a:nth-of-type(3) {
+                    li {
+                        position:relative;
+
+                        &:hover {
+                            &::after {
+                                transform:scaleX(0);
+                                transform-origin:left;
+                                transition:transform 300ms ease-in-out;
+                            }
+                            
+                        }
+                        &::after {
+                            content:"";
+                            width:100%;
+                            height:0.25rem;
+                            background-color:white;
+                            position:absolute;
+                            bottom:0;
+                            transform-origin:left;
+                            transition:transform 300ms ease-in-out;
+
+                        }
+                    }
+                   
+                }
+            }
+        }
+    }
+}
+
 
 // Loader 
 .loader {

@@ -71,7 +71,10 @@ header {
 
 .menu {
     position:relative;
+    
     z-index:10000 !important;
+
+  
     
     .open {
         cursor:pointer !important;

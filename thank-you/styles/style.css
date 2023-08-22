@@ -195,11 +195,23 @@ button.secondary-button {
   border: 1px solid white;
   color: #403579;
   background-color: white;
+  transition: background-color 300ms ease;
+}
+button.secondary-button:hover {
+  color: white;
+  background-color: transparent;
+  transition: background-color 300ms ease;
 }
 button.header-button {
   border: 1px solid white;
   color: #FFFFFF;
   background-color: transparent;
+  transition: background-color 300ms ease;
+}
+button.header-button:hover {
+  color: #403579;
+  background-color: white;
+  transition: background-color 300ms ease;
 }
 
 main {
