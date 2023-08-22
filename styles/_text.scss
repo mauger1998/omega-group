@@ -21,7 +21,7 @@
 
             span {
                 color:variables.$purple;
-                font-family:twk;
+                font-family:"Poppins", sans-serif;
             }
         }
     }
@@ -30,9 +30,11 @@
 p.h0 {
     font-size:clamp(100px, 15vw, variables.$h0) !important;
     color:variables.$purple;
-    font-weight:600;
+    font-weight:700 !important;
     opacity:0.1;
     margin-block-end:-3rem !important;
+    font-family:"Poppins", sans-serif;
+
 
     @media (max-width:616px) {
         font-size:clamp(64px, 15vw, 100px) !important;

@@ -29,7 +29,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: hell, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
 
@@ -88,7 +88,7 @@ h1 {
   line-height: 1.2;
   color: white;
   font-weight: 700;
-  font-family: twk;
+  font-family: "Poppins", sans-serif;
 }
 h1 span {
   color: #403579;
@@ -99,8 +99,8 @@ h1 .line {
 }
 h1 .char {
   font-size: 96px;
-  font-family: twk;
-  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 @media (max-width: 700px) {
   h1 {
@@ -111,8 +111,8 @@ h1 .char {
   }
   h1 .char {
     font-size: 64px;
-    font-family: twk;
-    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
   }
 }
 
@@ -121,7 +121,7 @@ h2 {
   line-height: 1.2;
   color: white;
   font-weight: 700;
-  font-family: twk;
+  font-family: "Poppins", sans-serif;
 }
 h2 span {
   color: #403579;
@@ -137,8 +137,8 @@ h3 {
   font-size: 24px;
   line-height: 1.2;
   color: white;
-  font-weight: 700;
-  font-family: twk;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
 }
 @media (max-width: 700px) {
   h3 {
@@ -148,7 +148,7 @@ h3 {
 
 p {
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 300 !important;
   font-size: 16px;
 }
 p.tagline {
@@ -166,7 +166,7 @@ p.large {
 p.number {
   font-size: 48px;
   line-height: 1.2;
-  font-family: twk;
+  font-family: "Poppins", sans-serif;
 }
 @media (max-width: 700px) {
   p {
@@ -184,9 +184,6 @@ button {
   padding: 1rem 2.5rem;
   cursor: pointer;
   border-radius: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   position: relative;
 }
 button.primary-button {
@@ -198,29 +195,11 @@ button.secondary-button {
   border: 1px solid white;
   color: #403579;
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
-  max-height: 3rem;
-  overflow: hidden;
 }
 button.header-button {
   border: 1px solid white;
   color: #FFFFFF;
   background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
-  max-height: 3rem;
-  overflow: hidden;
-}
-button span {
-  height: 1rem;
-  border: 1px solid white;
 }
 
 header {
@@ -396,7 +375,10 @@ main .wrapper .main-top p {
   font-size: 24px;
   color: white;
   text-align: center;
-  font-weight: 400;
+  font-weight: 300 !important;
+}
+main .wrapper .main-top p .purple {
+  font-weight: 300 !important;
 }
 main .wrapper .main-bottom {
   width: 100%;
@@ -417,7 +399,8 @@ main .wrapper .main-bottom .main-bottom-left {
 }
 main .wrapper .main-bottom .main-bottom-left p {
   color: white;
-  max-width: 40ch;
+  max-width: 45ch;
+  font-weight: 300 !important;
 }
 main .wrapper .main-bottom .main-bottom-left svg {
   width: 56px;
@@ -461,6 +444,12 @@ main .wrapper .main-bottom .main-bottom-right .stat-item .number-item {
   transition: clip-path 300ms ease;
   transition: clip-path 300ms ease, -webkit-clip-path 300ms ease;
 }
+main .wrapper .main-bottom .main-bottom-right .stat-item .number-item p {
+  font-weight: 700 !important;
+}
+main .wrapper .main-bottom .main-bottom-right .stat-item .number-item p:nth-child(2) {
+  font-weight: 300 !important;
+}
 main .wrapper .main-bottom .main-bottom-right .stat-item:nth-child(1) {
   border: none !important;
 }
@@ -472,6 +461,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   transition: -webkit-clip-path 300ms ease;
   transition: clip-path 300ms ease;
   transition: clip-path 300ms ease, -webkit-clip-path 300ms ease;
+  font-weight: 500;
 }
 @media (max-width: 1024px) {
   main {
@@ -588,15 +578,16 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 }
 .text-section .wrapper h2 span {
   color: #403579;
-  font-family: twk;
+  font-family: "Poppins", sans-serif;
 }
 
 p.h0 {
   font-size: clamp(100px, 15vw, 176px) !important;
   color: #403579;
-  font-weight: 600;
+  font-weight: 700 !important;
   opacity: 0.1;
   margin-block-end: -3rem !important;
+  font-family: "Poppins", sans-serif;
 }
 @media (max-width: 616px) {
   p.h0 {
@@ -618,24 +609,25 @@ p.h0.precision {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding-block-start: 4rem;
-  gap: 4rem;
+  gap: 2rem;
 }
 .omega-cards .wrapper .excellence-slider-item {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  place-content: center;
-  place-items: center;
-  gap: 1rem;
+  justify-content: flex-start;
 }
 .omega-cards .wrapper .excellence-slider-item h3 {
   color: black;
   max-width: 10ch;
   text-align: center;
+  font-weight: 600 !important;
+  margin-block: 0.75rem 1.25rem;
 }
 .omega-cards .wrapper .excellence-slider-item p {
-  max-width: 40ch;
+  max-width: 40ch !important;
   text-align: center;
+  font-weight: 300 !important;
 }
 .omega-cards .wrapper .excellence-slider-item svg {
   width: 75px;
@@ -713,7 +705,7 @@ html {
   padding-left: 12rem;
 }
 .service-cards .wrapper .service-cards-left button {
-  margin-block-start: 2rem;
+  margin-block-start: 4rem;
 }
 @media (max-width: 1024px) {
   .service-cards .wrapper .service-cards-left {
@@ -724,7 +716,7 @@ html {
 }
 .service-cards .wrapper .service-cards-left h2 {
   max-width: 12ch;
-  margin-block-end: 4rem;
+  margin-block-end: 2rem;
   text-transform: uppercase;
 }
 .service-cards .wrapper .service-cards-left p {
@@ -785,6 +777,7 @@ html {
 }
 .service-cards .wrapper .swiper .swiper-slide p {
   max-width: 45ch;
+  font-weight: 300 !important;
 }
 
 .team-section {
@@ -823,10 +816,15 @@ html {
 .team-section .wrapper .team-grid .team-grid-item h4 {
   color: white;
   font-size: 18px;
-  margin-block: 1rem 2rem;
+  margin-block: 0rem 1.5rem;
+  font-weight: 500 !important;
 }
 .team-section .wrapper .team-grid .team-grid-item h3 {
   margin-block: 2rem 0.5rem;
+  font-weight: 700 !important;
+}
+.team-section .wrapper .team-grid .team-grid-item p {
+  font-weight: 300 !important;
 }
 .team-section .wrapper .team-grid .team-grid-item:nth-child(1) {
   align-items: flex-start;
@@ -836,6 +834,7 @@ html {
 }
 .team-section .wrapper .team-grid .team-grid-item:nth-child(1) p {
   margin-block: 1rem 2rem;
+  max-width: 40ch;
 }
 .team-section .wrapper .team-grid .team-grid-item p {
   color: white;
@@ -888,7 +887,7 @@ html {
 }
 .gallery-section .wrapper .gallery-title h2 {
   color: #030303;
-  max-width: 28ch;
+  max-width: 32ch;
 }
 .gallery-section .wrapper .swiper3 .gallery-grid {
   display: flex;
@@ -1164,6 +1163,20 @@ footer .wrapper .footer-top .column ul li,
 footer .wrapper .footer-top .column ul a {
   color: #030303;
 }
+@media (max-width: 900px) {
+  footer .wrapper .footer-top {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  footer .wrapper .footer-top {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  footer .wrapper .footer-top .column:nth-child(2), footer .wrapper .footer-top .column:nth-child(4), footer .wrapper .footer-top .column:nth-child(3) {
+    grid-row: auto;
+  }
+}
 @media (max-width: 500px) {
   footer .wrapper .footer-top {
     grid-template-columns: 1fr 1fr 1fr;
@@ -1171,15 +1184,6 @@ footer .wrapper .footer-top .column ul a {
   }
   footer .wrapper .footer-top .column:nth-child(2), footer .wrapper .footer-top .column:nth-child(4), footer .wrapper .footer-top .column:nth-child(3) {
     grid-row: 2;
-  }
-}
-@media (max-width: 409px) {
-  footer .wrapper .footer-top {
-    grid-template-columns: 1fr;
-    width: 100%;
-  }
-  footer .wrapper .footer-top .column:nth-child(2), footer .wrapper .footer-top .column:nth-child(4), footer .wrapper .footer-top .column:nth-child(3) {
-    grid-row: auto;
   }
 }
 footer .wrapper .footer-bottom {

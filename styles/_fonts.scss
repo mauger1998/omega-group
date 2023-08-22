@@ -5,7 +5,7 @@ h1 {
     line-height:1.2;
     color:white;
     font-weight:700;
-    font-family:twk;
+    font-family:"Poppins", sans-serif;
 
     span {
         color:variables.$purple;
@@ -17,8 +17,8 @@ h1 {
     }
     .char {
         font-size:variables.$h1;
-        font-family:twk;
-        font-weight:700;
+    font-family:"Poppins", sans-serif;
+    font-weight:500;
     }
 
     @media (max-width:700px) {
@@ -29,8 +29,8 @@ h1 {
         }
         .char {
             font-size:variables.$mobile-h1;
-            font-family:twk;
-            font-weight:700;
+    font-family:"Poppins", sans-serif;
+    font-weight:500;
         }
     }
 }
@@ -40,7 +40,7 @@ h2 {
     line-height:1.2;
     color:white;
     font-weight:700;
-    font-family:twk;
+    font-family:"Poppins", sans-serif;
 
     span {
         color:variables.$purple;
@@ -56,8 +56,8 @@ h3 {
     font-size:variables.$h3;
     line-height:1.2;
     color:white;
-    font-weight:700;
-    font-family:twk;
+    font-weight:500;
+    font-family:"Poppins", sans-serif;
 
     @media(max-width:700px) {
         font-size:variables.$mobile-h3;
@@ -66,7 +66,7 @@ h3 {
 
 p {
     line-height:1.6;
-    font-weight:300;
+    font-weight:300 !important;
     font-size:variables.$base-font;
 
     &.tagline {
@@ -84,7 +84,7 @@ p {
     &.number {
         font-size:variables.$h2;
         line-height:1.2;
-        font-family:twk;
+        font-family:"Poppins", sans-serif;
     }
     @media (max-width:700px) {
         font-size:variables.$mobile-base;

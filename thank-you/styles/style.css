@@ -29,7 +29,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: hell, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
 
@@ -88,7 +88,7 @@ h1 {
   line-height: 1.2;
   color: white;
   font-weight: 700;
-  font-family: twk;
+  font-family: "Poppins", sans-serif;
 }
 h1 span {
   color: #403579;
@@ -99,8 +99,8 @@ h1 .line {
 }
 h1 .char {
   font-size: 96px;
-  font-family: twk;
-  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 @media (max-width: 700px) {
   h1 {
@@ -111,8 +111,8 @@ h1 .char {
   }
   h1 .char {
     font-size: 64px;
-    font-family: twk;
-    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
   }
 }
 
@@ -121,7 +121,7 @@ h2 {
   line-height: 1.2;
   color: white;
   font-weight: 700;
-  font-family: twk;
+  font-family: "Poppins", sans-serif;
 }
 h2 span {
   color: #403579;
@@ -137,8 +137,8 @@ h3 {
   font-size: 24px;
   line-height: 1.2;
   color: white;
-  font-weight: 700;
-  font-family: twk;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
 }
 @media (max-width: 700px) {
   h3 {
@@ -148,7 +148,7 @@ h3 {
 
 p {
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 300 !important;
   font-size: 16px;
 }
 p.tagline {
@@ -166,7 +166,7 @@ p.large {
 p.number {
   font-size: 48px;
   line-height: 1.2;
-  font-family: twk;
+  font-family: "Poppins", sans-serif;
 }
 @media (max-width: 700px) {
   p {
@@ -184,9 +184,6 @@ button {
   padding: 1rem 2.5rem;
   cursor: pointer;
   border-radius: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   position: relative;
 }
 button.primary-button {
@@ -198,29 +195,11 @@ button.secondary-button {
   border: 1px solid white;
   color: #403579;
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
-  max-height: 3rem;
-  overflow: hidden;
 }
 button.header-button {
   border: 1px solid white;
   color: #FFFFFF;
   background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
-  max-height: 3rem;
-  overflow: hidden;
-}
-button span {
-  height: 1rem;
-  border: 1px solid white;
 }
 
 main {

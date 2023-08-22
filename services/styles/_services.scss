@@ -69,7 +69,7 @@
                 display:flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-start;
 
                 @media (max-width:861px) {
                     padding:1rem !important;
@@ -81,6 +81,7 @@
                 h3 {
                     margin-block-start:0.5rem;
                     text-align:center;
+                    font-weight:700;
 
                 }
                 p {

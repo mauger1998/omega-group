@@ -47,7 +47,10 @@ main {
                 font-size:variables.$h3;
                 color:white;
                 text-align: center;
-                font-weight:400;
+                font-weight:300 !important;
+                .purple {
+                    font-weight:300 !important;
+                }
                 
             }
         }
@@ -70,7 +73,8 @@ main {
 
                 p {
                     color:white;
-                    max-width:40ch;
+                    max-width:45ch;
+                    font-weight:300 !important;
                 }
 
                 svg {
@@ -112,6 +116,13 @@ main {
                         clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
                         transition: clip-path 300ms ease;
 
+                        p {
+                            font-weight:700 !important;
+                            &:nth-child(2) {
+                                font-weight:300 !important;
+                            }
+                        }
+
                     }
 
                     &:nth-child(1) {
@@ -123,6 +134,7 @@ main {
                         line-height:1.2;
                         clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
                         transition: clip-path 300ms ease;
+                        font-weight:500;
 
 
                     }
