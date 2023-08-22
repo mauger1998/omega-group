@@ -33,7 +33,7 @@
 p.h0 {
     font-size:clamp(96px, 12vw, variables.$h0) !important;
     color:variables.$purple;
-    font-weight:600;
+    font-weight:600 !important;
     opacity:0.1;
     margin-block-end:-3rem !important;
 
@@ -47,10 +47,14 @@ p.h0 {
 
     &.artistry {
         // margin-block-end:-8rem;
+        font-weight:600;
+
     }
     &.precision {
         margin-block:0rem;
         line-height:clamp(100px, 12vw, variables.$h0) !important;
+        font-weight:600;
+
 
     }
 }

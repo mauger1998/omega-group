@@ -20,8 +20,20 @@
         }
         .started-right {
             margin-inline-start:-12rem;
-            margin-block-start:-16rem;
+            margin-block-start:-22rem;
             z-index:-1;
+            display:flex;
+            align-items: flex-end;
+
+            @media (max-width:1000px) {
+                height:auto;
+                overflow:hidden;
+            }
+
+            img {
+                object-fit:cover;
+                width:100%;
+            }
         }
     }
     @media (max-width:600px) {

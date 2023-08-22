@@ -566,7 +566,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 p.h0 {
   font-size: clamp(96px, 12vw, 176px) !important;
   color: #403579;
-  font-weight: 600;
+  font-weight: 600 !important;
   opacity: 0.1;
   margin-block-end: -3rem !important;
 }
@@ -581,9 +581,13 @@ p.h0 {
     font-size: clamp(32px, 12vw, 48px) !important;
   }
 }
+p.h0.artistry {
+  font-weight: 600;
+}
 p.h0.precision {
   margin-block: 0rem;
   line-height: clamp(100px, 12vw, 176px) !important;
+  font-weight: 600;
 }
 
 .started-section .wrapper {
@@ -603,8 +607,21 @@ p.h0.precision {
 }
 .started-section .wrapper .started-right {
   margin-inline-start: -12rem;
-  margin-block-start: -16rem;
+  margin-block-start: -22rem;
   z-index: -1;
+  display: flex;
+  align-items: flex-end;
+}
+@media (max-width: 1000px) {
+  .started-section .wrapper .started-right {
+    height: auto;
+    overflow: hidden;
+  }
+}
+.started-section .wrapper .started-right img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 @media (max-width: 600px) {
   .started-section .wrapper .started-right {
