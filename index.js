@@ -77,6 +77,27 @@ setTimeout(() => {
   })
 }, 1500);
 
+// Swiper 
+
+const swiper = new Swiper('.swiper:not(.swiper3)', {
+  speed: 400,
+  spaceBetween: 50,
+ 
+});
+
+
+
+const swiperNext = document.querySelector(".swiper-button-next")
+const swiperPrev = document.querySelector(".swiper-button-prev")
+
+swiperNext.addEventListener("click", (e) => {
+  swiper.slideNext();
+})
+swiperPrev.addEventListener("click", (e) => {
+  swiper.slidePrev();
+})
+
+
 
 
    
@@ -95,14 +116,35 @@ fetch(URL)
     if (result.length > 0) {
       galleryGrid.innerHTML = ""
       result.forEach((result) => {
-        const galleryGridItem = document.createElement("img")
-        galleryGridItem.src = result.imgUrl
+        const galleryGridItem = document.createElement("div")
+        galleryGridItem.classList.add("gallery-grid-item")
+        galleryGridItem.classList.add("swiper-slide")
+        const galleryGridImg = document.createElement("img")
+        galleryGridImg.src = result.imgUrl
         galleryGrid.appendChild(galleryGridItem)
+        galleryGridItem.appendChild(galleryGridImg)
       });
+
+      const swiper3 = new Swiper('.swiper3', {
+        direction: 'horizontal',
+        loop: true,
+        spaceBetween:0o0,
+        slidesPerView:3,
+        freeMode:true,
+        mousewheel:true,
+      });
+
+
+
       
     }
   })
   .catch((err) => console.error(err));
+
+
+// Swiper 
+
+
 
 let URLTWO = "https://f9u8zfhq.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22faq%22%5D+%7B%0A++question%2C%0A++++answer%0A%7D"
 
@@ -233,25 +275,6 @@ menuClose.addEventListener("click", () => {
 
 
 
-// Swiper 
-
-const swiper = new Swiper('.swiper', {
-  speed: 400,
-  spaceBetween: 50,
- 
-});
-
-
-
-const swiperNext = document.querySelector(".swiper-button-next")
-const swiperPrev = document.querySelector(".swiper-button-prev")
-
-swiperNext.addEventListener("click", (e) => {
-  swiper.slideNext();
-})
-swiperPrev.addEventListener("click", (e) => {
-  swiper.slidePrev();
-})
 
 
 
