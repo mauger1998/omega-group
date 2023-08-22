@@ -29,29 +29,28 @@ timelineSVG.to(svgLetters, {
 setTimeout(() => {
   const imgLoad = imagesLoaded(content, { background: true })
   imgLoad.on("done", instance => {
-    gsap.to(loader, {
-      opacity:0,
-      duration:1.5,
-      pointerEvents:"none",
-      ease: "Power4.easeInOut",
-    })
-    gsap.to(".loader > svg", {
-      scale:0,
-      duration:1.5,
-      ease: "Power4.easeInOut",
-    })
-    
-
  let tlTwo = gsap.timeline({repeat: 0, repeatDelay: 1});
+
+ tlTwo.to(loader, {
+  opacity:0,
+  duration:1.5,
+  pointerEvents:"none",
+  ease: "Power4.easeInOut",
+},0)
+tlTwo.to(".loader > svg", {
+  scale:0,
+  duration:1.5,
+  ease: "Power4.easeInOut",
+},0)
   
  tlTwo.to("main h1", {
    y:0,
    ease:"Power1.ease",
- },0.25)
+ },1)
  tlTwo.to("main p", {
    y:0,
    ease:"Power1.ease",
- },0.6)
+ },1.5)
  tlTwo.to("main button", {
    y:0,
    ease:"Power1.ease",
@@ -60,13 +59,15 @@ setTimeout(() => {
     ScrollTrigger.refresh()
     // mainTop.style.overflow = "visible"
   }
-},0.5) 
+},1.5) 
+    
+
 
    
   ScrollTrigger.refresh()
 
   })
-}, 1500);
+}, 1200);
 
 
 

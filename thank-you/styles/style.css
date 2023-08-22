@@ -233,9 +233,9 @@ main .wrapper .h1-wrapper {
   overflow: hidden;
 }
 main .wrapper .h1-wrapper h1 {
-  max-width: 10ch;
+  max-width: 14ch;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1;
   transform: translateY(14rem);
 }
 main .wrapper .p-wrapper {

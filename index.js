@@ -34,34 +34,35 @@ setTimeout(() => {
   const imgLoad = imagesLoaded(content, { background: true })
 
   imgLoad.on("done", instance => {
-    gsap.to(loader, {
+    
+    let tlTwo = gsap.timeline({repeat: 0, repeatDelay: 0.5}); 
+    tlTwo.to(loader, {
       opacity:0,
       duration:1.5,
       pointerEvents:"none",
       ease: "Power4.easeInOut",
-    })
-    gsap.to(".loader > svg", {
+    }, 0)
+    tlTwo.to(".loader > svg", {
       scale:0,
       duration:1.5,
       ease: "Power4.easeInOut",
-    })
-    let tlTwo = gsap.timeline({repeat: 0, repeatDelay: 0.5}); 
+    }, 0)
     tlTwo.to(".main-top svg path", {
       y:0,
-    },0.25)
+    },0.75)
    
     tlTwo.to(".stat-item", {
       clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       stagger:0.1,
-    },0.35)
+    },0.9)
     tlTwo.to(".number-item", {
       clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
 
-    },0.4)
+    },0.95)
     tlTwo.to(".stat-item > p", {
       clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
 
-    },0.45)
+    },1)
     tlTwo.to(".main-bottom-left", {
       clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
 
@@ -75,7 +76,7 @@ setTimeout(() => {
   ScrollTrigger.refresh()
 
   })
-}, 1500);
+}, 1200);
 
 // Swiper 
 
