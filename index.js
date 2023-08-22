@@ -134,9 +134,8 @@ fetch(URL)
         mousewheel:true,
 
         breakpoints: {
-          // when window width is >= 640px
           640: {
-            slidesPerView:6.25,
+            slidesPerView:6.3,
           }
         }
       });
