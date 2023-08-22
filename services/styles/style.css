@@ -529,9 +529,13 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   max-width: 8ch;
   margin-block-end: 2rem;
 }
+.services-section .wrapper .services-top .started-left p.h0 {
+  font-weight: 700 !important;
+}
 .services-section .wrapper .services-top .started-left p {
   max-width: 32ch;
   color: white;
+  font-weight: 300 !important;
 }
 .services-section .wrapper .services-top .started-right {
   margin-inline-start: -12rem;
@@ -584,6 +588,12 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   margin-block-start: 0.5rem;
   text-align: center;
   font-weight: 700;
+}
+@media (max-width: 568px) {
+  .services-section .wrapper .services-bottom .services-card h3 {
+    max-width: 10ch;
+    text-align: center;
+  }
 }
 .services-section .wrapper .services-bottom .services-card p {
   color: white;
