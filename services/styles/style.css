@@ -686,6 +686,7 @@ footer .wrapper .footer-bottom {
 }
 footer .wrapper .footer-bottom p {
   font-size: 14px;
+  opacity: 0.5;
 }
 footer .wrapper .h0 {
   font-size: 176px;
