@@ -173,3 +173,44 @@ p.h0 {
 
     }
 }
+
+
+
+// Full Gallery
+
+
+.swiper {
+    width: 100%;
+    height:90vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height:300px;
+    border:2px solid blue;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .full-gallery-section {
+    .wrapper {
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h2 {
+            color:black;
+            margin-block-end:6rem;
+        }
+    }
+  }
+
+

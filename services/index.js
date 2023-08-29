@@ -145,3 +145,49 @@ menuClose.addEventListener("click", () => {
 
 })
 
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  grid: {
+    rows: 2,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    700: {
+      slidesPerView:3,
+      spaceBetween: 30,
+      grid: {
+        rows: 2,
+      },
+
+    },
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+
+      grid: {
+        rows: 2,
+      },
+
+    },
+  
+   
+  },
+  spaceBetween:10,
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+
+const swiperNext = document.querySelector(".swiper-button-next")
+const swiperPrev = document.querySelector(".swiper-button-prev")
+
+swiperNext.addEventListener("click", (e) => {
+  swiper.slideNext();
+})
+swiperPrev.addEventListener("click", (e) => {
+  swiper.slidePrev();
+})
