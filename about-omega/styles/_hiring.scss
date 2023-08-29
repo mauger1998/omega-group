@@ -82,6 +82,10 @@
                             background-color:transparent;
                             padding:0 !important;
                             border-radius:0;
+
+                            h2 {
+                                text-align:left;
+                            }
                         }
 
                          button[aria-expanded="true"] {

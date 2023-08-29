@@ -976,6 +976,11 @@ html {
     display: none;
   }
 }
+@media (max-width: 616px) {
+  .helmets-section .wrapper .helmets-right {
+    margin-top: -1rem;
+  }
+}
 
 .hiring-section {
   background-color: #403579;
@@ -1054,6 +1059,9 @@ html {
   background-color: transparent;
   padding: 0 !important;
   border-radius: 0;
+}
+.hiring-section .wrapper .hiring-wrapper .hiring-right .hiring-list .hiring-list-item .question h2 {
+  text-align: left;
 }
 .hiring-section .wrapper .hiring-wrapper .hiring-right .hiring-list .hiring-list-item button[aria-expanded=true] {
   color: #FFFFFF;
