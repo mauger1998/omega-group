@@ -12,7 +12,13 @@
         h2 {
             text-align:center;
             max-width:10ch;
+            margin-block-end:2rem;
+        }
+        p {
+            color:white;
+            max-width:32ch;
             margin-block-end:4rem;
+            text-align:center;
         }
 
         form {
@@ -49,7 +55,6 @@
                     border-bottom:1px solid white;
                     width:100%;
                     border-radius:0.25rem;
-                    font-family:twk;
 
                     &:focus {
                         outline:2px solid white;
@@ -70,11 +75,14 @@
 .file::-webkit-file-upload-button {
     background-color:transparent;
     padding:0.5rem 1rem;
-    border:2px solid white;
+    border:1px solid white;
     color:white;
     font-weight:bold;
     text-transform: uppercase;
     border-radius:2rem;
     font-size:12px;
     cursor:pointer;
+}
+.file::placeholder {
+    font-family:"Poppins";
 }

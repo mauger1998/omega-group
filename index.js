@@ -119,27 +119,14 @@ fetch(URL)
       result.forEach((result) => {
         const galleryGridItem = document.createElement("div")
         galleryGridItem.classList.add("gallery-grid-item")
-        galleryGridItem.classList.add("swiper-slide")
-        const galleryGridImg = document.createElement("img")
-        galleryGridImg.src = result.imgUrl
         galleryGrid.appendChild(galleryGridItem)
-        galleryGridItem.appendChild(galleryGridImg)
+
+        const galleryImage = document.createElement("img")
+        galleryImage.src = result.imgUrl
+        galleryGridItem.appendChild(galleryImage)
       });
 
-      const swiper3 = new Swiper('.swiper3', {
-        direction: 'horizontal',
-        loop: true,
-        spaceBetween:0o0,
-        slidesPerView:2.5,
-        freeMode:true,
-        mousewheel:true,
-
-        breakpoints: {
-          640: {
-            slidesPerView:6.3,
-          }
-        }
-      });
+      
 
 
 

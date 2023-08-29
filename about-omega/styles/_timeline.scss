@@ -1,0 +1,64 @@
+@use "../../styles/variables";
+
+.slider-section {
+    margin-block:12rem;
+    .wrapper {
+        display:flex;
+        align-items: center;
+        position:relative;
+
+        .middle {
+            content:"";
+            width:0.2rem;
+            height:1250px;
+            background-color:variables.$purple;
+            position:absolute;
+            inset:0;
+            left:50%;
+            transform:translateX(-50%);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            
+
+        }
+
+
+        .timeline-left {
+            display:grid;
+            gap:24rem;
+            width:50%;
+            place-content:end;
+            padding-inline-end:12rem;
+            margin-block-end:-32rem;
+          
+
+
+            p {
+                font-weight:400 !important;
+                max-width:32ch;
+                opacity:0;
+                font-weight:700 !important;
+                width:20ch;
+                text-align:center;
+            }
+        }
+        .timeline-right {
+            display:grid;
+            gap:24rem;
+            width:50%;            
+            padding-inline-start:12rem;
+
+
+
+
+            p {
+                font-weight:400 !important;
+                max-width:32ch;
+                opacity:0;
+                font-weight:700 !important;
+                width:20ch;
+                text-align:center;
+
+            }
+        }
+    }
+}

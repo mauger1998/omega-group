@@ -29,8 +29,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -350,6 +351,8 @@ main {
   background-position: center;
   overflow: hidden;
   background-attachment: scroll;
+  height: 96vh;
+  max-height: 1000px;
 }
 main .wrapper {
   display: flex;
@@ -610,6 +613,11 @@ p.h0 {
 @media (max-width: 406px) {
   p.h0 {
     font-size: clamp(40px, 15vw, 64px) !important;
+  }
+}
+@media (max-width: 700px) {
+  p.h0.artistry {
+    margin-block-end: 0rem !important;
   }
 }
 p.h0.precision {
@@ -901,15 +909,22 @@ html {
   color: #030303;
   max-width: 32ch;
 }
+.gallery-section .wrapper .gallery-title button {
+  margin-block-start: 4rem;
+}
 .gallery-section .wrapper .swiper3 .gallery-grid {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
 }
-.gallery-section .wrapper .swiper3 .gallery-grid .swiper-slide img {
+.gallery-section .wrapper .swiper3 .gallery-grid .gallery-grid-item {
+  width: 100%;
+}
+.gallery-section .wrapper .swiper3 .gallery-grid .gallery-grid-item img {
   aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
 }
 
 p.h0 {
@@ -1089,7 +1104,13 @@ p.h0 {
 .contact-section .wrapper h2 {
   text-align: center;
   max-width: 10ch;
+  margin-block-end: 2rem;
+}
+.contact-section .wrapper p {
+  color: white;
+  max-width: 32ch;
   margin-block-end: 4rem;
+  text-align: center;
 }
 .contact-section .wrapper form {
   display: flex;
@@ -1124,7 +1145,6 @@ p.h0 {
   border-bottom: 1px solid white;
   width: 100%;
   border-radius: 0.25rem;
-  font-family: twk;
 }
 .contact-section .wrapper form fieldset input:focus,
 .contact-section .wrapper form fieldset textarea:focus {
@@ -1137,13 +1157,21 @@ p.h0 {
 .file::-webkit-file-upload-button {
   background-color: transparent;
   padding: 0.5rem 1rem;
-  border: 2px solid white;
+  border: 1px solid white;
   color: white;
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 2rem;
   font-size: 12px;
   cursor: pointer;
+}
+
+.file::-moz-placeholder {
+  font-family: "Poppins";
+}
+
+.file::placeholder {
+  font-family: "Poppins";
 }
 
 footer .wrapper {

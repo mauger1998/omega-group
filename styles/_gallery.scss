@@ -13,18 +13,23 @@
                 color:variables.$black;
                 max-width:32ch;
             }
+            button {
+                margin-block-start:4rem;
+            }
         }
         .swiper3 {
 
             .gallery-grid {
-                display:flex;
-                align-items: center;
+                display:grid;
+                grid-template-columns: 1fr 1fr 1fr;
                 gap:2rem;
 
-                .swiper-slide {
+                .gallery-grid-item {
+                    width:100%;
                     img {
                         aspect-ratio:1/1;
                         object-fit:cover;
+                        width:100%;
                     }
                 }
     
@@ -37,4 +42,5 @@
             
             
         }
+       
     }

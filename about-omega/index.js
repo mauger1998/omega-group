@@ -159,23 +159,7 @@ var tl = gsap.timeline({repeat: 0, repeatDelay: 1});
 
 
 
-gsap.to("h1 .char", {
-  scrollTrigger: {
-    trigger:"h1",
-    start:"top 125px",
-    end:"+=300",
-    scrub:true,
-  },
-  yPercent:-100,
-  opacity:0,
-  ease:"Power1.ease",
-  stagger:0.25,
 
-})
-
-window.addEventListener("resize", (e) => {
-  SplitType.revert('h1')
-})
 
 // h1 out
 
@@ -206,38 +190,7 @@ const swiper = new Swiper('.swiper:not(.swiper2)', {
 
 
 
-const swiperNext = document.querySelector(".swiper-button-next:not(.next-button-2)")
-const swiperPrev = document.querySelector(".swiper-button-prev:not(.prev-button-2)")
 
-swiperNext.addEventListener("click", (e) => {
-  swiper.slideNext();
-})
-swiperPrev.addEventListener("click", (e) => {
-  swiper.slidePrev();
-})
-
-// Swiper 2
-
-
-
-const swiper2 = new Swiper('.swiper2', {
-  speed: 400,
-  spaceBetween: 50,
-  // direction:"horizontal",
- 
-});
-
-
-
-const swiperNext2 = document.querySelector(".next-button-2")
-const swiperPrev2 = document.querySelector(".prev-button-2")
-
-swiperNext2.addEventListener("click", (e) => {
-  swiper2.slideNext();
-})
-swiperPrev2.addEventListener("click", (e) => {
-  swiper2.slidePrev();
-})
 
 
 // Mouse Move
@@ -351,3 +304,62 @@ fetch(URLTWO)
   })
   .catch((err) => console.error(err));
 
+
+
+  // Animations
+
+  const middle = document.querySelector(".middle")
+
+
+  gsap.to(".middle", {
+    scrollTrigger: {
+      trigger:".timeline-right",
+      start:"top -200px",
+      end:"+=1250",
+      scrub:true,
+      markers:true,
+    },
+    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+    ease:"Power1.ease",
+  
+  })
+
+  const gsapP = document.querySelectorAll(".timeline-right p")
+
+
+  gsap.to(gsapP, {
+    scrollTrigger: {
+      trigger:gsapP,
+      start:"top center",
+      end:"+=2000",
+      scrub:true,
+      markers:true,
+    },
+    opacity:1,
+    ease:"Power1.ease",
+    stagger:0.5,
+    fontSize:"2rem",
+
+  
+  })
+
+  const gsapP2 = document.querySelectorAll(".timeline-left p")
+
+
+  gsap.to(gsapP2, {
+    scrollTrigger: {
+      trigger:gsapP2,
+      start:"top center",
+      end:"+=2000",
+      scrub:true,
+      markers:true,
+    },
+    opacity:1,
+    ease:"Power1.ease",
+    stagger:0.5,
+    
+    fontSize:"2rem",
+
+
+  
+  })
