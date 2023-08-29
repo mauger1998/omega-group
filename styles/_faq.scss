@@ -121,6 +121,10 @@ p.h0 {
             opacity: 1;
             max-height: 9em;
             transition: all 200ms linear;
+
+            @media (max-width:500px) {
+              max-height:16em;
+            }
           }
           
           .content {
@@ -132,7 +136,7 @@ p.h0 {
           
           .content p {
             font-size: 1rem;
-            font-weight: 300;
+            font-weight:400;
             color:white;
             margin-block:0.75rem;
           

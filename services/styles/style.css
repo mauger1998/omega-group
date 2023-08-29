@@ -1,7 +1,7 @@
 @font-face {
   font-family: twk;
   src: url("../twk/TWKEverett-Light.ttf");
-  font-weight: 300;
+  font-weight: 400;
 }
 @font-face {
   font-family: twk;
@@ -16,12 +16,12 @@
 @font-face {
   font-family: hell;
   src: url("../Helvetica-Font/helvetica-light-587ebe5a59211.ttf");
-  font-weight: 300;
+  font-weight: 400;
 }
 @font-face {
   font-family: gt;
   src: url("../GT-ALPINA/GT-Alpina-Standard-Regular-Trial.ttf");
-  font-weight: 300;
+  font-weight: 400;
 }
 *,
 *::before,
@@ -149,7 +149,7 @@ h3 {
 
 p {
   line-height: 1.6;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   font-size: 16px;
 }
 p.tagline {
@@ -400,6 +400,15 @@ main .wrapper .main-bottom .main-bottom-left p {
   color: white;
   max-width: 40ch;
 }
+main .wrapper .main-bottom .main-bottom-left svg {
+  width: 56px;
+  transition: width 500ms ease;
+}
+main .wrapper .main-bottom .main-bottom-left svg:hover {
+  width: 64px;
+  transition: width 500ms ease;
+  cursor: pointer;
+}
 main .wrapper .main-bottom .main-bottom-right {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -536,7 +545,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 .services-section .wrapper .services-top .started-left p {
   max-width: 32ch;
   color: white;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
 }
 .services-section .wrapper .services-top .started-right {
   margin-inline-start: -12rem;

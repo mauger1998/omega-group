@@ -49,9 +49,9 @@ main {
                 font-size:variables.$h3;
                 color:white;
                 text-align: center;
-                font-weight:300 !important;
+                font-weight:400 !important;
                 .purple {
-                    font-weight:300 !important;
+                    font-weight:400 !important;
                 }
                 
             }
@@ -76,7 +76,7 @@ main {
                 p {
                     color:white;
                     max-width:45ch;
-                    font-weight:300 !important;
+                    font-weight:400 !important;
                 }
 
                 svg {
@@ -121,7 +121,7 @@ main {
                         p {
                             font-weight:700 !important;
                             &:nth-child(2) {
-                                font-weight:300 !important;
+                                font-weight:400 !important;
                             }
                         }
 

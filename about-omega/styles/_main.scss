@@ -64,6 +64,17 @@ main {
                     color:white;
                     max-width:40ch;
                 }
+                svg {
+                    width:56px;
+                    transition:width 500ms ease;
+
+
+                    &:hover {
+                        width:64px;
+                        transition:width 500ms ease;
+                        cursor:pointer;
+                    }
+                }
             }
 
             .main-bottom-right {

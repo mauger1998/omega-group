@@ -1,7 +1,7 @@
 @font-face {
   font-family: twk;
   src: url("../twk/TWKEverett-Light.ttf");
-  font-weight: 300;
+  font-weight: 400;
 }
 @font-face {
   font-family: twk;
@@ -16,12 +16,12 @@
 @font-face {
   font-family: hell;
   src: url("../Helvetica-Font/helvetica-light-587ebe5a59211.ttf");
-  font-weight: 300;
+  font-weight: 400;
 }
 @font-face {
   font-family: gt;
   src: url("../GT-ALPINA/GT-Alpina-Standard-Regular-Trial.ttf");
-  font-weight: 300;
+  font-weight: 400;
 }
 *,
 *::before,
@@ -149,7 +149,7 @@ h3 {
 
 p {
   line-height: 1.6;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   font-size: 16px;
 }
 p.tagline {
@@ -400,6 +400,15 @@ main .wrapper .main-bottom .main-bottom-left p {
   color: white;
   max-width: 40ch;
 }
+main .wrapper .main-bottom .main-bottom-left svg {
+  width: 56px;
+  transition: width 500ms ease;
+}
+main .wrapper .main-bottom .main-bottom-left svg:hover {
+  width: 64px;
+  transition: width 500ms ease;
+  cursor: pointer;
+}
 main .wrapper .main-bottom .main-bottom-right {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -643,54 +652,37 @@ p.h0.precision {
 .slider-section {
   margin-block: 12rem;
 }
-.slider-section .wrapper {
+.slider-section .wrapper .timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12rem;
+}
+.slider-section .wrapper .timeline .timeline-item {
+  border-bottom: 1px solid black;
+  padding: 2rem;
   display: flex;
   align-items: center;
+  gap: 2rem;
+  transition: transform 500ms ease;
   position: relative;
 }
-.slider-section .wrapper .middle {
-  content: "";
-  width: 0.2rem;
-  height: 1250px;
+.slider-section .wrapper .timeline .timeline-item .icon-circle {
+  width: 2rem;
   background-color: #403579;
-  position: absolute;
-  inset: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-}
-.slider-section .wrapper .timeline-left {
-  display: grid;
-  gap: 24rem;
-  width: 50%;
-  place-content: end;
-  padding-inline-end: 12rem;
-  margin-block-end: -32rem;
-}
-.slider-section .wrapper .timeline-left p {
-  font-weight: 400 !important;
-  max-width: 32ch;
+  height: 2rem;
+  border-radius: 50%;
   opacity: 0;
-  font-weight: 700 !important;
-  width: 20ch;
-  text-align: center;
+  transform: scale(0);
 }
-.slider-section .wrapper .timeline-right {
-  display: grid;
-  gap: 24rem;
-  width: 50%;
-  padding-inline-start: 12rem;
-}
-.slider-section .wrapper .timeline-right p {
-  font-weight: 400 !important;
+.slider-section .wrapper .timeline .timeline-item p {
   max-width: 32ch;
-  opacity: 0;
   font-weight: 700 !important;
-  width: 20ch;
-  text-align: center;
+  font-size: 24px;
 }
-
+.slider-section .wrapper .timeline .timeline-item:nth-child(odd) {
+  align-self: flex-end;
+}
 .slider-section .wrapper {
   padding-block-start: 0;
 }
@@ -1083,6 +1075,9 @@ html {
 }
 .hiring-section .wrapper .hiring-wrapper .hiring-right .hiring-list .hiring-list-item .answer p {
   color: white;
+  margin-block-start: 2rem;
+}
+.hiring-section .wrapper .hiring-wrapper .hiring-right .hiring-list .hiring-list-item .answer button {
   margin-block-start: 2rem;
 }
 .hiring-section .wrapper .hiring-wrapper .hiring-right .hiring-list .hiring-list-item:not(:nth-child(1)) {

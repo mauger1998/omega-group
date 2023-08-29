@@ -112,9 +112,22 @@ fetch(URLTHREE)
         answer.classList.add("answer")
         hiringListItem.appendChild(answer)
 
+        
+
         const answerP = document.createElement("p")
         answerP.textContent = result.moreInfo
         answer.appendChild(answerP)
+
+        const answerLink = document.createElement("a")
+        answerLink.setAttribute("href", "../#contact")
+        answer.appendChild(answerLink)
+
+
+        const answerButton = document.createElement("button")
+        answerButton.textContent = "Apply Now"
+        answerLink.appendChild(answerButton)
+        answerButton.classList.add("secondary-button")
+       
       })
 
       // Accordian
@@ -299,67 +312,48 @@ fetch(URLTWO)
         swiperP.textContent = result.review
         swiperSlide.appendChild(swiperP)
       })
+      const swiper2 = new Swiper('.swiper2', {
+        speed: 400,
+        spaceBetween: 50,
+        slidesPerView:1,
+        direction:"horizontal",
+        loop:true,
+
+       
+      });
+
+      const swiperNext2 = document.querySelector(".next-button-2")
+      const swiperPrev2 = document.querySelector(".prev-button-2")
+
+      swiperNext2.addEventListener("click", (e) => {
+        swiper2.slideNext();
+      })
+      swiperPrev2.addEventListener("click", (e) => {
+        swiper2.slidePrev();
+      })
       
     }
   })
   .catch((err) => console.error(err));
 
+//Animations
 
+const counter = document.querySelectorAll(".icon-circle")
 
-  // Animations
+gsap.to(counter, {
+  scrollTrigger: {
+    trigger:".timeline",
+    scrub:true,
+    end:"+=3000",
+    start:"top center",
 
-  const middle = document.querySelector(".middle")
+  },
+  opacity:1,
+  scale:1,
+  ease: "Power4.easeInOut",
+  stagger:2,
 
-
-  gsap.to(".middle", {
-    scrollTrigger: {
-      trigger:".timeline-right",
-      start:"top -200px",
-      end:"+=1250",
-      scrub:true,
-      markers:true,
-    },
-    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-    ease:"Power1.ease",
-  
-  })
-
-  const gsapP = document.querySelectorAll(".timeline-right p")
-
-
-  gsap.to(gsapP, {
-    scrollTrigger: {
-      trigger:gsapP,
-      start:"top center",
-      end:"+=2000",
-      scrub:true,
-      markers:true,
-    },
-    opacity:1,
-    ease:"Power1.ease",
-    stagger:0.5,
-    fontSize:"2rem",
-
-  
-  })
-
-  const gsapP2 = document.querySelectorAll(".timeline-left p")
-
-
-  gsap.to(gsapP2, {
-    scrollTrigger: {
-      trigger:gsapP2,
-      start:"top center",
-      end:"+=2000",
-      scrub:true,
-      markers:true,
-    },
-    opacity:1,
-    ease:"Power1.ease",
-    stagger:0.5,
-    
-    fontSize:"2rem",
+})
 
 
   
-  })
