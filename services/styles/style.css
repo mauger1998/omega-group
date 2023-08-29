@@ -861,9 +861,10 @@ p.h0.precision {
   align-items: center;
 }
 .swiper-slide img {
-  height: 300px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
 }
 
 .full-gallery-section .wrapper {
