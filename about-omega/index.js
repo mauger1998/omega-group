@@ -338,22 +338,8 @@ fetch(URLTWO)
 
 //Animations
 
-const counter = document.querySelectorAll(".icon-circle")
 
-gsap.to(counter, {
-  scrollTrigger: {
-    trigger:".timeline",
-    scrub:true,
-    end:"+=3000",
-    start:"top center",
 
-  },
-  opacity:1,
-  scale:1,
-  ease: "Power4.easeInOut",
-  stagger:2,
-
-})
 
 
   
