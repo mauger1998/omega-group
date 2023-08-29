@@ -855,11 +855,15 @@ p.h0.precision {
   font-size: 18px;
   background: #fff;
   height: 300px;
-  border: 2px solid blue;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.swiper-slide img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .full-gallery-section .wrapper {

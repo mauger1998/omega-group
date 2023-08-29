@@ -146,48 +146,84 @@ menuClose.addEventListener("click", () => {
 })
 
 
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  grid: {
-    rows: 2,
-  },
-  breakpoints: {
-    // when window width is >= 320px
-    700: {
-      slidesPerView:3,
-      spaceBetween: 30,
-      grid: {
-        rows: 2,
-      },
-
-    },
-    500: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-
-      grid: {
-        rows: 2,
-      },
-
-    },
-  
-   
-  },
-  spaceBetween:10,
-
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
 
 
-const swiperNext = document.querySelector(".swiper-button-next")
-const swiperPrev = document.querySelector(".swiper-button-prev")
 
-swiperNext.addEventListener("click", (e) => {
-  swiper.slideNext();
-})
-swiperPrev.addEventListener("click", (e) => {
-  swiper.slidePrev();
-})
+
+// Full Gallery Cms
+
+let URL = "https://f9u8zfhq.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22fullGallery%22%5D+%7B%0A++%22imgUrl%22%3A+fullGalleryImage.asset-%3Eurl%0A%7D%0A"
+
+
+
+// fetch the content
+fetch(URL)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    const fullGallery = document.querySelector(".swiper-wrapper")
+
+    if (result.length > 0) {
+      fullGallery.innerHTML = ""
+      result.forEach((result) => {
+        const swiperSlide = document.createElement("div")
+        swiperSlide.classList.add("swiper-slide")
+        fullGallery.appendChild(swiperSlide)
+
+        const swiperImage = document.createElement("img")
+        swiperImage.src = result.imgUrl
+        swiperSlide.appendChild(swiperImage)
+
+      });
+
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        grid: {
+          rows: 2,
+        },
+        breakpoints: {
+          // when window width is >= 320px
+          700: {
+            slidesPerView:3,
+            spaceBetween: 30,
+            grid: {
+              rows: 2,
+            },
+      
+          },
+          500: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+      
+            grid: {
+              rows: 2,
+            },
+      
+          },
+        
+         
+        },
+        spaceBetween:10,
+      
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+      
+      
+      const swiperNext = document.querySelector(".swiper-button-next")
+      const swiperPrev = document.querySelector(".swiper-button-prev")
+      
+      swiperNext.addEventListener("click", (e) => {
+        swiper.slideNext();
+      })
+      swiperPrev.addEventListener("click", (e) => {
+        swiper.slidePrev();
+      })
+
+        
+
+      
+    }
+  })
+  .catch((err) => console.error(err));

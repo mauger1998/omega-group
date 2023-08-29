@@ -191,12 +191,16 @@ p.h0 {
     font-size: 18px;
     background: #fff;
     height:300px;
-    border:2px solid blue;
 
     /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img {
+        height:300px;
+        object-fit:cover;
+    }
   }
 
 
