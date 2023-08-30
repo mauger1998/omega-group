@@ -1166,6 +1166,44 @@ p.h0 {
   font-family: "Poppins";
 }
 
+.contact-banner .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+@media (max-width: 1068px) {
+  .contact-banner .wrapper {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 8rem;
+  }
+}
+@media (max-width: 651px) {
+  .contact-banner .wrapper {
+    grid-template-columns: 1fr;
+    row-gap: 8rem;
+  }
+}
+.contact-banner .wrapper .banner-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.contact-banner .wrapper .banner-item a svg {
+  width: 64px !important;
+}
+.contact-banner .wrapper .banner-item a h3 {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+@media (max-width: 350px) {
+  .contact-banner .wrapper .banner-item a h3 {
+    font-size: 18px;
+  }
+}
+
 footer .wrapper {
   display: flex;
   align-items: flex-start;

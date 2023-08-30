@@ -1,0 +1,37 @@
+@use "./variables";
+
+.contact-banner {
+    .wrapper {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap:2rem;
+
+        @media (max-width:1068px) {
+            grid-template-columns: 1fr 1fr;
+            row-gap:8rem;
+        }
+        @media (max-width:651px) {
+            grid-template-columns: 1fr;
+            row-gap:8rem;
+        }
+
+        .banner-item a {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            gap:1rem;
+            svg {
+            width:64px !important;
+        }
+        h3 {
+            color:black;
+            font-size:variables.$mobile-h3;
+            font-weight:700;
+            text-align:center;
+            @media (max-width:350px) {
+                font-size:18px;
+            }
+        }
+    }
+}
+}
