@@ -642,7 +642,7 @@ p.h0.precision {
     row-gap: 6rem;
   }
   .omega-cards .wrapper .excellence-slider-item p {
-    max-width: 32ch;
+    max-width: 32ch !important;
   }
 }
 
@@ -1423,4 +1423,8 @@ span.text {
   .span.text {
     font-size: 1.5em;
   }
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: black !important;
 }/*# sourceMappingURL=style.css.map */
