@@ -228,7 +228,7 @@ fetch(URLTWO)
 const menuOpen = document.querySelector(".open")
 const menuClose = document.querySelector(".close")
 const overlay = document.querySelector(".overlay")
-const contactButton = document.querySelector("header .secondary-button")
+const contactButton = document.querySelector("header .header-button")
 const menuLinks = document.querySelectorAll(".overlay ul a")
 
 

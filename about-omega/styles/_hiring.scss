@@ -98,6 +98,10 @@
                           
                            button[aria-expanded="true"] + .answer {
                             max-height: 16rem;
+
+                            @media (max-width:450px) {
+                                max-height:22rem;
+                            }
                             transition: max-height 200ms linear;
                           }
 

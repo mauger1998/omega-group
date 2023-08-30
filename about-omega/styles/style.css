@@ -1053,6 +1053,11 @@ html {
   max-height: 16rem;
   transition: max-height 200ms linear;
 }
+@media (max-width: 450px) {
+  .hiring-section .wrapper .hiring-wrapper .hiring-right .hiring-list .hiring-list-item button[aria-expanded=true] + .answer {
+    max-height: 22rem;
+  }
+}
 .hiring-section .wrapper .hiring-wrapper .hiring-right .hiring-list .hiring-list-item .answer {
   max-height: 0;
   overflow: hidden;
