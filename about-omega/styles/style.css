@@ -1282,4 +1282,9 @@ header .header-wrapper nav ul a:nth-of-type(2) li::after {
   .loader .svg-full svg:nth-child(2) {
     width: 78px;
   }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #403579 !important;
 }/*# sourceMappingURL=style.css.map */
