@@ -344,7 +344,7 @@ main .wrapper .main-top {
 }
 main .wrapper .main-top > h1 {
   transform: translateY(14rem);
-  max-width: 12ch;
+  max-width: 14ch;
   text-align: center;
   line-height: 1;
 }
