@@ -156,6 +156,7 @@ main {
     }
     @media (max-width:700px) {
         .wrapper {
+            padding-block-start:12rem;
             .main-top {
                 p {
                     font-size:variables.$mobile-h3 !important;

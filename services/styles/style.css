@@ -452,6 +452,9 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   }
 }
 @media (max-width: 700px) {
+  main .wrapper {
+    padding-block-start: 12rem;
+  }
   main .wrapper .main-top p {
     font-size: 20px !important;
     line-height: 1.2;
