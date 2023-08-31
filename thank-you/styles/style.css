@@ -220,7 +220,7 @@ main .wrapper .p-wrapper {
 }
 main .wrapper .p-wrapper p {
   color: white;
-  max-width: 60ch;
+  max-width: 64ch;
   margin-block: 2rem 3rem;
   text-align: center;
   transform: translateY(8rem);
