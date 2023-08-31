@@ -1395,14 +1395,14 @@ footer .wrapper .footer-top .column ul a {
 }
 footer .wrapper .footer-bottom {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   width: 100%;
   border-block-start: 0.5px solid black;
   padding-block-start: 2rem;
   padding-block-end: 0;
 }
-@media (max-width: 327px) {
+@media (max-width: 438px) {
   footer .wrapper .footer-bottom {
     flex-direction: column-reverse;
     align-items: flex-start;
@@ -1412,6 +1412,11 @@ footer .wrapper .footer-bottom {
 footer .wrapper .footer-bottom p {
   font-size: 14px;
   opacity: 0.5;
+}
+footer .wrapper .footer-bottom a p {
+  color: black;
+  opacity: 1;
+  margin-block-end: 0.5rem;
 }
 footer .wrapper .h0 {
   font-size: 176px;

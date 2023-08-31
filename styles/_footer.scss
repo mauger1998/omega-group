@@ -69,14 +69,14 @@ footer {
         }
         .footer-bottom {
             display:flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: space-between;
             width:100%;
             border-block-start:0.5px solid black;
             padding-block-start:2rem;
             padding-block-end:0;
 
-            @media (max-width:327px) {
+            @media (max-width:438px) {
                 flex-direction: column-reverse;
                 align-items: flex-start;
                 gap:2rem;
@@ -85,6 +85,13 @@ footer {
             p {
                 font-size:variables.$mobile-base;
                 opacity:0.5;
+            }
+            a {
+                p {
+                    color:black;
+                    opacity:1;
+                    margin-block-end:0.5rem;
+                }
             }
         }
         .h0 {
