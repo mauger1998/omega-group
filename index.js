@@ -321,7 +321,7 @@ function countdown() {
     clearInterval(i);
     document.querySelector(
       ".countdown"
-    ).innerHTML = `<h1>Countdown had expired!</h1>`;
+    ).innerHTML = `<h2>Countdown has expired come back tommorow!</h2>`;
   }
   //If end date is not before today date
   else {
