@@ -1150,6 +1150,10 @@ p.h0 {
   color: white;
   opacity: 0.5;
 }
+.update-section .wrapper form fieldset input:focus {
+  outline: none;
+  background-color: transparent;
+}
 @media (max-width: 700px) {
   .update-section .wrapper {
     padding-block-end: 0;
