@@ -1140,6 +1140,7 @@ p.h0 {
   width: 300px;
   border: 1px solid white;
   background-color: transparent;
+  color: white !important;
 }
 .update-section .wrapper form fieldset input::-moz-placeholder {
   color: white;
