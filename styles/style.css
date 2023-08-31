@@ -336,7 +336,7 @@ main .wrapper {
   padding-block-start: 14rem;
   height: 100%;
   position: relative;
-  gap: 4rem;
+  gap: 12rem;
 }
 main .wrapper > svg {
   position: absolute;
@@ -369,54 +369,6 @@ main .wrapper .main-top p {
 }
 main .wrapper .main-top p .purple {
   font-weight: 400 !important;
-}
-main .wrapper .main-top form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: -moz-max-content;
-  width: max-content;
-  justify-content: center;
-  margin-block-start: 4rem;
-}
-main .wrapper .main-top form p {
-  max-width: 32ch;
-  line-height: 1.1;
-  font-size: 24px;
-  margin-block-end: 2rem;
-  text-align: center;
-}
-main .wrapper .main-top form fieldset {
-  border: none;
-  display: flex;
-  align-items: center;
-  width: -moz-max-content;
-  width: max-content;
-  justify-content: center;
-  gap: 2rem;
-}
-main .wrapper .main-top form fieldset button {
-  background-color: #403579;
-  border: 1px solid #403579;
-  color: white;
-  cursor: pointer;
-  padding: 0.75rem 2rem;
-  margin-inline-start: -4rem;
-}
-main .wrapper .main-top form fieldset input {
-  padding: 0.75rem;
-  border-radius: 4rem;
-  width: 300px;
-  border: 1px solid white;
-  background-color: transparent;
-}
-main .wrapper .main-top form fieldset input::-moz-placeholder {
-  color: white;
-  opacity: 0.5;
-}
-main .wrapper .main-top form fieldset input::placeholder {
-  color: white;
-  opacity: 0.5;
 }
 main .wrapper .main-bottom {
   width: 100%;
@@ -525,7 +477,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 }
 @media (max-width: 700px) {
   main .wrapper {
-    padding-block-start: 10rem;
+    padding-block-start: 12rem;
   }
   main .wrapper .main-top p {
     font-size: 20px !important;
@@ -1148,6 +1100,55 @@ p.h0 {
   bottom: 0;
   right: 0%;
 }
+.update-section .wrapper form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+  justify-content: center;
+  margin-block-start: 4rem;
+}
+.update-section .wrapper form p {
+  max-width: 26ch;
+  line-height: 1.1;
+  font-size: 24px;
+  margin-block-end: 2rem;
+  text-align: center;
+  color: white;
+}
+.update-section .wrapper form fieldset {
+  border: none;
+  display: flex;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+  justify-content: center;
+  gap: 2rem;
+}
+.update-section .wrapper form fieldset button {
+  background-color: white;
+  border: 1px solid whtie;
+  color: #403579;
+  cursor: pointer;
+  padding: 0.75rem 2rem;
+  margin-inline-start: -6rem;
+}
+.update-section .wrapper form fieldset input {
+  padding: 0.75rem;
+  border-radius: 4rem;
+  width: 300px;
+  border: 1px solid white;
+  background-color: transparent;
+}
+.update-section .wrapper form fieldset input::-moz-placeholder {
+  color: white;
+  opacity: 0.5;
+}
+.update-section .wrapper form fieldset input::placeholder {
+  color: white;
+  opacity: 0.5;
+}
 @media (max-width: 700px) {
   .update-section .wrapper {
     padding-block-end: 0;
@@ -1155,6 +1156,31 @@ p.h0 {
   .update-section .wrapper img {
     position: static;
     width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .update-section .wrapper form fieldset input {
+    width: 250px;
+  }
+  .update-section .wrapper form fieldset button {
+    margin-inline-start: -6rem;
+  }
+}
+@media (max-width: 420px) {
+  .update-section .wrapper form {
+    width: 100%;
+  }
+  .update-section .wrapper form fieldset {
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .update-section .wrapper form fieldset input {
+    width: 100%;
+  }
+  .update-section .wrapper form fieldset button {
+    width: 100%;
+    margin-inline-start: 0;
   }
 }
 
