@@ -3,11 +3,11 @@
 .contact-banner {
     .wrapper {
         display:grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap:2rem;
+        padding-block:4rem;
 
         @media (max-width:1068px) {
-            grid-template-columns: 1fr 1fr;
             row-gap:8rem;
         }
         @media (max-width:651px) {
@@ -34,4 +34,48 @@
         }
     }
 }
+}
+
+.jonathan-section {
+    background-color:variables.$purple;
+    .wrapper {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position:relative;
+        z-index:0;
+        overflow:hidden;
+        @media (max-width:957px) {
+            padding-bottom:0;
+        }
+
+        img {
+            width:max(40%,400px);
+            position:absolute;
+            bottom:0;
+            z-index:-1;
+            right:2%;
+
+            @media (max-width:957px) {
+                position:relative;
+                width:max(50%,350px);
+
+            }
+        }
+
+        h2 {
+            color:white;
+            max-width:18ch;
+            text-align:center;
+
+        }
+        h3 {
+            color:white;
+            margin-block:2rem 3rem;
+            text-align:center;
+
+
+        }
+    }
 }

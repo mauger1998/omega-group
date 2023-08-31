@@ -326,8 +326,6 @@ main {
   background-position: center;
   overflow: hidden;
   background-attachment: scroll;
-  height: 96vh;
-  max-height: 1000px;
 }
 main .wrapper {
   display: flex;
@@ -338,7 +336,7 @@ main .wrapper {
   padding-block-start: 14rem;
   height: 100%;
   position: relative;
-  gap: 12rem;
+  gap: 4rem;
 }
 main .wrapper > svg {
   position: absolute;
@@ -347,6 +345,8 @@ main .wrapper > svg {
   opacity: 0.05;
   right: -10%;
   top: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 main .wrapper .main-top {
   display: flex;
@@ -369,6 +369,54 @@ main .wrapper .main-top p {
 }
 main .wrapper .main-top p .purple {
   font-weight: 400 !important;
+}
+main .wrapper .main-top form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+  justify-content: center;
+  margin-block-start: 4rem;
+}
+main .wrapper .main-top form p {
+  max-width: 32ch;
+  line-height: 1.1;
+  font-size: 24px;
+  margin-block-end: 2rem;
+  text-align: center;
+}
+main .wrapper .main-top form fieldset {
+  border: none;
+  display: flex;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+  justify-content: center;
+  gap: 2rem;
+}
+main .wrapper .main-top form fieldset button {
+  background-color: #403579;
+  border: 1px solid #403579;
+  color: white;
+  cursor: pointer;
+  padding: 0.75rem 2rem;
+  margin-inline-start: -4rem;
+}
+main .wrapper .main-top form fieldset input {
+  padding: 0.75rem;
+  border-radius: 4rem;
+  width: 300px;
+  border: 1px solid white;
+  background-color: transparent;
+}
+main .wrapper .main-top form fieldset input::-moz-placeholder {
+  color: white;
+  opacity: 0.5;
+}
+main .wrapper .main-top form fieldset input::placeholder {
+  color: white;
+  opacity: 0.5;
 }
 main .wrapper .main-bottom {
   width: 100%;
@@ -476,6 +524,9 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   }
 }
 @media (max-width: 700px) {
+  main .wrapper {
+    padding-block-start: 10rem;
+  }
   main .wrapper .main-top p {
     font-size: 20px !important;
     line-height: 1.2;
@@ -490,9 +541,32 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
     padding-inline: 0.5rem;
   }
 }
+@media (max-width: 500px) {
+  main .wrapper .main-top form fieldset input {
+    width: 250px;
+  }
+  main .wrapper .main-top form fieldset button {
+    margin-inline-start: -6rem;
+  }
+}
 @media (max-width: 394px) {
   main .wrapper .main-top > svg {
     width: clamp(225px, 85vw, 300px);
+  }
+  main .wrapper .main-top form {
+    width: 100%;
+  }
+  main .wrapper .main-top form fieldset {
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  main .wrapper .main-top form fieldset input {
+    width: 100%;
+  }
+  main .wrapper .main-top form fieldset button {
+    width: 100%;
+    margin-inline-start: 0;
   }
   main .wrapper .main-bottom .main-bottom-left p {
     font-size: 14px !important;
@@ -1168,12 +1242,12 @@ p.h0 {
 
 .contact-banner .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
+  padding-block: 4rem;
 }
 @media (max-width: 1068px) {
   .contact-banner .wrapper {
-    grid-template-columns: 1fr 1fr;
     row-gap: 8rem;
   }
 }
@@ -1202,6 +1276,47 @@ p.h0 {
   .contact-banner .wrapper .banner-item a h3 {
     font-size: 18px;
   }
+}
+
+.jonathan-section {
+  background-color: #403579;
+}
+.jonathan-section .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+@media (max-width: 957px) {
+  .jonathan-section .wrapper {
+    padding-bottom: 0;
+  }
+}
+.jonathan-section .wrapper img {
+  width: max(40%, 400px);
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  right: 2%;
+}
+@media (max-width: 957px) {
+  .jonathan-section .wrapper img {
+    position: relative;
+    width: max(50%, 350px);
+  }
+}
+.jonathan-section .wrapper h2 {
+  color: white;
+  max-width: 18ch;
+  text-align: center;
+}
+.jonathan-section .wrapper h3 {
+  color: white;
+  margin-block: 2rem 3rem;
+  text-align: center;
 }
 
 footer .wrapper {
