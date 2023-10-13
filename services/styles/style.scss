@@ -1,11 +1,11 @@
-@use "../../styles/variables";
-@use "../../styles/reset";
-@use "../../styles/fonts";
-@use "../../styles/button";
-@use "../../styles/header";
-@use "./main";
-@use"./services";
-@use "../../styles/footer";
+@use '../../styles/variables';
+@use '../../styles/reset';
+@use '../../styles/fonts';
+@use '../../styles/button';
+@use '../../styles/header';
+@use './main';
+@use './services';
+@use '../../styles/footer';
 
 // Current Page Indicator
 
@@ -15,182 +15,161 @@ header {
     .header-wrapper {
         nav {
             ul {
-
                 a:not(:nth-of-type(3)) {
                     li {
-                        position:relative;
+                        position: relative;
 
                         &:hover {
                             &::after {
-                                transform:scaleX(1);
-                                transform-origin:left;
-                                transition:transform 300ms ease-in-out;
+                                transform: scaleX(1);
+                                transform-origin: left;
+                                transition: transform 300ms ease-in-out;
                             }
-                            
                         }
                         &::after {
-                            content:"";
-                            width:100%;
-                            height:0.25rem;
-                            background-color:white;
-                            position:absolute;
-                            bottom:0;
-                            transform:scaleX(0);
-                            transform-origin:left;
-                            transition:transform 300ms ease-in-out;
-
+                            content: '';
+                            width: 100%;
+                            height: 0.25rem;
+                            background-color: white;
+                            position: absolute;
+                            bottom: 0;
+                            transform: scaleX(0);
+                            transform-origin: left;
+                            transition: transform 300ms ease-in-out;
                         }
                     }
                 }
 
                 a:nth-of-type(3) {
                     li {
-                        position:relative;
+                        position: relative;
 
                         &:hover {
                             &::after {
-                                transform:scaleX(0);
-                                transform-origin:left;
-                                transition:transform 300ms ease-in-out;
+                                transform: scaleX(0);
+                                transform-origin: left;
+                                transition: transform 300ms ease-in-out;
                             }
-                            
                         }
                         &::after {
-                            content:"";
-                            width:100%;
-                            height:0.25rem;
-                            background-color:white;
-                            position:absolute;
-                            bottom:0;
-                            transform-origin:left;
-                            transition:transform 300ms ease-in-out;
-
+                            content: '';
+                            width: 100%;
+                            height: 0.25rem;
+                            background-color: white;
+                            position: absolute;
+                            bottom: 0;
+                            transform-origin: left;
+                            transition: transform 300ms ease-in-out;
                         }
                     }
-                   
                 }
             }
         }
     }
 }
 
-
-// Loader 
+// Loader
 .loader {
-    position:fixed;
-    background-color:variables.$purple;
-    height:100vh;
-    z-index:1000;
-    display:flex;
+    position: fixed;
+    background-color: variables.$purple;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width:100%;
+    width: 100%;
     transition: 300ms ease;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
     & > svg {
-        width:200px;
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform:translate(calc(-50% ), calc(-50% - 5rem));
-        opacity:0;
-        @media (max-width:600px) {
-            width:150px;
+        width: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(calc(-50%), calc(-50% - 5rem));
+        opacity: 0;
+        @media (max-width: 600px) {
+            width: 150px;
         }
-        
-
-       
     }
 
     .svg-full {
-        display:flex;
+        display: flex;
         align-items: center;
         justify-content: center;
-        overflow:hidden;
+        overflow: hidden;
 
         svg {
             // position:absolute;
-            margin-block-end:10rem;
-            transform:translateX(30rem);
-            width:75px;
+            margin-block-end: 10rem;
+            transform: translateX(30rem);
+            width: 75px;
 
-            @media (max-width:600px) {
-                width:50px;
+            @media (max-width: 600px) {
+                width: 50px;
             }
-            
+
             &:not(:nth-child(1)) {
-                margin-inline-start:-0.5rem;
+                margin-inline-start: -0.5rem;
             }
             &:nth-child(2) {
-                width:115px;
+                width: 115px;
 
-                @media (max-width:600px) {
-                    width:78px;
+                @media (max-width: 600px) {
+                    width: 78px;
                 }
             }
-    
-    
         }
     }
-
-  
-        
 }
 
-
 p.h0 {
-    font-size:clamp(96px, 12vw, variables.$h0) !important;
-    color:variables.$purple;
-    font-weight:600;
-    opacity:0.1;
-    margin-block-end:-3rem !important;
+    font-size: clamp(96px, 12vw, variables.$h0) !important;
+    color: variables.$purple;
+    font-weight: 600;
+    opacity: 0.1;
+    margin-block-end: -3rem !important;
 
-    @media (max-width:616px) {
-        font-size:clamp(48px, 12vw, 100px) !important;
-        align-self:start;
-        
+    @media (max-width: 616px) {
+        font-size: clamp(48px, 12vw, 100px) !important;
+        align-self: start;
     }
-    @media (max-width:426px) {
-        font-size:clamp(32px, 12vw, 48px) !important;
+    @media (max-width: 426px) {
+        font-size: clamp(32px, 12vw, 48px) !important;
     }
 
     &.innovate {
-        margin-block-end:-6rem !important;
+        margin-block-end: -6rem !important;
 
-        @media (max-width:616px) {
-            margin-block-end:-2rem !important;
+        @media (max-width: 616px) {
+            margin-block-end: -2rem !important;
         }
-
     }
 
     &.artistry {
         // margin-block-end:-8rem;
     }
     &.precision {
-        margin-block:0rem;
-        line-height:clamp(100px, 12vw, variables.$h0) !important;
-
+        margin-block: 0rem;
+        line-height: clamp(100px, 12vw, variables.$h0) !important;
     }
 }
 
-
-
 // Full Gallery
-
 
 .swiper {
     width: 100%;
-    height:90vh;
+    height: 90vh;
+    min-height: 700px;
     margin-left: auto;
     margin-right: auto;
-  }
+}
 
-  .swiper-slide {
+.swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
-    height:300px;
+    height: 300px;
 
     /* Center slide text vertically */
     display: flex;
@@ -198,31 +177,28 @@ p.h0 {
     align-items: center;
 
     img {
-        height:100%;
-        object-fit:cover;
-        width:100%;
-
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
     }
-  }
+}
 
-
-  .full-gallery-section {
+.full-gallery-section {
     .wrapper {
-        display:flex;
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
 
         h2 {
-            color:black;
-            margin-block-end:6rem;
+            color: black;
+            margin-block-end: 6rem;
         }
     }
-  }
+}
 
-
-  .swiper-button-next {
-    color:variables.$purple !important;
-  }
-  .swiper-button-prev {
-      color:variables.$purple !important;
-  }
+.swiper-button-next {
+    color: variables.$purple !important;
+}
+.swiper-button-prev {
+    color: variables.$purple !important;
+}
