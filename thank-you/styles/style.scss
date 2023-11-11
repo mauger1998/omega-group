@@ -1,115 +1,105 @@
-@use "../../styles/variables";
-@use "../../styles/reset";
-@use "../../styles/fonts";
-@use "../../styles/button";
+@use '../../styles/variables';
+@use '../../styles/reset';
+@use '../../styles/fonts';
+@use '../../styles/button';
 
 main {
-    background-image:linear-gradient(#0303033e, #0303033e 100%),url(../../public/images/blurred-hero.png);
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position:center;
-    overflow:hidden;
+    background-image: linear-gradient(#0303033e, #0303033e 100%),
+        url(../../public/images/blurred-hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
     background-attachment: scroll;
 
     .wrapper {
-        display:flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-block:12rem;
+        padding-block: 12rem;
 
         .h1-wrapper {
-            overflow:hidden;
-            padding-block:1rem;
+            overflow: hidden;
+            padding-block: 1rem;
             h1 {
-                max-width:14ch;
-                text-align:center;
-                line-height:1;
-                transform:translateY(14rem);
+                max-width: 14ch;
+                text-align: center;
+                line-height: 1;
+                transform: translateY(14rem);
             }
         }
 
         .p-wrapper {
-            overflow:hidden;
+            overflow: hidden;
             p {
-                color:white;
-                max-width:64ch;
-                margin-block:2rem 3rem;
-                text-align:center;
-                transform:translateY(8rem);
+                color: white;
+                max-width: 64ch;
+                margin-block: 2rem 3rem;
+                text-align: center;
+                transform: translateY(8rem);
             }
         }
         a {
-            overflow:hidden;
+            overflow: hidden;
             button {
-                
-                transform:translateY(8rem);
+                transform: translateY(8rem);
             }
-        }   
+        }
     }
 }
 
-
-
-// Loader 
+// Loader
 .loader {
-    position:fixed;
-    background-color:variables.$purple;
-    height:100vh;
-    z-index:1000;
-    display:flex;
+    position: fixed;
+    background-color: variables.$purple;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width:100%;
+    width: 100%;
     transition: 300ms ease;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
     & > svg {
-        width:200px;
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform:translate(calc(-50% ), calc(-50% - 5rem));
-        opacity:0;
-        @media (max-width:600px) {
-            width:150px;
+        width: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(calc(-50%), calc(-50% - 5rem));
+        opacity: 0;
+        @media (max-width: 600px) {
+            width: 150px;
         }
-        
-
-       
     }
 
     .svg-full {
-        display:flex;
+        display: flex;
         align-items: center;
         justify-content: center;
-        overflow:hidden;
+        overflow: hidden;
 
         svg {
             // position:absolute;
-            margin-block-end:10rem;
-            transform:translateX(30rem);
-            width:75px;
+            margin-block-end: 10rem;
+            transform: translateX(30rem);
+            width: 75px;
 
-            @media (max-width:600px) {
-                width:50px;
+            @media (max-width: 600px) {
+                width: 50px;
             }
-            
+
             &:not(:nth-child(1)) {
-                margin-inline-start:-0.5rem;
+                margin-inline-start: -0.5rem;
             }
             &:nth-child(2) {
-                width:115px;
+                width: 115px;
 
-                @media (max-width:600px) {
-                    width:78px;
+                @media (max-width: 600px) {
+                    width: 78px;
                 }
             }
-    
-    
         }
     }
-
-  
-        
 }

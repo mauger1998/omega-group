@@ -1,128 +1,122 @@
-@use "../../styles/variables";
+@use '../../styles/variables';
 
 .services-section {
-    background-color:variables.$purple;
-    background-color:variables.$light-purple;
-    background-image:url(../../public/summer-background-sea-water3.png);
+    background-color: variables.$purple;
+    background-color: variables.$light-purple;
+    background-image: url(../../public/summer-background-sea-water3.png);
     background-blend-mode: luminosity;
-    background-size:cover;
-    z-index:0;
-    position:relative;
+    background-size: cover;
+    z-index: 0;
+    position: relative;
     .wrapper {
-        display:flex;
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
         button {
-            margin-block-start:4rem;
-            background-color:white;
-            color:variables.$purple;
+            margin-block-start: 4rem;
+            background-color: white;
+            color: variables.$purple;
         }
         .services-top {
-            display:flex;
+            display: flex;
             align-items: center;
-            margin-block-start:8rem;
+            // margin-block-start:8rem;
+            margin-block-start: -8rem;
 
-        .started-left {
-            h2 {
-                font-size:clamp(44px,13vw,variables.$massive);
-                line-height:1;
-                max-width:8ch;
-                margin-block-end:2rem;
+            .started-left {
+                h2 {
+                    font-size: clamp(44px, 13vw, variables.$massive);
+                    line-height: 1;
+                    max-width: 8ch;
+                    margin-block-end: 2rem;
+                }
+                p.h0 {
+                    font-weight: 700 !important;
+                }
+                p {
+                    max-width: 32ch;
+                    color: white;
+                    font-weight: 400 !important;
+                }
             }
-            p.h0 {
-                font-weight:700 !important;
+            .started-right {
+                margin-inline-start: -12rem;
+                margin-block-start: -26rem;
+                z-index: -1;
             }
-            p {
-                max-width:32ch;
-                color:white;
-                font-weight:400 !important;
-            }
-        }
-        .started-right {
-            margin-inline-start:-12rem;
-            margin-block-start:-26rem;
-            z-index:-1;
-            
-        }
         }
         .services-bottom {
-            display:grid;
-            margin-block-start:6rem;
-            width:100%;
-            grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
-            gap:2rem;
+            display: grid;
+            margin-block-start: 6rem;
+            width: 100%;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
 
-            @media (max-width:861px) {
-                grid-template-columns: repeat( auto-fit, minmax(225px, 1fr) );
+            @media (max-width: 861px) {
+                grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
             }
-            @media (max-width:546px) {
-                grid-template-columns: repeat( auto-fit, minmax(175px, 1fr) );
-                gap:1rem;
+            @media (max-width: 546px) {
+                grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+                gap: 1rem;
             }
-            @media (max-width:411px) {
-                grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
-                gap:0.5rem;
+            @media (max-width: 411px) {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 0.5rem;
             }
-           
 
             .services-card {
-                background-color:#463b7d89;
-                backdrop-filter:blur(5px);
-                padding:2rem;
-                display:flex;
+                background-color: #463b7d89;
+                backdrop-filter: blur(5px);
+                padding: 2rem;
+                display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: flex-start;
 
-                @media (max-width:861px) {
-                    padding:1rem !important;
+                @media (max-width: 861px) {
+                    padding: 1rem !important;
                 }
 
                 svg {
-                    width:25px;
+                    width: 25px;
                 }
                 h3 {
-                    margin-block-start:0.5rem;
-                    text-align:center;
-                    font-weight:700;
+                    margin-block-start: 0.5rem;
+                    text-align: center;
+                    font-weight: 700;
 
-                    @media (max-width:568px) {
-                        max-width:10ch;
-                        text-align:center;
+                    @media (max-width: 568px) {
+                        max-width: 10ch;
+                        text-align: center;
                     }
-
                 }
                 p {
-                    color:white;
-                    margin-block-start:0.75rem;
-                    text-align:center;
+                    color: white;
+                    margin-block-start: 0.75rem;
+                    text-align: center;
                 }
-               
-            }
-           
-        }
-        
-    }
-    @media (max-width:600px) {
-        .wrapper {
-            .started-right {
-                margin-inline-start:-10rem;
             }
         }
     }
-    @media (max-width:500px) {
+    @media (max-width: 600px) {
         .wrapper {
             .started-right {
-                margin-inline-start:-8rem;
+                margin-inline-start: -10rem;
             }
         }
     }
-    @media (max-width:375px) {
+    @media (max-width: 500px) {
         .wrapper {
             .started-right {
-                margin-inline-start:-14rem;
+                margin-inline-start: -8rem;
+            }
+        }
+    }
+    @media (max-width: 375px) {
+        .wrapper {
+            .started-right {
+                margin-inline-start: -14rem;
                 // margin-block-start:-26rem;
-
             }
         }
     }

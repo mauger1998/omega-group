@@ -533,7 +533,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  padding-block: 12rem;
+  padding-block-start: 4rem;
 }
 .text-section .wrapper h2 {
   color: #030303;

@@ -1,152 +1,137 @@
-@use "./variables";
-
+@use './variables';
 
 html {
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 .service-cards {
-    background-color:variables.$purple;
-    overflow:hidden !important;
+    background-color: variables.$purple;
+    overflow: hidden !important;
 
     .wrapper {
-        display:flex;
-        gap:2rem;
+        display: flex;
+        gap: 2rem;
         align-items: center;
-        padding-left:0;
-        padding-right:12rem;
-        
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 12rem;
 
-        @media (max-width:1024px) {
-            width:100%;
-            padding-left:4rem;
-            gap:6rem;
-            padding-right:4rem;
-
+        @media (max-width: 1024px) {
+            width: 100%;
+            padding-left: 4rem;
+            gap: 6rem;
+            padding-right: 4rem;
         }
-        @media (max-width:700px) {
-            width:100%;
-            padding-left:2rem;
-            padding-right:2rem;
-
+        @media (max-width: 700px) {
+            width: 100%;
+            padding-left: 2rem;
+            padding-right: 2rem;
         }
-        @media (max-width:500px) {
-            width:100%;
-            padding-left:1rem;
-            padding-right:1rem;
-
+        @media (max-width: 500px) {
+            width: 100%;
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
 
-        @media (max-width:1024px) {
+        @media (max-width: 1024px) {
             flex-direction: column;
             align-items: flex-start;
-
         }
 
-        
-
         .service-cards-left {
-            width:60%;
-            color:white;
-            padding-block:4rem;
-            min-height:650px;
-            background-color:variables.$purple;
-            position:relative;
-            z-index:2;
-            padding-left:12rem;
+            width: 60%;
+            color: white;
+            padding-block: 4rem;
+            min-height: 650px;
+            background-color: variables.$purple;
+            position: relative;
+            z-index: 2;
+            padding-left: 8rem;
 
             button {
-                margin-block-start:4rem;
+                margin-block-start: 4rem;
             }
 
-            @media (max-width:1024px) {
-                width:100%;
-                padding:0rem;
-                min-height:auto;
+            @media (max-width: 1024px) {
+                width: 100%;
+                padding: 0rem;
+                min-height: auto;
             }
-
-           
 
             h2 {
-                max-width:12ch;
-                margin-block-end:2rem;
-                text-transform:uppercase;
+                max-width: 12ch;
+                margin-block-end: 2rem;
+                text-transform: uppercase;
             }
 
             p {
-                max-width:34ch;
+                max-width: 34ch;
             }
         }
 
         .swiper {
-           width:40%;
-           overflow-x:visible;
+            width: 40%;
+            overflow-x: visible;
 
-           &.swiper2 {
-            img {
-                width:75px;
+            &.swiper2 {
+                img {
+                    width: 75px;
+                }
+
+                h3 {
+                    line-height: 1.2;
+                    margin-block: 2rem 1rem;
+                }
+                .swiper-slide {
+                    gap: 0;
+                }
             }
 
-            h3 {
-                line-height:1.2;
-                margin-block:2rem 1rem;
+            @media (max-width: 1024px) {
+                width: 100%;
             }
+
+            .swiper-button-next {
+                color: white;
+            }
+            .swiper-button-prev {
+                color: white;
+            }
+
             .swiper-slide {
-                gap:0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 2rem;
+                color: white;
+                background-color: variables.$light-purple;
+                padding: 2rem;
+                padding-block-end: 4rem;
+                border: 1px solid white;
+
+                @media (max-width: 856px) {
+                    padding: 1rem;
+                }
+
+                img {
+                    height: 300px;
+                    object-fit: cover;
+                }
+
+                .number {
+                    font-weight: 500;
+                }
+
+                h2 {
+                    max-width: 10ch;
+                }
+
+                p {
+                    max-width: 45ch;
+                    font-weight: 400 !important;
+                }
             }
-           }
-
-        @media (max-width:1024px) {
-            width:100%;
-        }
-
-           .swiper-button-next {
-                color:white;
-           }
-           .swiper-button-prev {
-            color:white;
-           }
-
-
-           .swiper-slide {
-            display:flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            gap:2rem;
-            color:white;
-            background-color:variables.$light-purple;
-            padding:2rem;
-            padding-block-end:4rem;
-            border:1px solid white;
-
-            @media(max-width:856px) {
-                padding:1rem;
-            }
-
-            img {
-                height:300px;
-                object-fit:cover;
-            }
-            
-
-            .number {
-                font-weight:500;
-            }
-
-            h2 {
-                max-width:10ch;
-            }
-
-            p {
-                max-width:45ch;
-                font-weight:400 !important;
-                
-            }
-           }
         }
     }
 }
-
-
-

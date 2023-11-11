@@ -508,7 +508,7 @@ main .wrapper .main-bottom .main-bottom-right .stat-item > p {
 .services-section .wrapper .services-top {
   display: flex;
   align-items: center;
-  margin-block-start: 8rem;
+  margin-block-start: -8rem;
 }
 .services-section .wrapper .services-top .started-left h2 {
   font-size: clamp(44px, 13vw, 166px);
