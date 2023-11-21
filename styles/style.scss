@@ -1,21 +1,20 @@
-@use "./variables";
-@use "./reset";
-@use "./fonts";
-@use "./button";
-@use "./header";
-@use "./main";
-@use "./question";
-@use "./text";
-@use "./omega-cards";
-@use "./service-cards";
-@use "./team";
-@use "./gallery";
-@use "./faq";
-@use "./update";
-@use "./contact";
-@use "./contact-banner";
-@use "./scroller";
-@use "./footer";
+@use './variables';
+@use './reset';
+@use './fonts';
+@use './button';
+@use './header';
+@use './main';
+@use './question';
+@use './text';
+@use './omega-cards';
+@use './service-cards';
+@use './team';
+@use './gallery';
+@use './faq';
+@use './contact';
+@use './contact-banner';
+@use './scroller';
+@use './footer';
 
 // Current Page Indicator
 
@@ -23,141 +22,126 @@ header {
     .header-wrapper {
         nav {
             ul {
-
                 a:not(:nth-of-type(1)) {
                     li {
-                        position:relative;
+                        position: relative;
 
                         &:hover {
                             &::after {
-                                transform:scaleX(1);
-                                transform-origin:left;
-                                transition:transform 300ms ease-in-out;
+                                transform: scaleX(1);
+                                transform-origin: left;
+                                transition: transform 300ms ease-in-out;
                             }
-                            
                         }
                         &::after {
-                            content:"";
-                            width:100%;
-                            height:0.25rem;
-                            background-color:white;
-                            position:absolute;
-                            bottom:0;
-                            transform:scaleX(0);
-                            transform-origin:left;
-                            transition:transform 300ms ease-in-out;
-
+                            content: '';
+                            width: 100%;
+                            height: 0.25rem;
+                            background-color: white;
+                            position: absolute;
+                            bottom: 0;
+                            transform: scaleX(0);
+                            transform-origin: left;
+                            transition: transform 300ms ease-in-out;
                         }
                     }
                 }
-              
 
                 a:nth-of-type(1) {
                     li {
-                        position:relative;
+                        position: relative;
 
                         &:hover {
                             &::after {
-                                transform:scaleX(0);
-                                transform-origin:left;
-                                transition:transform 300ms ease-in-out;
+                                transform: scaleX(0);
+                                transform-origin: left;
+                                transition: transform 300ms ease-in-out;
                             }
-                            
                         }
                         &::after {
-                            content:"";
-                            width:100%;
-                            height:0.25rem;
-                            background-color:white;
-                            position:absolute;
-                            bottom:0;
-                            transform-origin:left;
-                            transition:transform 300ms ease-in-out;
-
+                            content: '';
+                            width: 100%;
+                            height: 0.25rem;
+                            background-color: white;
+                            position: absolute;
+                            bottom: 0;
+                            transform-origin: left;
+                            transition: transform 300ms ease-in-out;
                         }
                     }
-                   
                 }
             }
         }
     }
 }
 
-// Loader 
+// Loader
 .loader {
-    position:fixed;
-    background-color:variables.$purple;
-    height:100vh;
-    z-index:1000;
-    display:flex;
+    position: fixed;
+    background-color: variables.$purple;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width:100%;
+    width: 100%;
     transition: 300ms ease;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
     & > svg {
-        width:200px;
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform:translate(calc(-50% ), calc(-50% - 5rem));
-        opacity:0;
-        @media (max-width:600px) {
-            width:150px;
+        width: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(calc(-50%), calc(-50% - 5rem));
+        opacity: 0;
+        @media (max-width: 600px) {
+            width: 150px;
         }
-        
-
-       
     }
 
     .svg-full {
-        display:flex;
+        display: flex;
         align-items: center;
         justify-content: center;
-        overflow:hidden;
+        overflow: hidden;
 
         svg {
             // position:absolute;
-            margin-block-end:10rem;
-            transform:translateX(30rem);
-            width:75px;
+            margin-block-end: 10rem;
+            transform: translateX(30rem);
+            width: 75px;
 
-            @media (max-width:600px) {
-                width:50px;
+            @media (max-width: 600px) {
+                width: 50px;
             }
-            
+
             &:not(:nth-child(1)) {
-                margin-inline-start:-0.5rem;
+                margin-inline-start: -0.5rem;
             }
             &:nth-child(2) {
-                width:115px;
+                width: 115px;
 
-                @media (max-width:600px) {
-                    width:78px;
+                @media (max-width: 600px) {
+                    width: 78px;
                 }
             }
-    
-    
         }
     }
-
-  
-        
 }
 
-.countdown{
+.countdown {
     width: clamp(250px, 50%, 500px);
     display: flex;
     justify-content: space-around;
     gap: 10px;
-    margin-block:4rem;
+    margin-block: 4rem;
     // position: absolute;
     // transform: translate(-50%,-50%);
     // top: 50%;
     // left: 50%;
 }
-.box{
+.box {
     width: 100%;
     height: auto;
     display: flex;
@@ -167,15 +151,15 @@ header {
     position: relative;
     font-size: 16px;
 }
-.box:after{
-    content: "";
+.box:after {
+    content: '';
     position: absolute;
-    background-color: rgba(255,255,255,0.12);
+    background-color: rgba(255, 255, 255, 0.12);
     height: 100%;
     width: 50%;
     left: 0;
 }
-span.num{
+span.num {
     background-color: variables.$purple;
     height: 100%;
     width: 100%;
@@ -183,9 +167,9 @@ span.num{
     place-items: center;
     font-weight: 600;
     font-size: 5em;
-    color:white;
+    color: white;
 }
-span.text{
+span.text {
     font-size: 1.2em;
     background-color: variables.$light-purple;
     display: block;
@@ -193,7 +177,7 @@ span.text{
     text-align: center;
     padding: 0.5em 0;
     font-weight: 400;
-    color:white;
+    color: white;
 }
 // @media screen and (max-width: 1024px){
 //     .countdown{
@@ -205,45 +189,42 @@ span.text{
 //         font-size: 12px;
 //     }
 // }
-@media screen and (max-width: 768px){
-    .countdown{
+@media screen and (max-width: 768px) {
+    .countdown {
         width: 100%;
         flex-wrap: wrap;
         gap: 1rem;
     }
-    .box{
-        width: calc( 50% - 1rem);
+    .box {
+        width: calc(50% - 1rem);
         height: 30vmin;
         font-size: 14px;
 
         &:nth-child(3),
         &:nth-child(4) {
-            margin-block-start:2rem;
+            margin-block-start: 2rem;
         }
     }
 }
-@media screen and (max-width: 480px){
-    .countdown{
+@media screen and (max-width: 480px) {
+    .countdown {
         gap: 0rem;
     }
-    .box{
+    .box {
         width: 100%;
         height: 25vmin;
         font-size: 8px;
 
         &:nth-child(2) {
-            margin-block-start:2rem;
+            margin-block-start: 2rem;
         }
     }
-    .span.text{
+    .span.text {
         font-size: 1.5em;
     }
-        
-        
 }
-
 
 .swiper-button-next,
 .swiper-button-prev {
-    color:white !important;
+    color: white !important;
 }
