@@ -112,6 +112,16 @@ setTimeout(() => {
     })
 }, 1200)
 
+// Scroll To Element
+const scrollToElement = document.querySelector('#scroll-to')
+const scrollToButton = document.querySelector('.main-bottom-left a')
+const html = document.querySelector('html')
+
+scrollToButton.addEventListener('click', () => {
+    html.style.scrollBehavior = 'smooth'
+    scrollToElement.scrollIntoView()
+})
+
 // Swiper
 
 const swiper = new Swiper('.swiper:not(.swiper3)', {
